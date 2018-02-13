@@ -1,0 +1,275 @@
+@import "ui-variables";
+
+// Mixin for padding for non-stream screens
+.onboarding-screen {
+	max-width: 225px;
+	width: 75%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+
+	h2 {
+		text-align: center;
+		line-height: 1.5em;
+		color: @text-color-highlight;
+		font-weight: bold;
+	}
+}
+
+.codestream {
+	//globals
+	.form-error {
+		text-align: center;
+		line-height: 1;
+		margin-bottom: 5%;
+	}
+	.error-message {
+		color: @text-color-error;
+		a {
+			color: @text-color-error;
+		}
+	}
+
+	// screen styles
+	#no-git {
+		.onboarding-screen;
+	}
+
+	#signup-form,
+	#login-form,
+	#change-username-form {
+		.onboarding-screen;
+
+		#controls {
+			label {
+				font-size: 1.2em;
+				// font-weight: bold;
+				margin: 0 0 2px 3px;
+			}
+			.control-group {
+				margin: 3% 0;
+
+				&:first-child,
+				&:last-child {
+					margin: 0;
+				}
+
+				.help-link {
+					text-align: right;
+				}
+				position: relative;
+
+				small {
+					display: block;
+					margin: 2px 0 0 3px;
+					position: absolute;
+					top: 3px;
+					right: 3px;
+				}
+			}
+
+			.control-button {
+				width: 100%;
+			}
+
+			.footer {
+				margin-top: 10%;
+				text-align: center;
+				p {
+					line-height: 1.5;
+				}
+				strong {
+					color: @text-color-highlight !important;
+				}
+			}
+			input[type="text"],
+			input[type="password"] {
+				font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
+				font-size: 1.15em;
+				padding: 4px 8px;
+				opacity: 0.6;
+			}
+			input[type="text"]:focus,
+			input[type="password"]:focus {
+				opacity: 1;
+				color: @text-color-highlight;
+			}
+			input + .tip {
+				display: none;
+			}
+		}
+
+		#signup-button,
+		#login-button,
+		#submit-button {
+			margin-top: 25px;
+			font-size: 1.15em;
+		}
+
+		.fine-print {
+			display: block;
+			margin-top: 20px;
+			opacity: 0.7;
+		}
+
+		#telemetry-consent {
+			input[type="checkbox"] {
+				float: left;
+				margin-top: 2px;
+			}
+			.telemetry-label {
+				margin-left: 22px;
+			}
+		}
+
+		.page-error {
+			margin-bottom: 2%;
+		}
+	}
+
+	#email-confirmation {
+		.onboarding-screen;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+
+		#form {
+			display: flex;
+			flex-direction: column;
+		}
+
+		#inputs {
+			margin-bottom: 5%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			input {
+				width: 14%;
+				text-align: center;
+			}
+			input[type="number"]::-webkit-inner-spin-button,
+			input[type="number"]::-webkit-outer-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+		}
+		#submit-button {
+			width: 100%;
+			font-size: 1.15em;
+		}
+	}
+
+	#team-creation {
+		.onboarding-screen;
+
+		form * {
+			margin: 5% 0;
+		}
+
+		#submit-button {
+			width: 100%;
+			font-size: 1.15em;
+		}
+	}
+
+	#team-selection {
+		.onboarding-screen;
+
+		#name-input {
+			width: 80%;
+			margin-left: 8%;
+		}
+		#submit-button {
+			width: 100%;
+			font-size: 1.15em;
+		}
+
+		.control-group {
+			margin-bottom: 5%;
+		}
+	}
+
+	#team-member-selection {
+		.onboarding-screen;
+
+		// height: inherit;
+
+		ul {
+			padding: 0;
+			list-style-type: none;
+		}
+
+		.select-members-form {
+			// height: 100%;
+			overflow-y: scroll;
+			max-height: 50%;
+		}
+
+		.error-message {
+			display: block;
+			margin-bottom: 5%;
+		}
+
+		.spinner {
+			text-align: center;
+		}
+		.input {
+			display: inline-block;
+			vertical-align: top;
+		}
+		.committer-info {
+			display: inline-block;
+		}
+		.committer-name {
+			font-weight: bold;
+			color: @text-color-highlight;
+		}
+		.input-label {
+			position: relative;
+		}
+		.committer-info {
+			box-sizing: border-box;
+			padding-left: 2em;
+			width: 100%;
+			word-wrap: break-word;
+		}
+		input[type="checkbox"] {
+			margin-left: 0;
+			position: absolute;
+			top: 4px;
+			left: 0;
+		}
+
+		.help-text {
+			font-weight: bold;
+		}
+
+		.footer {
+			margin: 5% 0;
+		}
+
+		#submit-button {
+			width: 100%;
+			font-size: 1.15em;
+		}
+
+		.transforming-line {
+			margin-bottom: 5%;
+		}
+
+		.add-member-form {
+			.errors {
+				text-align: center;
+				margin-bottom: 5%;
+			}
+			.control-group {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+			}
+		}
+	}
+}

@@ -1,81 +1,87 @@
 {
-	"name": "CodeStream",
-	"main": "./lib/codestream",
-	"version": "0.0.1",
-	"description": "Better teamwork. Better code.",
-	"keywords": ["git", "team", "chat"],
-	"activationCommands": {},
-	"repository": "https://github.com/TeamCodeStream/atom-client",
-	"license": "MIT",
-	"engines": {
-		"atom": ">=1.0.0 <2.0.0"
-	},
-	"scripts": {
-		"prettify":
-			"prettier --config .prettierrc --write ./{lib,spec}/*.js ./{lib,spec}/**/*.js ./package.json ./.prettierrc"
-	},
-	"deserializers": {
-		"codestream/CodestreamView": "deserializeCodestreamView"
-	},
-	"consumedServices": {
-		"status-bar": {
-			"versions": {
-				"^1.0.0": "consumeStatusBar"
-			}
-		}
-	},
-	"atomTranspilers": [
-		{
-			"glob": "{lib,spec}/**/*.js",
-			"transpiler": "atom-babel6-transpiler",
-			"options": {
-				"babel": {
-					"presets": ["es2015", "react"],
-					"plugins": [
-						"transform-object-rest-spread",
-						[
-							"transform-class-properties",
-							{
-								"spec": true
-							}
-						]
-					],
-					"babelrc": false
-				}
-			}
-		}
-	],
-	"dependencies": {
-		"atom-babel6-transpiler": "^1.1.2",
-		"classnames": "^2.2.5",
-		"dexie": "^2.0.1",
-		"moment": "^2.19.3",
-		"nodegit": "^0.20.3",
-		"prop-types": "^15.6.0",
-		"pubnub": "^4.19.0",
-		"raven-for-redux": "^1.2.0",
-		"raven-js": "^3.22.1",
-		"react": "^16.0.0",
-		"react-contenteditable": "^2.0.5",
-		"react-dom": "^16.0.0",
-		"react-gravatar": "^2.6.3",
-		"react-intl": "^2.4.0",
-		"react-redux": "^5.0.6",
-		"redux": "^3.7.2",
-		"redux-devtools-extension": "^2.13.2",
-		"redux-thunk": "^2.2.0",
-		"underscore-plus": "^1.6.6",
-		"username": "^3.0.0"
-	},
-	"devDependencies": {
-		"babel-plugin-transform-class-properties": "^6.24.1",
-		"babel-plugin-transform-object-rest-spread": "^6.26.0",
-		"babel-preset-es2015": "^6.24.1",
-		"babel-preset-react": "^6.24.1",
-		"enzyme": "^3.1.0",
-		"enzyme-adapter-react-16": "^1.0.2",
-		"prettier": "^1.7.4",
-		"redux-mock-store": "^1.4.0",
-		"sinon": "^4.1.3"
-	}
+  "name": "CodeStream",
+  "main": "./lib/codestream",
+  "version": "0.0.2",
+  "description": "Better teamwork. Better code.",
+  "keywords": [
+    "git",
+    "team",
+    "chat"
+  ],
+  "activationCommands": {},
+  "repository": "https://github.com/TeamCodeStream/atom-client",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "scripts": {
+    "prettify": "prettier --config .prettierrc --write ./{lib,spec}/*.js ./{lib,spec}/**/*.js ./package.json ./.prettierrc"
+  },
+  "deserializers": {
+    "codestream/CodestreamView": "deserializeCodestreamView"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
+  "atomTranspilers": [
+    {
+      "glob": "{lib,spec}/**/*.js",
+      "transpiler": "atom-babel6-transpiler",
+      "options": {
+        "babel": {
+          "presets": [
+            "es2015",
+            "react"
+          ],
+          "plugins": [
+            "transform-object-rest-spread",
+            [
+              "transform-class-properties",
+              {
+                "spec": true
+              }
+            ]
+          ],
+          "babelrc": false
+        }
+      }
+    }
+  ],
+  "dependencies": {
+    "atom-babel6-transpiler": "^1.1.2",
+    "classnames": "^2.2.5",
+    "dexie": "^2.0.1",
+    "moment": "^2.19.3",
+    "nodegit": "^0.20.3",
+    "prop-types": "^15.6.0",
+    "pubnub": "^4.19.0",
+    "raven-for-redux": "^1.2.0",
+    "raven-js": "^3.22.1",
+    "react": "^16.0.0",
+    "react-contenteditable": "^2.0.5",
+    "react-dom": "^16.0.0",
+    "react-gravatar": "^2.6.3",
+    "react-intl": "^2.4.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.2.0",
+    "underscore-plus": "^1.6.6",
+    "username": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.2",
+    "prettier": "^1.7.4",
+    "redux-mock-store": "^1.4.0",
+    "sinon": "^4.1.3"
+  }
 }

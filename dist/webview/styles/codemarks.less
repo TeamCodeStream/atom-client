@@ -1,0 +1,427 @@
+.codemark {
+	padding-left: 10px;
+	cursor: pointer;
+	// transition: top 0.1s;
+	&.collapsed {
+		height: 25px;
+		width: 100%;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 38px;
+		.contents > .body {
+			background: none;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			p {
+				display: inline;
+			}
+			.type-icon {
+				padding-right: 5px;
+			}
+			.file-name {
+				padding-left: 10px;
+				opacity: 0.25;
+			}
+			pre.prettyprint,
+			blockquote {
+				display: none;
+			}
+		}
+		.align-far-left {
+			margin-left: -22px;
+			display: inline-block;
+			float: left;
+		}
+		.status-button {
+			// float: right;
+			display: inline-block;
+			// border: 2px solid green;
+			border-radius: 3px;
+			width: 14px;
+			height: 14px;
+			text-align: center;
+			border: 2px solid @text-color;
+			opacity: 1;
+			margin-top: 2px;
+			.check {
+				opacity: 1;
+				transform: scale(0.01);
+				transition: transform 0.3s;
+				display: inline-block;
+				top: -2px !important;
+				color: @text-color !important;
+				visibility: hidden;
+			}
+			&.checked {
+				.check {
+					visibility: visible;
+				}
+				background-color: @text-color;
+				border: none;
+				vertical-align: 2px !important;
+				.check {
+					// opacity: 0.6;
+					transform: scale(1);
+					transform: scale(0.85);
+					color: @app-background-color !important;
+				}
+			}
+		}
+		.show-on-hover {
+			padding: 5px 0 0 0;
+			x-color: @text-color-subtle;
+			time {
+				padding: 3px 3px 3px 5px;
+				font-size: 11px;
+			}
+			opacity: 0;
+			transition: opacity 0.4s;
+			.details {
+				padding-left: 8px;
+			}
+		}
+		&:hover .show-on-hover {
+			opacity: 0.6;
+		}
+		.angle-arrow {
+			width: 16px;
+			height: 16px;
+			position: relative;
+			display: inline-block;
+			margin-right: 8px;
+			margin-left: 3px;
+			&::before {
+				content: "";
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 8px;
+				width: 2px;
+				height: 8px;
+				background: @text-color;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				display: block;
+				top: 8px;
+				left: 8px;
+				width: 8px;
+				height: 2px;
+				background: @text-color;
+			}
+		}
+		.clickable:hover {
+			color: @text-color-highlight;
+		}
+		.username {
+			font-weight: bold;
+		}
+	}
+	&:hover {
+		color: @text-color-highlight;
+		background: rgba(127, 127, 127, 0.4);
+	}
+	&.inline {
+		position: absolute;
+		padding: 0 !important;
+		z-index: 14;
+		background: @app-background-color;
+		.assignees {
+			float: right;
+		}
+		.archived {
+			padding: 10px;
+			background: repeating-linear-gradient(
+				-45deg,
+				transparent,
+				transparent 5px,
+				@app-background-color 5px,
+				@app-background-color 10px
+			);
+			border-bottom: 1px solid @base-border-color;
+		}
+		.status-button {
+			display: none;
+		}
+		.contents > .body {
+			padding-top: 2px;
+			padding-bottom: 2px;
+			padding-left: 49px !important;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow-x: hidden;
+			.type-icon {
+				margin-left: -23px;
+			}
+			// we don't want to display block elements
+			// when inline, since codemarks are one-line only
+			&:not(:hover) pre.prettyprint,
+			&:not(:hover) blockquote {
+				display: none;
+			}
+		}
+		.description {
+			padding: 0 10px 0 10px;
+		}
+		&:hover .contents {
+			background: rgba(127, 127, 127, 0.05);
+		}
+
+		left: 45px;
+		width: calc(~"100vw - 85px");
+		border: 1px solid @base-border-color;
+		background: @base-background-color;
+		height: auto;
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		max-height: 90%;
+		overflow-y: auto;
+
+		transition: transform 0.2s, margin-top 0.2s;
+		&.selected {
+			// transform: scale(1.05);
+			transform: translate(-20px, 0);
+			z-index: 15;
+			// box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+		}
+		&.hidden {
+			display: unset !important;
+			transform: none;
+			// this weird syntax works around a 'less' bug
+			left: calc(~"100% - 10px");
+			&.unpinned {
+				.contents > .body {
+					background: repeating-linear-gradient(
+						-45deg,
+						transparent,
+						transparent 5px,
+						@app-background-color 5px,
+						@app-background-color 10px
+					);
+				}
+			}
+		}
+		&:not(.selected) {
+			transition: transform 0.2s, margin-top 0.2s, left 0.2s;
+		}
+		.postslist {
+			max-height: 200px;
+			overflow: auto;
+		}
+		.date-separator {
+			display: none;
+		}
+		.post {
+			border-top: 1px solid @base-border-color;
+		}
+		.contents > .body {
+			white-space: normal;
+			text-overflow: initial;
+			overflow-x: auto;
+			padding: 10px 20px 10px 10px !important;
+		}
+		.contents > .body,
+		.codemark-details {
+			.post {
+				padding: 10px;
+			}
+			.author {
+				font-size: 13px;
+				font-weight: 700;
+				// padding-bottom: 5px;
+				// this negative margin and offsetting padding
+				// is to make the author div go edge-to-edge
+				// within the codemark card, and all the way to
+				// the top pixel, to support the clicking on
+				// the title to de-select the codemark (which
+				// i don't really love... but that's the spec)
+				margin: -10px -10px 0 -10px;
+				padding: 10px 10px 5px 10px;
+			}
+			time {
+				opacity: 0.4;
+				font-size: 11px;
+				padding-left: 5px;
+				.details {
+					padding-left: 5px;
+					// opacity: 0;
+					transition: opacity 0.4s;
+				}
+			}
+			.headshot {
+				display: inline-block;
+				position: relative;
+				width: 18px;
+				height: 18px;
+				margin-right: 7px;
+				vertical-align: -4px;
+				left: 0;
+			}
+			.headshot-image {
+				position: absolute;
+				width: 18px;
+				height: 18px;
+				border-radius: 3px;
+				z-index: 2;
+				left: 0;
+			}
+			.headshot-gravatar {
+				position: absolute;
+				width: 18px;
+				height: 18px;
+				border-radius: 3px;
+				z-index: 2;
+				left: 0;
+			}
+			.headshot-initials {
+				position: absolute;
+				width: 18px;
+				height: 18px;
+				border-radius: 3px;
+				text-align: center;
+				font-size: 11px;
+				text-transform: capitalize;
+				padding-top: 1px;
+				z-index: 1;
+				color: @app-background-color;
+				left: 0;
+			}
+		}
+		.kebab-vertical {
+			padding: 5px;
+			opacity: 0.5;
+		}
+	}
+	.replies {
+		margin-top: 10px;
+	}
+	.post-details {
+		padding: 5px 10px 10px 10px;
+	}
+	.code {
+		margin: 0 10px !important;
+	}
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	.resolve-button {
+		border: 1px solid @base-border-color;
+		padding: 2px 10px;
+		float: right;
+		margin: -3px 5px 0 5px;
+		&:hover {
+			background: @base-background-color;
+		}
+	}
+	.icon.info {
+		opacity: 0.5;
+	}
+	&.type-bookmark:not(.selected) {
+		.contents > .body {
+			padding-left: 28px !important;
+			.author,
+			.kebab-vertical-x {
+				display: none;
+			}
+			.type-icon {
+				margin-left: -23px;
+			}
+			&:hover {
+				.kebab-vertical {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	.pinned-replies {
+		margin-bottom: 10px;
+	}
+	.pinned-reply {
+		// padding: 10px 10px 3px 10px;
+		// margin: 10px -10px 0 -10px;
+		// width: calc(100% + 30px);
+		// border-top: 1px solid @base-border-color;
+		padding-top: 10px;
+		.pinned-reply-body {
+			opacity: 0.5;
+			// see COMPUTATION below
+			padding-left: 49px;
+			margin-top: -18px;
+		}
+	}
+	&.type-bookmark:not(.selected) {
+		.pinned-reply {
+			margin-left: -24px; // COMPUTATION = 49-28
+		}
+	}
+	.post + .post {
+		border-top: 1px solid @base-border-color;
+	}
+	.detail-icons {
+		margin-top: 5px;
+		color: @text-color;
+		.detail-icon {
+			opacity: 0.25;
+			padding-right: 10px;
+			&:hover {
+				opacity: 0.75;
+			}
+			.icon {
+				color: @text-color;
+			}
+		}
+	}
+}
+.icon.pinned-reply-star {
+	opacity: 0.6;
+	margin: 0 6px 0 2px;
+}
+.no-codemarks {
+	width: 100%;
+	position: fixed;
+	padding: 0 40px 0 40px;
+	color: @text-color-subtle;
+	text-align: center;
+	font-size: 13px;
+	z-index: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	.keybindings {
+		background-color: @base-background-color;
+		padding: 10px;
+		width: 20em;
+		margin: 10px auto;
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		.function-row {
+			padding: 5px 0;
+			text-align: right;
+			.function {
+				float: left;
+			}
+			.keybinding {
+			}
+		}
+	}
+}
+
+.codemark-faq {
+	width: 70vw;
+	color: @text-color-subtle;
+	padding: 10px 10px 0 10px; // 0 on the bottom because the li has a margin-bottom of 10
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	b {
+		color: @text-color;
+	}
+	li {
+		margin-bottom: 10px;
+	}
+}

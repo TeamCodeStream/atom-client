@@ -1,0 +1,174 @@
+// Code syntax highlighting
+
+.prettyprint ol.linenums {
+	margin-top: 0;
+	margin-bottom: 0;
+	list-style-type: decimal-leading-zero;
+}
+
+ol.linenums {
+	color: var(--line-numbers-foreground-color);
+}
+
+/* plain text */
+.pln {
+	color: #000;
+
+	body.vscode-dark & {
+		color: #9cdcfe; //#ede4f1;
+	}
+}
+
+/* string content */
+.str {
+	color: #080;
+
+	body.vscode-dark & {
+		color: #ce9178;
+	}
+
+	body.vscode-light & {
+		color: #689f38;
+	}
+}
+
+/* a keyword */
+.kwd {
+	color: #008;
+
+	body.vscode-dark & {
+		color: #c586c0; //#569cd6;
+	}
+
+	body.vscode-light & {
+		color: #0097a7;
+	}
+}
+
+/* a comment */
+.com {
+	color: #800;
+
+	body.vscode-dark & {
+		color: #6a9955;
+	}
+
+	body.vscode-light & {
+		color: #d81b60;
+	}
+}
+
+/* a type name */
+.typ {
+	color: #606;
+
+	body.vscode-dark & {
+		color: #4ec9b0;
+	}
+
+	body.vscode-light & {
+		color: #9c27b0;
+	}
+}
+
+/* a literal value */
+.lit {
+	color: #066;
+
+	body.vscode-dark & {
+		color: #b5cea8;
+	}
+
+	body.vscode-light & {
+		color: #ef6c00;
+	}
+}
+
+/* open bracket, close bracket */
+.opn,
+.clo {
+	color: #660;
+
+	body.vscode-dark & {
+		color: #d4d4d4;
+	}
+}
+
+/* punctuation */
+.pun {
+	color: #660;
+
+	body.vscode-dark & {
+		color: #d4d4d4;
+	}
+}
+
+/* a markup tag name */
+.tag {
+	color: #008;
+
+	body.vscode-dark & {
+		color: #569cd6;
+	}
+
+	body.vscode-light & {
+		color: #0097a7;
+	}
+}
+
+/* a markup attribute name */
+.atn {
+	color: #606;
+
+	body.vscode-dark & {
+		color: #9cdcfe;
+	}
+
+	body.vscode-light & {
+		color: #9c27b0;
+	}
+}
+
+/* a markup attribute value */
+.atv {
+	color: #080;
+
+	body.vscode-dark & {
+		color: #ce9178;
+	}
+
+	body.vscode-light & {
+		color: #689f38;
+	}
+}
+
+/* a declaration */
+.dec {
+	color: #606;
+
+	body.vscode-dark & {
+		color: #4ec9b0;
+	}
+
+	body.vscode-light & {
+		color: #ef6c00;
+	}
+}
+
+/* a variable name */
+.var {
+	color: #606;
+
+	body.vscode-dark & {
+		color: #9cdcfe; // #569cd6
+	}
+}
+
+/* a function name */
+.fun {
+	color: red;
+
+	body.vscode-dark & {
+		color: #dcdcaa;
+	}
+}

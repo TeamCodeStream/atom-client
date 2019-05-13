@@ -1,0 +1,40 @@
+{
+	"context-menu": {
+		"atom-text-editor": [
+			{ "type": "separator" },
+			{
+				"label": "Add Comment",
+				"command": "codestream:context-create-comment"
+			},
+			{
+				"label": "Create Issue",
+				"command": "codestream:context-create-issue"
+			},
+			{
+				"label": "Create Bookmark",
+				"command": "codestream:context-create-bookmark"
+			},
+			{
+				"label": "Get Permalink",
+				"command": "codestream:context-get-permalink"
+			},
+			{ "type": "separator" }
+		]
+	},
+	"menu": [
+		{
+			"label": "Packages",
+			"submenu": [
+				{
+					"label": "CodeStream",
+					"submenu": [
+						{
+							"label": "Toggle",
+							"command": "codestream:toggle"
+						}
+					]
+				}
+			]
+		}
+	]
+}

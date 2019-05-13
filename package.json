@@ -1,0 +1,96 @@
+{
+	"name": "codestream",
+	"main": "./dist/codestream",
+	"version": "1.0.0",
+	"description": "Discuss, review, and share code with your team. Integrates w/ Slack, Jira, Trello, and GitHub",
+	"keywords": [
+		"git",
+		"team",
+		"comment",
+		"collaboration"
+	],
+	"activationHooks": [
+		"core:loaded-shell-environment"
+	],
+	"repository": "https://github.com/TeamCodeStream/atom-client",
+	"license": "",
+	"engines": {
+		"atom": ">=1.34.0 <2.0.0"
+	},
+	"deserializers": {
+		"codestream/CodestreamView": "deserializeCodestreamView"
+	},
+	"providedServices": {
+		"codestream-info": {
+			"description": "Provides environment config info",
+			"versions": {
+				"1.0.0": "provideEnvironmentConfig"
+			}
+		}
+	},
+	"consumedServices": {
+		"status-bar": {
+			"versions": {
+				"^1.0.0": "consumeStatusBar"
+			}
+		}
+	},
+	"configSchema": {
+		"team": {
+			"type": "string",
+			"default": "",
+			"description": "Specifies team name to sign into"
+		},
+		"avatars": {
+			"type": "boolean",
+			"default": true
+		},
+		"showMarkers": {
+			"type": "boolean",
+			"default": true
+		},
+		"autoHideMarkers": {
+			"type": "boolean",
+			"default": true
+		},
+		"autoSignIn": {
+			"type": "boolean",
+			"default": true,
+			"description": "Automatically sign in when restoring a window with a previous session"
+		},
+		"traceLevel": {
+			"type": "string",
+			"default": "verbose",
+			"enum": [
+				"silent",
+				"errors",
+				"verbose",
+				"debug"
+			]
+		},
+		"proxySupport": {
+			"type": "string",
+			"default": "off",
+			"enum": [
+				"override",
+				"on",
+				"off"
+			],
+			"description": "Specifies whether to support proxy servers. If 'override', a url is required"
+		},
+		"proxyUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"proxyStrictSSL": {
+			"type": "boolean",
+			"default": true
+		}
+	},
+	"scripts": {
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+	}
+}

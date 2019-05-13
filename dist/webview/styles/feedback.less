@@ -1,0 +1,114 @@
+.feedback {
+	position: fixed;
+	bottom: 7px;
+	right: 10px;
+	z-index: 18;
+	font-size: 15px;
+	.icon {
+		opacity: 0.6;
+		padding: 5px;
+		margin-bottom: -10px;
+	}
+	h2,
+	h4 {
+		font-weight: normal;
+		margin: 0;
+		padding: 0;
+	}
+	h2 {
+		margin-bottom: 15px;
+	}
+	.emotion {
+		margin-top: 10px;
+		margin-bottom: 30px;
+		.icon {
+			display: inline-block;
+			transform: scale(1.5);
+			cursor: pointer;
+			color: #fc0;
+			border: 1px solid transparent;
+			opacity: 1;
+			line-height: 16px;
+			margin-right: 8px;
+			margin-left: 8px;
+		}
+
+		.icon.selected {
+			border: 1px solid @text-color-info;
+		}
+	}
+	.dialog {
+		box-sizing: border-box;
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		border: 1px solid @base-border-color;
+		background: @app-background-color;
+		height: auto;
+		max-width: 500px;
+		position: relative;
+		z-index: 5000;
+		.input-text {
+			margin-bottom: 5px;
+		}
+		.align-right-button {
+			position: absolute;
+			cursor: pointer;
+			right: 5px;
+			top: 10px;
+		}
+	}
+	.input-text {
+		margin-bottom: 20px !important;
+		font-size: 15px !important;
+		padding: 5px;
+		background: @base-background-color;
+		color: @text-color;
+		border: 1px solid @base-background-color;
+		min-height: 60px;
+	}
+	button {
+		float: right;
+		font-size: 13px !important;
+		.icon {
+			display: inline-block;
+			transform: scale(1.25);
+			margin-right: 8px;
+			opacity: 1;
+			padding: 0;
+		}
+		&:disabled {
+			opacity: 0.4;
+		}
+	}
+	.contact-us {
+		float: right;
+		background: @base-background-color;
+		padding: 10px;
+		margin: 0 0 10px 10px;
+		font-size: 13px;
+	}
+	.happy-icon {
+		float: right;
+	}
+	.warn {
+		color: @text-color-warning;
+	}
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	.show-smiley {
+		margin-top: 10px;
+		// the 110px leaves room for the Tweet button
+		max-width: calc(~"100% - 110px");
+		#show-smiley-checkbox {
+			margin-left: -20px;
+		}
+		label {
+			display: block;
+			float: left;
+			margin-left: 20px !important;
+		}
+	}
+}

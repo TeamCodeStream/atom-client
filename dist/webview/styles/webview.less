@@ -1,0 +1,64 @@
+// The ui-variables and syntax-variables files are provided by Atom themes.
+@import "ui-variables";
+@import "syntax-variables";
+
+@app-background-color-darker: darken(@app-background-color, 2%);
+@app-background-color-hover: lighten(@app-background-color, 3%);
+@text-color-subtle-extra: lighten(@text-color-subtle, 50%);
+@background-color: @base-background-color;
+@background-color-umi: @background-color-info;
+@background-color-highlight-light: lighten(@background-color-highlight, 10%);
+@background-color-highlight-dark: darken(@background-color-highlight, 10%);
+@background-color-info-hover-dark: @background-color-info;
+@background-color-info-hover-light: @background-color-info;
+@pane-item-border-color-dark: @pane-item-border-color;
+@pane-item-border-color-light: @pane-item-border-color;
+
+// this file is copied into `../dist` so `main` will be there and copied from the webview
+@import "main";
+
+body {
+	--in-dark-mode: false;
+	& when (lightness(@app-background-color) < 50) {
+		--in-dark-mode: true;
+	}
+	--font-family: @font-family;
+	--font-weight: var(--editor-font-weight);
+	--font-size: var(--editor-font-size);
+
+	--text-color: @text-color;
+	--text-color-highlight: @text-color-highlight;
+	--text-color-subtle: @text-color-subtle;
+	--text-color-subtle-extra: lighten(@text-color-subtle, 50%);
+	--text-color-info: @text-color-info;
+	--text-color-info-muted: var(--text-color-subtle-extra);
+
+	--app-background-color: @app-background-color;
+	--app-background-color-darker: @app-background-color-darker;
+	--app-background-color-hover: lighten(@background-color, 3%);
+	--base-background-color: @base-background-color;
+
+	--border-color: @base-border-color;
+	--base-border-color: @base-border-color;
+
+	--panel-tool-background-color: @tool-panel-background-color;
+	--panel-section-foreground-color: @text-color;
+	--panel-section-header-background-color: @tab-bar-background-color;
+	--panel-section-header-foreground-color: @text-color;
+
+	--line-numbers-foreground-color: @syntax-gutter-text-color; // will this work?
+
+	--button-background-color: @button-background-color;
+	--button-background-color-hover: @button-background-color-hover;
+
+	// --scrollbar-thumb: ${scrollBarBg.rgba}
+	// --scrollbar-thumb-hover: ${scrollBarFg.rgba}
+}
+
+#app {
+	background-color: @app-background-color;
+
+	button.cancel:hover {
+		color: @text-color-highlight;
+	}
+}

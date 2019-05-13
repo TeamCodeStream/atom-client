@@ -1,0 +1,102 @@
+.onboarding-page {
+	background-color: @app-background-color;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	h2 {
+		text-align: center;
+	}
+}
+
+#login-page {
+	.divider {
+		width: 300px;
+		height: 2px;
+		background-color: @app-background-color-darker;
+		margin: 0 auto;
+	}
+	.standard-form .form-body {
+		padding-top: 0;
+	}
+}
+
+.onboarding-page .standard-form,
+#continue-form {
+	width: 100%;
+	margin: 0 auto;
+	flex-direction: column;
+	justify-content: center;
+
+	h2,
+	h3 {
+		text-align: center;
+	}
+
+	.spacer {
+		height: 10px;
+	}
+
+	.form-error {
+		text-align: center;
+		margin-bottom: 15px;
+		* {
+			color: @text-color-error;
+		}
+	}
+
+	#controls {
+		label {
+			font-size: 1.2em;
+			// font-weight: bold;
+			margin: 0 0 2px 3px;
+		}
+		.control-group {
+			margin: 3% 0;
+			display: flex;
+			flex-direction: column;
+
+			&:first-child,
+			&:last-child {
+				margin: 0;
+			}
+
+			.help-link {
+				font-size: 11px;
+				text-align: right;
+			}
+		}
+
+		.control-button {
+			width: 100%;
+		}
+
+		.footer {
+			margin-top: 10%;
+			text-align: center;
+			p {
+				line-height: 1.5;
+			}
+			strong {
+				color: @text-color-highlight !important;
+			}
+		}
+		input[type="text"],
+		input[type="password"] {
+			font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
+			font-size: 1.15em;
+			padding: 4px 8px;
+			opacity: 0.6;
+		}
+		input[type="text"]:focus,
+		input[type="password"]:focus {
+			opacity: 1;
+			color: @text-color-highlight;
+		}
+		input + .tip {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,92 @@
+&.blue .type-icon,
+&.blue-color {
+	color: #3578ba;
+}
+&.green .type-icon,
+&.green-color {
+	color: #7aba5d;
+}
+&.yellow .type-icon,
+&.yellow-color {
+	color: #edd648;
+}
+&.orange .type-icon,
+&.orange-color {
+	color: #f1a340;
+}
+&.red .type-icon,
+&.red-color {
+	color: #d9634f;
+}
+&.purple .type-icon,
+&.purple-color {
+	color: #b87cda;
+}
+&.aqua .type-icon,
+&.aqua-color {
+	color: #5abfdc;
+}
+&.gray .type-icon,
+&.gray-color {
+	color: #888888;
+}
+&.blue-background {
+	background-color: #3578ba;
+}
+&.green-background {
+	background-color: #7aba5d;
+}
+&.yellow-background {
+	background-color: #edd648;
+}
+&.orange-background {
+	background-color: #f1a340;
+}
+&.red-background {
+	background-color: #d9634f;
+}
+&.purple-background {
+	background-color: #b87cda;
+}
+&.aqua-background {
+	background-color: #5abfdc;
+}
+&.gray-background {
+	background-color: #888888;
+}
+.color-choices {
+	padding-left: 5px;
+	padding-top: 3px;
+	display: inline-block;
+	user-select: none;
+	white-space: nowrap;
+	.icon.chevron-down {
+		display: inline-block;
+		transform: scale(0.7);
+		margin-left: 2px;
+	}
+}
+.label-label {
+	cursor: pointer;
+	color: @text-color-highlight;
+}
+.color-choice-box {
+	display: inline-block;
+	// width: 15px;
+	// height: 15px;
+	margin-right: 2px;
+	padding: 1px 2px;
+	cursor: pointer;
+	// opacity: 0.5;
+
+	&.selected {
+		outline: 1px solid @base-border-color;
+		// Dave is blind
+		background: @base-border-color;
+	}
+
+	// &:hover {
+	// 	background: @base-border-color;
+	// 	outline: 1px solid @base-border-color;
+	// }
+}

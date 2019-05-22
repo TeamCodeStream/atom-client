@@ -1,7 +1,7 @@
 {
 	"name": "codestream",
 	"main": "./dist/codestream",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "Discuss, review, and share code with your team. Integrates w/ Slack, Jira, Trello, and GitHub",
 	"keywords": [
 		"git",

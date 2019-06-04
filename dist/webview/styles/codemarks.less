@@ -1,6 +1,5 @@
 .codemark {
 	padding-left: 10px;
-	cursor: pointer;
 	// transition: top 0.1s;
 	&.collapsed {
 		height: 25px;
@@ -155,12 +154,6 @@
 			.type-icon {
 				margin-left: -23px;
 			}
-			// we don't want to display block elements
-			// when inline, since codemarks are one-line only
-			&:not(:hover) pre.prettyprint,
-			&:not(:hover) blockquote {
-				display: none;
-			}
 		}
 		.description {
 			padding: 0 10px 0 10px;
@@ -225,8 +218,13 @@
 		.codemark-details {
 			.post {
 				padding: 10px;
+
+				&.reply .author {
+					cursor: unset;
+				}
 			}
 			.author {
+				cursor: pointer;
 				font-size: 13px;
 				font-weight: 700;
 				// padding-bottom: 5px;

@@ -1613,6 +1613,9 @@
 			padding: 10px 9px 10px 55px; // 1px left and right for border
 			// padding: 10px 9px 10px 9px; // 1px left and right for border
 			cursor: pointer;
+			&.reply {
+				cursor: unset;
+			}
 			min-height: 56px;
 			white-space: pre-wrap;
 			word-wrap: break-word;
@@ -2584,7 +2587,8 @@
 			font-size: 11px;
 			text-transform: capitalize;
 			text-align: center;
-			padding-top: 6px;
+			padding-top: 1px;
+			font-weight: 700;
 			border-radius: 4px;
 			color: @app-background-color;
 			z-index: 1;

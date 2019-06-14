@@ -26,12 +26,23 @@
 			"versions": {
 				"1.0.0": "provideEnvironmentConfig"
 			}
+		},
+		"codestream-debug-config": {
+			"description": "Controls to change the debug mode",
+			"versions": {
+				"1.0.0": "provideDebugConfig"
+			}
 		}
 	},
 	"consumedServices": {
 		"status-bar": {
 			"versions": {
 				"^1.0.0": "consumeStatusBar"
+			}
+		},
+		"split-diff": {
+			"versions": {
+				"1.0.0": "consumeSplitDiff"
 			}
 		}
 	},
@@ -88,6 +99,9 @@
 		}
 	},
 	"scripts": {},
+	"package-deps": [
+		"split-diff"
+	],
 	"dependencies": {},
 	"devDependencies": {}
 }

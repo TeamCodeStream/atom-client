@@ -7,6 +7,7 @@
 		padding-top: 5px;
 		padding-bottom: 5px;
 		padding-left: 38px;
+		overflow: hidden;
 		.contents > .body {
 			background: none;
 			white-space: nowrap;
@@ -25,6 +26,9 @@
 			pre.prettyprint,
 			blockquote {
 				display: none;
+			}
+			code {
+				display: inline;
 			}
 		}
 		.align-far-left {
@@ -285,6 +289,14 @@
 				color: @app-background-color;
 				left: 0;
 			}
+			.headshot-system {
+				position: absolute;
+				width: 18px;
+				height: 18px;
+				border-radius: 3px;
+				z-index: 2;
+				left: 0;
+			}
 		}
 		.kebab-vertical {
 			padding: 5px;
@@ -421,5 +433,39 @@
 	}
 	li {
 		margin-bottom: 10px;
+	}
+}
+
+// currently only used in CodemarkDetails
+.progress-container {
+	width: 100%;
+	display: flex;
+	overflow: hidden;
+
+	.progress-bar {
+		background-color: transparent;
+		height: 2px;
+		width: 100%;
+	}
+
+	.progress-cursor {
+		width: 45%;
+		height: inherit;
+		background-image: linear-gradient(
+			to right,
+			transparent 10%,
+			var(--text-color-info) 75%,
+			transparent 90%
+		);
+		animation: 1.75s ease-in-out infinite move-cursor;
+	}
+}
+
+@keyframes move-cursor {
+	from {
+		transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(200%);
 	}
 }

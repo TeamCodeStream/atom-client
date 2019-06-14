@@ -13,7 +13,7 @@ CodeStream turns conversation into documentation by capturing all of the discuss
 
 ## Does your team use Slack?
 
-Sign up for CodeStream using Slack so that discussions about code can be shared in your existing Slack channels and direct messages. Connecting to your Slack workspace allows developers to participate in discussions about code when they're not in their editor, or if they don’t use an editor supported by CodeSteam.
+Sign up for CodeStream using Slack so that discussions about code can be shared in your workspace's existing channels. You and your teammates can participate in the discussion, even when you're not in the IDE!
 
 # Requirements
 
@@ -74,7 +74,7 @@ You won’t need to provide CodeStream with any Git (or GitHub, Bitbucket, etc.)
 
 #### What is CodeStream's pricing model?
 
-Codestream is free to try for 30 days for teams of all sizes. CodeStream is free to use for small teams with 5 or fewer developers, educational organizations, and for open source projects. For all other teams, pricing starts at $10/user/month. To learn more, visit https://www.codestream.com/pricing or contact sales@codestream.com.
+Codestream is free to try for 30 days for teams of all sizes. CodeStream is free to use for small teams with 5 or fewer developers, educational organizations, and for open source projects. For all other teams, pricing starts at \$10/user/month. To learn more, visit https://www.codestream.com/pricing or contact sales@codestream.com.
 
 # Help & Feedback
 

@@ -1,5 +1,26 @@
 # Change Log
 
+## [1.2.0] - 2019-6-14
+
+### Added
+
+- Adds the ability to compare the code associated with a codemark to your local version of the file, or to apply the change
+
+### Changed
+
+- The Invite People page now only shows teammates from your Slack workspace that have signed up for CodeStream
+
+### Fixed
+
+- Fixes an issue that would cause an error when opening a Slack channel with Japanese characters in the name
+- Fixes an issue where hovering over an expanded codemark wouldn't highlight the corresponding code block in the editor
+- Fixes an issue with text in backticks not rendering properly
+- Fixes an issue with new lines being displayed as html in posts on Slack
+- Fixes an issue with new lines in codemark text causing display issues on the Search tab
+- Fixes an issue with the Asana integration that was preventing projects from being listed
+- Fixes an issue with invitation codes incorrectly expiring after 10 minutes
+- Fixes an issue with editing a reply from a codemark's thread view
+
 ## [1.1.0] - 2019-6-4
 
 ### Changed

@@ -4,12 +4,83 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	overflow: auto;
+	padding: 20px 0;
 	h2 {
 		text-align: center;
 	}
-	overflow: auto;
+}
+
+// see https://stackoverflow.com/questions/33454533/cant-scroll-to-top-of-flex-item-that-is-overflowing-container/33455342
+.onboarding-page > div,
+.onboarding-page > form {
+	margin: auto !important;
+}
+
+.outline-box {
+	border: 1px solid @base-border-color;
+	// background: @app-background-color-darker;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	padding: 10px 20px 20px 20px;
+	margin-bottom: 20px;
+	position: relative;
+	font-size: 14px;
+	h2,
+	h3 {
+		position: absolute;
+		top: -13px;
+		left: 15px;
+		background: @app-background-color;
+		padding: 0 5px;
+		margin: 0;
+		display: inline-block;
+	}
+	h2 {
+		top: -18px;
+	}
+}
+.row-button {
+	// background-color: var(--button-background-color);
+	// color: var(--text-color);
+	padding: 5px 10px !important;
+	display: flex !important;
+	text-align: center !important;
+	align-items: center;
+	margin-top: 20px;
+	width: 100%;
+	&.no-top-margin {
+		margin-top: 10px;
+	}
+	&:hover {
+		// background-color: var(--button-background-color-hover);
+		// color: var(--text-color-highlight);
+	}
+	.icon {
+		margin: 5px;
+		transform: scale(1.6);
+		&.extra-pad {
+			margin: 0 10px;
+		}
+	}
+	.spin {
+		flex-basis: 100%;
+		margin: 8px;
+	}
+	.copy {
+		padding-left: 10px;
+		flex-basis: 100%;
+		font-size: 14px !important;
+		font-weight: bold;
+		text-align: left;
+		.small {
+			font-size: 12px;
+			font-weight: normal;
+			line-height: 1em;
+			padding-bottom: 5px;
+		}
+	}
+	// cursor: pointer;
+	user-select: none;
 }
 
 #login-page {
@@ -24,7 +95,7 @@
 	}
 }
 
-.onboarding-page .standard-form,
+.codestream .onboarding-page .standard-form,
 #continue-form {
 	width: 100%;
 	margin: 0 auto;
@@ -39,6 +110,9 @@
 	.spacer {
 		height: 10px;
 	}
+	.small-spacer {
+		height: 5px;
+	}
 
 	.form-error {
 		text-align: center;
@@ -50,7 +124,7 @@
 
 	#controls {
 		label {
-			font-size: 1.2em;
+			font-size: 1em !important;
 			// font-weight: bold;
 			margin: 0 0 2px 3px;
 		}
@@ -75,7 +149,7 @@
 		}
 
 		.footer {
-			margin-top: 10%;
+			margin-top: 5%;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -89,8 +163,8 @@
 		input[type="text"],
 		input[type="password"] {
 			font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
-			font-size: 1.15em;
-			padding: 4px 8px;
+			font-size: 1em !important;
+			padding: 8px !important;
 			opacity: 0.6;
 		}
 		input[type="text"]:focus,

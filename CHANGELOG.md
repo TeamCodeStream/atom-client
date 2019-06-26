@@ -1,5 +1,21 @@
 # Change Log
 
+## [1.3.0] - 2019-6-26
+
+### Added
+
+- New Microsoft Teams integration allows you to share codemarks in your organization's existing channels. [Learn more.](https://www.codestream.com/blog/codestream-1-3)
+- New Slack integration that reduces the amount of Slack that appears in CodeStream, with the full Channels tab now being optional
+
+### Changed
+
+- Updated the UI of CodeStream's signup flow
+- Asana projects are now listed in alphabetical order for selection
+
+### Fixed
+
+- Fixes an issue with code blocks in Trello cards not rendering properly, and not including the line numbers
+
 ## [1.2.0] - 2019-6-14
 
 ### Added

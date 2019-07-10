@@ -1,5 +1,24 @@
 # Change Log
 
+## [1.3.1] - 2019-7-10
+
+### Added
+
+- Password reset. Sorry it took so long!
+- Enforcement of CodeStream's 30-day free trial, and 5-member limit for teams on the free plan
+
+### Changed
+
+- Optimizations to ipc between our processes and plugin startup
+
+### Fixed
+
+- Fixes an issue where scrolling in the CodeStream pane with the compose modal open would lose any information already entered
+- Fixes an issue where a codemark could get posted as a reply to another codemark if you had thread view open
+- Fixes a spacing issue on the Sign In page
+- Fixes an issue with new UI not being applied to email confirmation and Team Name pages
+- Fixes rendering issues with certain Slack bots when using Slack real-time channels
+
 ## [1.3.0] - 2019-6-26
 
 ### Added

@@ -1,5 +1,15 @@
 # Change Log
 
+## [1.3.4] - 2019-7-26
+
+### Added
+
+- Adds roadblocks when your extension is behind either a required or suggested version of CodeStream
+
+### Fixed
+
+- Fixes [#71](]https://github.com/TeamCodeStream/CodeStream/issues/71) &mdash; You can edit channel selection when editing via thread view
+
 ## [1.3.2] - 2019-7-16
 
 ### Changed

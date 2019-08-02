@@ -1,0 +1,140 @@
+// should go into message-input.less
+.mentions-popup-container {
+	position: relative;
+}
+.message-input-wrapper {
+	position: relative;
+}
+
+.codemark-form {
+	width: 100%;
+	max-height: 100vh !important;
+	padding: 0 10px 10px 10px;
+	position: relative;
+
+	.message-input {
+		min-height: 50px;
+		max-width: calc(~"100vw - 62px") !important;
+		outline: 1px solid @base-border-color !important;
+		background: rgba(0, 0, 0, 0.1) !important;
+	}
+
+	.input-text {
+		background: rgba(0, 0, 0, 0.1) !important;
+	}
+
+	.message-input-wrapper .smiley {
+		position: absolute;
+		bottom: 8px;
+		right: 8px;
+		opacity: 0.4;
+		cursor: pointer;
+		transition: transform 0.1s;
+	}
+
+	.connect-issue {
+		display: flex;
+		margin-bottom: 10px;
+	}
+	.connect-issue-label {
+		white-space: nowrap;
+		padding-right: 5px;
+	}
+
+	.channel-label {
+		font-weight: normal;
+		color: @text-color-highlight;
+		white-space: nowrap;
+		cursor: pointer;
+		.icon {
+			display: inline-block;
+			transform: scale(0.7);
+			margin-left: 2px;
+		}
+	}
+
+	.headshot-gravatar,
+	.headshot-image,
+	.headshot-system {
+		display: block;
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		border-radius: 4px;
+		background: none;
+		z-index: 2;
+		left: 10px;
+	}
+	.headshot-initials {
+		display: block;
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		font-size: 11px;
+		text-transform: capitalize;
+		text-align: center;
+		padding-top: 1px;
+		font-weight: 700;
+		border-radius: 4px;
+		color: @app-background-color;
+		z-index: 1;
+		left: 10px;
+	}
+	.tab-group {
+		margin-bottom: 10px;
+	}
+	fieldset {
+		padding: 0 !important;
+		// padding: 0 0 40px 0 !important;
+		max-width: 100% !important;
+		// width: calc(100vw - 60px) !important;
+	}
+	.form-body {
+		padding: 0;
+	}
+	.align-right-button {
+		right: 0px;
+	}
+	// .chat-bubble {
+	// 	vertical-align: -2px;
+	// }
+	label {
+		margin-top: 5px !important;
+	}
+	.mentions-popup ul {
+		max-height: 150px;
+	}
+	.more {
+		color: @text-color !important;
+	}
+	.permalink {
+		background-color: @app-background-color-hover;
+		padding: 10px !important;
+		text-align: center;
+		overflow: hidden;
+		// text-overflow: ellipsis;
+		margin: 10px 0;
+		border: 1px solid @base-border-color;
+		width: 100%;
+		white-space: nowrap;
+	}
+	.permalink-warning {
+		color: @text-color-warning;
+		margin: 10px 0 5px 0;
+		.icon {
+			margin-right: 5px;
+		}
+	}
+}
+
+// TODO: 🔥
+@media only screen and (max-width: 350px) {
+	.codemark-form .tab-group label b {
+		display: none;
+	}
+}
+@media only screen and (max-width: 430px) {
+	.codemark-form .tab-group label {
+		max-width: calc(~"25% - 10");
+	}
+}

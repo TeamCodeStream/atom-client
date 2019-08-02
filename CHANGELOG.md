@@ -1,5 +1,22 @@
 # Change Log
 
+## [2.0.0] - 2019-8-1
+
+### Added
+
+- Adds issue-tracking integrations with Jira Server and GitHub Enterprise
+
+### Changed
+
+- Updates the UI for creating issues on external issue tracking services to allow you to be connected to multiple services at once and change the selection on an issue by issue basis
+- Codemarks now appear immediately upon submission
+- Trailing slashes are stripped off of the Server URL setting for on-prem installations
+
+### Fixed
+
+- Fixes an issue with not all DMs from Slack appearing in the conversation selector when creating a codemark
+- Fixes an issue with a lack of notification when viewing a codemark in a file you don't have
+
 ## [1.3.4] - 2019-7-26
 
 ### Added

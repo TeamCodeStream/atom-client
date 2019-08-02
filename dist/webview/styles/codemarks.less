@@ -1,3 +1,8 @@
+.editing-codemark-container {
+	.card;
+	padding-bottom: 10px;
+}
+
 .codemark {
 	padding-left: 10px;
 	// transition: top 0.1s;
@@ -127,9 +132,9 @@
 		background: rgba(127, 127, 127, 0.4);
 	}
 	&.inline {
-		position: absolute;
+		position: relative;
 		padding: 0 !important;
-		z-index: 14;
+		z-index: 1;
 		background: @app-background-color;
 		.assignees {
 			float: right;
@@ -148,7 +153,13 @@
 		.status-button {
 			display: none;
 		}
+
+		&.type-bookmark:not(.selected) .header {
+			margin-bottom: 0 !important;
+		}
 		.contents > .body {
+			display: flex;
+			flex-direction: column;
 			padding-top: 2px;
 			padding-bottom: 2px;
 			padding-left: 49px !important;
@@ -166,7 +177,6 @@
 			background: rgba(127, 127, 127, 0.05);
 		}
 
-		left: 45px;
 		width: calc(~"100vw - 85px");
 		border: 1px solid @base-border-color;
 		background: @base-background-color;
@@ -175,32 +185,26 @@
 		max-height: 90%;
 		overflow-y: auto;
 
-		transition: transform 0.2s, margin-top 0.2s;
 		&.selected {
 			// transform: scale(1.05);
 			transform: translate(-20px, 0);
-			z-index: 15;
+			z-index: 2;
 			// box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
 		}
-		&.hidden {
-			display: unset !important;
+		&.cs-hidden {
 			transform: none;
-			// this weird syntax works around a 'less' bug
-			left: calc(~"100% - 10px");
-			&.unpinned {
-				.contents > .body {
-					background: repeating-linear-gradient(
-						-45deg,
-						transparent,
-						transparent 5px,
-						@app-background-color 5px,
-						@app-background-color 10px
-					);
-				}
+			.contents {
+				visibility: hidden;
 			}
-		}
-		&:not(.selected) {
-			transition: transform 0.2s, margin-top 0.2s, left 0.2s;
+			&.unpinned {
+				background: repeating-linear-gradient(
+					-45deg,
+					transparent,
+					transparent 5px,
+					@app-background-color 5px,
+					@app-background-color 10px
+				) !important;
+			}
 		}
 		.postslist {
 			max-height: 200px;
@@ -216,7 +220,7 @@
 			white-space: normal;
 			text-overflow: initial;
 			overflow-x: auto;
-			padding: 10px 20px 10px 10px !important;
+			padding: 10px 10px 10px 10px !important;
 		}
 		.contents > .body > .title > p {
 			margin: 0;
@@ -230,19 +234,22 @@
 					cursor: unset;
 				}
 			}
+
+			.header {
+				margin-bottom: 8px;
+			}
+			.header .right {
+				float: right;
+				display: flex;
+				flex-direction: row-reverse;
+			}
+
 			.author {
+				display: inline;
 				cursor: pointer;
 				font-size: 13px;
 				font-weight: 700;
 				// padding-bottom: 5px;
-				// this negative margin and offsetting padding
-				// is to make the author div go edge-to-edge
-				// within the codemark card, and all the way to
-				// the top pixel, to support the clicking on
-				// the title to de-select the codemark (which
-				// i don't really love... but that's the spec)
-				margin: -10px -10px 0 -10px;
-				padding: 10px 10px 5px 10px;
 			}
 			time {
 				opacity: 0.4;
@@ -302,8 +309,8 @@
 			}
 		}
 		.kebab-vertical {
-			padding: 5px;
 			opacity: 0.5;
+			margin-left: 2px;
 		}
 	}
 	.replies {
@@ -332,6 +339,9 @@
 	}
 	.icon.info {
 		opacity: 0.5;
+		position: absolute;
+		right: 5px;
+		bottom: 5px;
 	}
 	&.type-bookmark:not(.selected) {
 		.contents > .body {
@@ -342,11 +352,6 @@
 			}
 			.type-icon {
 				margin-left: -23px;
-			}
-			&:hover {
-				.kebab-vertical {
-					display: inline-block;
-				}
 			}
 		}
 	}

@@ -1,7 +1,4 @@
 // should go into message-input.less
-.mentions-popup-container {
-	position: relative;
-}
 .message-input-wrapper {
 	position: relative;
 }
@@ -12,6 +9,10 @@
 	padding: 0 10px 10px 10px;
 	position: relative;
 
+	.form-body {
+		min-width: 180px;
+	}
+
 	.message-input {
 		min-height: 50px;
 		max-width: calc(~"100vw - 62px") !important;
@@ -21,21 +22,16 @@
 
 	.input-text {
 		background: rgba(0, 0, 0, 0.1) !important;
-	}
-
-	.message-input-wrapper .smiley {
-		position: absolute;
-		bottom: 8px;
-		right: 8px;
-		opacity: 0.4;
-		cursor: pointer;
-		transition: transform 0.1s;
+		border: 1px solid @base-border-color !important;
+		margin-bottom: 5px;
 	}
 
 	.connect-issue {
 		display: flex;
 		margin-bottom: 10px;
+		flex-wrap: wrap;
 	}
+
 	.connect-issue-label {
 		white-space: nowrap;
 		padding-right: 5px;
@@ -46,10 +42,29 @@
 		color: @text-color-highlight;
 		white-space: nowrap;
 		cursor: pointer;
+		text-overflow: ellipsis;
+		overflow: hidden;
+
 		.icon {
 			display: inline-block;
 			transform: scale(0.7);
 			margin-left: 2px;
+		}
+	}
+
+	.headline {
+		padding-left: 25px;
+		height: 20px;
+		margin-top: 10px;
+		display: inline-flex;
+		width: 100%;
+
+		.subhead {
+			opacity: 0.75;
+			padding-left: 5px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
 		}
 	}
 
@@ -65,6 +80,7 @@
 		z-index: 2;
 		left: 10px;
 	}
+
 	.headshot-initials {
 		display: block;
 		position: absolute;
@@ -80,9 +96,11 @@
 		z-index: 1;
 		left: 10px;
 	}
+
 	.tab-group {
 		margin-bottom: 10px;
 	}
+
 	fieldset {
 		padding: 0 !important;
 		// padding: 0 0 40px 0 !important;
@@ -100,9 +118,6 @@
 	// }
 	label {
 		margin-top: 5px !important;
-	}
-	.mentions-popup ul {
-		max-height: 150px;
 	}
 	.more {
 		color: @text-color !important;
@@ -123,6 +138,32 @@
 		margin: 10px 0 5px 0;
 		.icon {
 			margin-right: 5px;
+		}
+	}
+}
+
+.message-attach-icons {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	.icon {
+		// position: absolute;
+		// bottom: 5px;
+		// right: 38px;
+		margin-left: 10px;
+		opacity: 0.4;
+		cursor: pointer;
+		transition: transform 0.1s;
+		display: inline-block;
+		&:hover,
+		&.hover {
+			opacity: 1;
+			color: @text-color-info;
+			transform: scale(1.4) !important;
+		}
+		&.selected {
+			opacity: 1;
+			color: @text-color-highlight;
 		}
 	}
 }

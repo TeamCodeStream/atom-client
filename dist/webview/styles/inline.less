@@ -1,7 +1,11 @@
-.spatial-list {
-	.codemark-container {
-		margin-bottom: 20px;
-	}
+.spatial-list .codemark-container {
+	margin-bottom: 20px;
+	padding: 0 45px;
+}
+
+.knowledge-panel .codemark-container {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .card {
@@ -13,29 +17,78 @@
 .plane-container {
 	position: absolute;
 	width: 100%;
-	&:not(.cs-hidden) {
-		transition: margin-top 0.2s, left 0.2s;
+	transition: transform 20ms, margin-top 20ms;
+	will-change: transform;
+	padding: 0 45px;
+	z-index: 2; // one above the <nav> element, one below .hover-plus
+
+	// since we use padding to place the codemark inside this div,
+	// when you click to the left or right of the codemark, we want
+	// those clicks to go through to the element below -- on the left
+	// that means the hover-plus icons, and on the right that might
+	// mean an archived codemark or the ... of the global nav
+	// by setting pointer-events to none, these clicks fall through
+	// the plane-container div to the one below... but...
+	pointer-events: none;
+	// ... we want clicks to divs inside this div to still work, so
+	// we reset pointer-events to initial for any direct descendent
+	> * {
+		pointer-events: initial;
+	}
+
+	.animate & {
+		transition: transform 200ms, margin-top 200ms;
+	}
+
+	&.cs-selected {
+		// these !important declarations are necessary to over-ride
+		// the inline styles of when we position NON-selected codemarks
+		padding-top: 30px !important;
+		padding-bottom: 30px !important;
+		margin-top: 0 !important;
+		transform: translateY(0) !important;
+		z-index: 35;
+		max-height: 100vh;
+		min-height: 100vh;
+		overflow-y: auto;
+	}
+	&.cs-at-selection {
+		z-index: 35;
 	}
 }
 
 .codemark-container {
-	margin: 0 45px;
+	position: relative;
+	display: flex;
+	min-width: 200px;
+
+	.spatial-list & {
+		min-width: 290px;
+	}
+
+	.animate & {
+		transition: transform 0.2s;
+	}
 
 	.cs-hidden & {
 		background-color: var(--base-background-color);
-		position: absolute;
-		left: calc(~"100vw - 55px");
-	}
+		// when a codemark gets marked hidden, we transition it off-screen in 200ms
+		transition: transform 200ms, margin-top 200ms;
+		// position: absolute;
+		// z-index: 0;
 
-	.codemark {
-		transition: transform 0.2s, margin-top 0.2s;
+		// &,
+		// * {
+		// 	max-height: 100px;
+		// }
 	}
 }
 
 .codemark-form-container {
 	.card;
-	margin: 0 30px;
 	padding-bottom: 10px;
+	min-width: 200px;
+	z-index: 35;
 }
 
 .inline-panel {
@@ -44,7 +97,7 @@
 		bottom: 0px;
 		right: 0;
 		padding-right: 40px;
-		z-index: 55;
+		z-index: 45;
 		background: @app-background-color;
 		width: 100%;
 		padding-top: 3px;
@@ -117,7 +170,7 @@
 	width: 35px;
 	height: 25px;
 	white-space: nowrap;
-	z-index: 1;
+	z-index: 3; // needs to be above .plane-container
 	overflow: visible;
 	&:hover:not(.disabled),
 	&.open {
@@ -220,14 +273,14 @@
 	border-bottom: 1px dashed @base-border-color;
 }
 .compose.codemark-compose {
-	border-top: 1px solid @base-border-color !important;
+	// border-top: 1px solid @base-border-color !important;
 	box-sizing: border-box;
 	background: none !important;
 	// z-index: 50;
 	// padding: 30px 30px 30px 30px;
 	width: 100% !important;
-	padding: 10px !important;
-	margin: 0 !important;
+	padding: 0 10px !important;
+	margin: 10px 0 0 0 !important;
 	.message-input {
 		max-width: calc(~"100vw - 62px") !important;
 		// background: @app-background-color;

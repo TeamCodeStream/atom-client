@@ -1,6 +1,7 @@
 .editing-codemark-container {
 	.card;
 	padding-bottom: 10px;
+	width: 100%;
 }
 
 .codemark {
@@ -135,9 +136,16 @@
 		position: relative;
 		padding: 0 !important;
 		z-index: 1;
-		background: @app-background-color;
+		border: 1px solid @base-border-color;
+		background: @base-background-color;
+		height: auto;
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+		flex: auto;
+		width: 100%;
+		// overflow: hidden;
+
 		.assignees {
-			float: right;
+			// float: right;
 		}
 		.archived {
 			padding: 10px;
@@ -157,6 +165,9 @@
 		&.type-bookmark:not(.selected) .header {
 			margin-bottom: 0 !important;
 		}
+		.contents {
+			width: 100%;
+		}
 		.contents > .body {
 			display: flex;
 			flex-direction: column;
@@ -172,29 +183,29 @@
 		}
 		.description {
 			padding: 0 10px 0 10px;
+			p {
+				margin: 0;
+			}
 		}
 		&:hover .contents {
 			background: rgba(127, 127, 127, 0.05);
 		}
 
-		width: calc(~"100vw - 85px");
-		border: 1px solid @base-border-color;
-		background: @base-background-color;
-		height: auto;
-		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-		max-height: 90%;
-		overflow-y: auto;
+		&:not(.selected) {
+			cursor: pointer;
+		}
 
 		&.selected {
 			// transform: scale(1.05);
-			transform: translate(-20px, 0);
+			// transform: translate(-20px, 0);
 			z-index: 2;
 			// box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
 		}
 		&.cs-hidden {
-			transform: none;
+			// transform: none;
+
 			.contents {
-				visibility: hidden;
+				// visibility: hidden;
 			}
 			&.unpinned {
 				background: repeating-linear-gradient(
@@ -207,31 +218,46 @@
 			}
 		}
 		.postslist {
-			max-height: 200px;
-			overflow: auto;
+			// max-height: 200px;
+			// overflow: auto;
 		}
 		.date-separator {
 			display: none;
-		}
-		.post {
-			border-top: 1px solid @base-border-color;
 		}
 		.contents > .body {
 			white-space: normal;
 			text-overflow: initial;
 			overflow-x: auto;
 			padding: 10px 10px 10px 10px !important;
+			.code.prettyprint {
+				margin: 0;
+			}
 		}
 		.contents > .body > .title > p {
 			margin: 0;
+		}
+		.codemark-details {
+			margin-top: -10px;
 		}
 		.contents > .body,
 		.codemark-details {
 			.post {
 				padding: 10px;
+				min-height: 36px;
+				.body {
+					padding: 0 0 0 23px;
+				}
 
 				&.reply .author {
 					cursor: unset;
+				}
+				&:hover {
+					.gear {
+						visibility: visible;
+					}
+				}
+				.gear {
+					visibility: hidden;
 				}
 			}
 
@@ -264,45 +290,47 @@
 			.headshot {
 				display: inline-block;
 				position: relative;
-				width: 18px;
-				height: 18px;
+				width: 16px;
+				height: 16px;
 				margin-right: 7px;
 				vertical-align: -4px;
 				left: 0;
 			}
 			.headshot-image {
 				position: absolute;
-				width: 18px;
-				height: 18px;
+				width: 16px;
+				height: 16px;
 				border-radius: 3px;
 				z-index: 2;
 				left: 0;
 			}
 			.headshot-gravatar {
 				position: absolute;
-				width: 18px;
-				height: 18px;
+				width: 16px;
+				height: 16px;
 				border-radius: 3px;
 				z-index: 2;
 				left: 0;
+				overflow: hidden;
 			}
 			.headshot-initials {
 				position: absolute;
-				width: 18px;
-				height: 18px;
+				width: 16px;
+				height: 16px;
 				border-radius: 3px;
 				text-align: center;
-				font-size: 11px;
+				font-size: 10px;
+				font-weight: normal;
 				text-transform: capitalize;
-				padding-top: 1px;
+				padding-top: 0px;
 				z-index: 1;
 				color: @app-background-color;
 				left: 0;
 			}
 			.headshot-system {
 				position: absolute;
-				width: 18px;
-				height: 18px;
+				width: 16px;
+				height: 16px;
 				border-radius: 3px;
 				z-index: 2;
 				left: 0;
@@ -311,16 +339,18 @@
 		.kebab-vertical {
 			opacity: 0.5;
 			margin-left: 2px;
+			padding: 0 5px;
+			margin-right: -5px;
 		}
 	}
 	.replies {
-		margin-top: 1px;
+		// margin-top: 1px;
 	}
 	.post-details {
 		padding: 5px 10px 10px 10px;
 	}
 	.code {
-		margin: 0 10px !important;
+		margin: 5px 0 !important;
 	}
 	a {
 		text-decoration: none;
@@ -328,16 +358,26 @@
 			text-decoration: underline;
 		}
 	}
-	.resolve-button {
+	.resolve-button,
+	.codemark-actions-button {
 		border: 1px solid @base-border-color;
 		padding: 2px 10px;
-		float: right;
+		// float: right;
 		margin: -3px 5px 0 5px;
+		cursor: pointer;
 		&:hover {
-			background: @base-background-color;
+			color: @text-color-highlight;
+			// background: @base-background-color;
+
+			color: var(--button-text-color);
+			background: var(--button-background-color);
+			border: 1px solid var(--button-background-color);
 		}
 	}
-	.icon.info {
+	.codemark-actions-button {
+		margin: 0 0 0 10px;
+	}
+	.info-wrapper {
 		opacity: 0.5;
 		position: absolute;
 		right: 5px;
@@ -353,22 +393,30 @@
 			.type-icon {
 				margin-left: -23px;
 			}
+			p {
+				margin: 0;
+				display: inline;
+				padding-left: 5px;
+			}
 		}
 	}
 	.pinned-replies {
-		margin-bottom: 10px;
+		margin-top: 10px;
 	}
 	.pinned-reply {
 		// padding: 10px 10px 3px 10px;
 		// margin: 10px -10px 0 -10px;
 		// width: calc(100% + 30px);
 		// border-top: 1px solid @base-border-color;
-		padding-top: 10px;
+		margin: 0 0 5px 0;
 		.pinned-reply-body {
 			opacity: 0.5;
 			// see COMPUTATION below
 			padding-left: 49px;
 			margin-top: -18px;
+		}
+		.title p {
+			margin: 0;
 		}
 	}
 	&.type-bookmark:not(.selected) {
@@ -377,37 +425,87 @@
 		}
 	}
 	.post + .post {
-		border-top: 1px solid @base-border-color;
+		// border-top: 1px solid @base-border-color;
+		border: none;
 	}
 	.detail-icons {
-		margin-top: 5px;
+		margin-top: 10px;
 		color: @text-color;
 		.detail-icon {
-			opacity: 0.25;
+			opacity: 0.4;
 			padding-right: 10px;
+			cursor: pointer;
+			user-select: none;
 			&:hover {
-				opacity: 0.75;
+				opacity: 1;
 			}
 			.icon {
 				color: @text-color;
 			}
 		}
+		.tag {
+			// margin-top: 2px;
+			cursor: pointer;
+			margin-bottom: 0;
+			&:last-of-type {
+				margin-right: 10px;
+			}
+			&:hover {
+				box-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
+			}
+		}
+		.headshot {
+			cursor: pointer;
+			border-radius: 3px;
+			&:hover {
+				box-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
+			}
+		}
+		.assignees {
+			padding-right: 5px;
+		}
 	}
+}
+.related-row {
+	display: flex;
+	.related {
+		flex-grow: 1;
+		margin-bottom: 0;
+	}
+	// this should match the margin-bottom of .related
+	margin-bottom: 20px;
+}
+.related {
+	margin: 20px 0;
+}
+.related-label,
+.posts-header {
+	text-transform: uppercase;
+	font-weight: 800;
+	opacity: 0.5;
+	font-size: 11px;
+	margin-bottom: 3px;
+}
+.posts-header {
+	margin: 10px 0 -7px 10px;
 }
 .icon.pinned-reply-star {
 	opacity: 0.6;
 	margin: 0 6px 0 2px;
 }
-.no-codemarks {
-	width: 100%;
+.no-codemarks-container {
 	position: fixed;
-	padding: 0 40px 0 40px;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 0;
+}
+.no-codemarks {
+	width: 20em;
+	margin: 0 auto;
 	color: @text-color-subtle;
 	text-align: center;
 	font-size: 13px;
-	z-index: 0;
-	top: 50%;
-	transform: translateY(-50%);
 	.keybindings {
 		background-color: @base-background-color;
 		padding: 10px;
@@ -423,6 +521,9 @@
 			.keybinding {
 			}
 		}
+	}
+	a {
+		white-space: nowrap;
 	}
 }
 
@@ -449,6 +550,7 @@
 	width: 100%;
 	display: flex;
 	overflow: hidden;
+	margin-top: -2px;
 
 	.progress-bar {
 		background-color: transparent;
@@ -475,5 +577,57 @@
 	}
 	to {
 		transform: translateX(200%);
+	}
+}
+.related-codemark {
+	margin: 0 0 5px 0;
+	cursor: pointer;
+	&:hover {
+		color: var(--text-color-info);
+	}
+	&.resolved {
+		text-decoration: line-through;
+	}
+}
+.external-link {
+	color: @text-color;
+	overflow: hidden;
+	white-space: nowrap;
+	display: block;
+	text-overflow: ellipsis;
+
+	&:hover {
+		color: @text-color-info;
+		text-decoration: none !important;
+	}
+	.icon {
+		margin-right: 5px;
+	}
+}
+.codemark-file,
+.external-url {
+	padding-left: 5px;
+	opacity: 0.5;
+}
+.menu-selected {
+	color: @text-color-info;
+	font-weight: bold;
+}
+
+.codemark-view {
+	z-index: 51;
+	position: absolute;
+	padding: 30px 45px;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	overflow: auto;
+
+	// this is the X cancel button
+	.align-right-button {
+		position: absolute !important;
+		right: 20px;
+		top: 40px;
 	}
 }

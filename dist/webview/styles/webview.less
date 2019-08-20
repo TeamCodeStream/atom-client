@@ -5,6 +5,7 @@
 @app-background-color-darker: darken(@app-background-color, 2%);
 @app-background-color-hover: lighten(@app-background-color, 3%);
 @text-color-subtle-extra: lighten(@text-color-subtle, 50%);
+@text-focus-border-color: fade(@background-color-info, 60%);
 @background-color: @base-background-color;
 @background-color-umi: @background-color-info;
 @background-color-highlight-light: lighten(@background-color-highlight, 10%);
@@ -32,10 +33,10 @@ body {
 	--text-color-subtle-extra: lighten(@text-color-subtle, 50%);
 	--text-color-info: @text-color-info;
 	--text-color-info-muted: var(--text-color-subtle-extra);
-
+	--text-focus-border-color: @text-focus-border-color;
 	--app-background-color: @app-background-color;
 	--app-background-color-darker: @app-background-color-darker;
-	--app-background-color-hover: lighten(@background-color, 3%);
+	--app-background-color-hover: @app-background-color-hover;
 	--base-background-color: @base-background-color;
 
 	--border-color: @base-border-color;

@@ -1,0 +1,117 @@
+.tag-choice-box {
+	display: inline-block;
+	// width: 15px;
+	// height: 15px;
+	margin-right: 2px;
+	padding: 1px 2px;
+	cursor: pointer;
+	user-select: none;
+	// opacity: 0.5;
+
+	&.selected {
+		outline: 1px solid @base-border-color;
+		// Dave is blind
+		background: @base-border-color;
+	}
+
+	// &:hover {
+	// 	background: @base-border-color;
+	// 	outline: 1px solid @base-border-color;
+	// }
+}
+.tag-menu-block {
+	width: 125px;
+	min-height: 15px;
+	display: block;
+	float: left;
+	border-radius: 3px;
+	padding: 1px 30px 1px 5px;
+	// margin-right: 1px;
+	border: 2px solid transparent;
+	color: white;
+	// text-shadow: 0 0 1px rgba(0, 0, 0, 1);
+	font-weight: bold;
+	user-select: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	position: relative;
+	&.wide {
+		padding: 1px 5px 1px 5px;
+	}
+	&:hover {
+		border: 2px solid white;
+	}
+	.check {
+		position: absolute !important;
+		right: 5px;
+		top: 1px;
+		// float: right;
+		// margin: 0 3px 0 5px;
+		color: white;
+	}
+}
+.tag-edit-block {
+	width: auto;
+	height: 30px;
+	border-radius: 3px;
+	display: grid;
+	font-size: 10px;
+	user-select: none;
+	position: relative;
+	&:hover {
+		border: 2px solid rgba(255, 255, 255, 0.75);
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+	}
+	.check,
+	div {
+		place-self: center;
+		color: white;
+		// text-shadow: 0 0 1px rgba(0, 0, 0, 1);
+		font-weight: bold;
+	}
+}
+.custom-tag-edit-block {
+	border: none;
+	outline: 0;
+	width: auto;
+	height: 30px;
+	margin: 0;
+	user-select: none;
+}
+.tag-menu-selector {
+	display: inline-block;
+	margin: -5px 0 -5px 0;
+	user-select: none;
+	.edit {
+		margin-top: -4px;
+		display: inline-block;
+		transform: scale(0.75);
+		border-radius: 3px;
+		padding: 7px 10px;
+		opacity: 0.75;
+		&:hover {
+			opacity: 1;
+			color: @text-color-highlight;
+			background: rgba(127, 127, 127, 0.4);
+		}
+	}
+}
+.tag {
+	margin: 0 5px 5px 0;
+	min-width: 16px;
+	height: 16px;
+	font-size: 10px;
+	display: inline-grid;
+	border-radius: 3px;
+	width: auto;
+	// float: left;
+	user-select: none;
+	div {
+		width: auto;
+		place-self: center;
+		color: white;
+		padding: 0 2px;
+		font-weight: bold;
+		// text-shadow: 0 0 1px rgba(0, 0, 0, 1);
+	}
+}

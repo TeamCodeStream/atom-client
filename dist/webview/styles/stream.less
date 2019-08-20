@@ -15,6 +15,28 @@
 .emoji-mart {
 	max-width: 95%;
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	input[type="search"] {
+		font-family: var(--font-family);
+		font-size: 15px;
+		padding: 4px 8px;
+		opacity: 0.6;
+		background-color: @app-background-color;
+		color: @text-color;
+		border-radius: 0;
+		border: 1px solid @base-border-color;
+		margin: 5px 0 10px 0;
+
+		:focus {
+			opacity: 1;
+			color: @text-color-highlight;
+		}
+	}
+	.emoji-mart-search-icon {
+		display: none;
+	}
+	.emoji-mart-anchor-bar {
+		background-color: @text-color-info !important;
+	}
 }
 .emoji-mart-category .emoji-mart-emoji:hover:before {
 	background-color: @background-color-highlight;
@@ -236,7 +258,6 @@
 			z-index: 100000;
 			pointer-events: unset;
 		}
-		#thread-blanket,
 		#panel-blanket {
 			width: 100%;
 			height: 100%;
@@ -529,9 +550,10 @@
 		}
 		.a-group {
 			float: right;
-			a {
+			.codemark-actions-button {
 				display: inline-block;
-				margin: 0 8px !important;
+				text-align: center;
+				margin: 0 5px !important;
 				&:first-child {
 					margin-left: 0 !important;
 				}
@@ -587,28 +609,6 @@
 				bottom: 20px;
 				left: 20px;
 				opacity: 0.5;
-			}
-
-			.smiley,
-			.plus {
-				position: absolute;
-				opacity: 0.4;
-				cursor: pointer;
-				transition: transform 0.1s;
-			}
-
-			.smiley {
-				right: 10px;
-				bottom: 5px;
-			}
-
-			.smiley:hover,
-			.smiley.hover,
-			.plus:hover,
-			.plus.hover {
-				opacity: 1;
-				color: @text-color-info;
-				transform: scale(1.4);
 			}
 
 			.plus {
@@ -721,7 +721,7 @@
 			// padding: 30px 30px 30px 30px;
 			padding: 0 !important;
 			.message-input {
-				min-height: 100px;
+				min-height: 75px;
 				max-width: calc(~"100vw - 62px") !important;
 				// background: @app-background-color;
 				outline: 1px solid @base-border-color !important;
@@ -730,9 +730,6 @@
 			input {
 				outline: 1px solid @base-border-color;
 				background: rgba(0, 0, 0, 0.1) !important;
-			}
-			.google-style .message-input {
-				min-height: 50px;
 			}
 			.plus {
 				display: none;
@@ -782,9 +779,15 @@
 			border: 1px solid @base-border-color;
 			resize: none;
 			// height: 20px;
+			min-height: 75px;
 			max-height: 300px;
 			max-width: calc(~"100vw - 10px") !important;
 			overflow: auto;
+			&.format-code {
+				white-space: pre;
+				font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
+				font-size: 12px;
+			}
 		}
 		.message-input:empty {
 			white-space: nowrap;
@@ -838,7 +841,6 @@
 		.code,
 		code,
 		pre code {
-			max-width: 100%;
 			max-height: 200px;
 			white-space: pre;
 			font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
@@ -904,7 +906,6 @@
 			width: 100%;
 			// height: 500px;
 			position: absolute;
-			bottom: 5px;
 			right: 0px;
 			z-index: 50;
 			padding: 0;
@@ -912,6 +913,21 @@
 			user-select: none;
 			cursor: pointer;
 			border-radius: 5px;
+			top: 80%;
+			// max-height: 50vh;
+
+			.icon.close {
+				position: absolute;
+				right: 5px;
+				top: 8px;
+				padding: 3px 6px 0px 6px;
+				display: block;
+				border-radius: 3px;
+				font-size: 15px;
+				&:hover {
+					background: rgba(127, 127, 127, 0.4);
+				}
+			}
 
 			.body {
 				width: 100%;
@@ -924,39 +940,36 @@
 				// background: #eee;
 				background: @base-background-color;
 			}
-			.instructions {
+			.matches {
 				font-size: 11px;
 				padding: 10px;
 				border-radius: 5px 5px 0 0;
 				opacity: 0.5;
-				background: #eee;
-				background: @base-background-color;
 			}
-			table {
-				// temporarily not displayed for aesthetic reasons
-				display: none;
+			.instructions {
+				display: flex;
+				padding: 10px;
 				font-size: 11px;
-				width: 100%;
-				border-collapse: collapse;
-				border-spacing: 0;
 				opacity: 0.5;
-				td:nth-child(2) {
-					text-align: center;
-				}
-				td:last-child {
-					text-align: right;
+				div {
+					flex-grow: 1;
+					&:nth-of-type(2) {
+						text-align: middle;
+					}
+					&:nth-of-type(3) {
+						text-align: right;
+					}
 				}
 			}
 			ul {
-				max-height: 80vh;
-				overflow-y: auto;
 				// border-bottom: 1px solid @base-border-color;
 				border-top: 1px solid @base-border-color;
+				border-bottom: 1px solid @base-border-color;
 				// background: #fff;
 				background: @base-background-color;
 				padding: 5px 0;
 				border-radius: 0 0 5px 5px;
-				max-height: 60vh;
+				max-height: 40vh;
 				overflow-y: auto;
 			}
 			li {
@@ -1058,7 +1071,8 @@
 			user-select: none;
 			cursor: pointer;
 			border-radius: 5px;
-			max-width: 95%;
+			max-width: 75vw;
+			// overflow-x: hidden;
 
 			.menu-popup-body {
 				width: 100%;
@@ -1067,6 +1081,23 @@
 				border-radius: 5px;
 				border: 1px solid @base-border-color;
 				background: @base-background-color;
+				h3 {
+					margin: 0;
+					// text-align: center;
+					position: relative;
+					padding: 10px 40px 3px 10px;
+					.icon {
+						position: absolute;
+						right: 5px;
+						top: 8px;
+						padding: 3px 6px 0px 6px;
+						display: block;
+						border-radius: 3px;
+						&:hover {
+							background: rgba(127, 127, 127, 0.4);
+						}
+					}
+				}
 			}
 			.menu-popup-submenu {
 				position: absolute;
@@ -1082,14 +1113,14 @@
 			ul {
 				// border-top: 1px solid @base-border-color;
 				margin: 5px 0;
-				border-radius: 0 5px 5px 0;
-				max-height: 95vh;
+				// border-radius: 0 5px 5px 0;
+				max-height: 90vh;
 				overflow: auto;
 			}
 			li.menu-item {
 				padding: 5px 10px;
 				white-space: nowrap;
-				overflow: hidden;
+				overflow-x: hidden;
 				text-overflow: ellipsis;
 				.headshot-image,
 				.headshot-gravatar {
@@ -1577,6 +1608,19 @@
 			}
 		}
 
+		.button-row {
+			display: flex;
+			button {
+				flex: 1;
+				margin: 0 5px;
+				&:first-child {
+					margin-left: 0;
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
 		// .post.unread {
 		// 	border-left: 1px solid @background-color-info;
 		// 	border-right: 1px solid @background-color-info;
@@ -1980,7 +2024,7 @@
 			.reactions {
 				display: none;
 			}
-			min-height: 40px;
+			// min-height: 40px;
 			padding-left: 38px;
 			min-height: 25px;
 			padding: 4px 15px 4px 32px;
@@ -1993,54 +2037,52 @@
 				float: left;
 			}
 		}
-		.post {
-			.status-button {
-				// float: right;
-				display: inline-block;
-				// border: 2px solid green;
-				border-radius: 3px;
-				width: 14px;
-				height: 14px;
-				text-align: center;
-				border: 2px solid @text-color;
+		.status-button {
+			// float: right;
+			display: inline-block;
+			// border: 2px solid green;
+			border-radius: 3px;
+			width: 14px;
+			height: 14px;
+			text-align: center;
+			border: 2px solid @text-color;
+			opacity: 1;
+			margin-top: 2px;
+			cursor: pointer;
+			.check {
 				opacity: 1;
-				margin-top: 2px;
-				cursor: pointer;
+				transform: scale(0.01);
+				transition: transform 0.3s;
+				display: inline-block;
+				top: -2px !important;
+				color: @text-color !important;
+				visibility: hidden;
+			}
+			&.checked {
 				.check {
-					opacity: 1;
-					transform: scale(0.01);
-					transition: transform 0.3s;
-					display: inline-block;
-					top: -2px !important;
-					color: @text-color !important;
-					visibility: hidden;
+					visibility: visible;
 				}
-				&.checked {
-					.check {
-						visibility: visible;
-					}
-					background-color: @text-color;
-					border: none;
-					vertical-align: 2px !important;
-					.check {
-						// opacity: 0.6;
-						transform: scale(1);
-						transform: scale(0.85);
-						color: @app-background-color !important;
-					}
+				background-color: @text-color;
+				border: none;
+				vertical-align: 2px !important;
+				.check {
+					// opacity: 0.6;
+					transform: scale(1);
+					transform: scale(0.85);
+					color: @app-background-color !important;
 				}
+			}
+		}
+		.status-label {
+			vertical-align: 4px;
+		}
+		.status:hover {
+			cursor: pointer;
+			.status-button:not(.checked) {
+				border: 2px solid @text-color-info;
 			}
 			.status-label {
-				vertical-align: 4px;
-			}
-			.status:hover {
-				cursor: pointer;
-				.status-button:not(.checked) {
-					border: 2px solid @text-color-info;
-				}
-				.status-label {
-					color: @text-color-info;
-				}
+				color: @text-color-info;
 			}
 		}
 
@@ -2280,81 +2322,9 @@
 		color: @text-color;
 		background: @background-color-highlight !important;
 	}
-	.react-select__control {
-		border: 1px solid @base-border-color;
-		background-color: @app-background-color;
-		margin: 0;
-		font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
-		font-size: 1.15em;
-		color: @text-color;
-		min-height: 20px;
-		padding-left: 4px;
-	}
-	.react-select__control-is-focused {
-		box-shadow: none;
-		border: 2px solid @background-color-info;
-		.react-select__multi-value__label {
-			opacity: 1;
-			color: @text-color-highlight;
-		}
-	}
-	.react-select__input {
-		font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
-		font-size: 1.15em;
-		font-size: 0.9em;
-		color: @text-color;
-		// padding: 4px 8px;
-		opacity: 0.6;
-	}
-	.react-select__input:focus {
-		opacity: 1;
+	button.delete {
 		color: @text-color-highlight;
-	}
-	.react-select__multi-value,
-	.react-select__single-value {
-		font-size: 0.9em;
-		background: @background-color-highlight;
-	}
-	.react-select__value-container {
-		padding: 0 5px;
-	}
-	.react-select__multi-value__label,
-	.react-select__single-value {
-		color: @text-color;
-	}
-	.react-select__multi-value__remove:hover {
 		background: @background-color-error;
-		color: white;
-	}
-	.react-select__menu {
-		z-index: 2;
-	}
-	.react-select__menu-list {
-		background: @base-background-color;
-		border-radius: 3px;
-	}
-	.react-select__option {
-		padding: 5px 10px;
-		cursor: pointer;
-	}
-	.react-select__option:hover {
-		background: @background-color-info;
-		color: white;
-	}
-	.react-select__option--is-focused {
-		background: inherit;
-		color: inherit;
-	}
-	.react-select.input-text {
-		padding: 0;
-	}
-	.react-select__dropdown-indicator {
-		opacity: 0.6;
-		padding: 6px;
-	}
-	.react-select__indicator-separator {
-		opacity: 0.5;
-		margin: 8px 0;
 	}
 
 	.invite-panel .standard-form,
@@ -2482,6 +2452,7 @@
 			}
 		}
 		.checkbox-row {
+			margin-top: 10px;
 			user-select: none;
 			color: @text-color-subtle;
 			.service {
@@ -2911,6 +2882,7 @@
 		vertical-align: 1px;
 		text-align: center;
 		min-width: 1.5em;
+		user-select: none;
 		&.extra-pad {
 			padding: 1px 5px;
 		}

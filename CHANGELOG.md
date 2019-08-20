@@ -1,5 +1,25 @@
 # Change Log
 
+## [2.1.0] - 2019-8-20
+
+### Added
+
+- Adds more robust tagging functionality, allowing you to create tags with any color / text label combination
+- Adds the ability to link parts of your codebase by adding "related" codemarks to a parent codemark, and then using the links to jump around the codebases
+
+### Changed
+
+- Improved display of collapsed codemarks to make it easy to see tags, assignees, linked issues (i.e., on an external service like Jira), and the presence of replies or related codemarks
+- All new cleaner display of expanded codemarks, with replies now displayed in descending order (i.e., most recent first)
+- Consistent display of codemarks across all areas of CodeStream
+- Smoother scrolling of codemarks in the CodeStream pane
+
+### Fixed
+
+- Fixes an issue with the positioning of the codemark form when creating a codemark at the bottom of the viewport
+- Fixes an issue with not being able to change issue-tracking selection once Azure DevOps has been selected
+- Fixes an issue with password reset in CodeStream on-prem
+
 ## [2.0.0] - 2019-8-1
 
 ### Added

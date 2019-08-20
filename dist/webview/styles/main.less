@@ -30,6 +30,32 @@ a {
 }
 
 @import (inline) "../node_modules/rc-tooltip/assets/bootstrap.css";
+
+.rc-tooltip-inner {
+	background-color: var(--base-border-color);
+	color: var(--text-color);
+}
+.rc-tooltip-placement-top .rc-tooltip-arrow,
+.rc-tooltip-placement-topLeft .rc-tooltip-arrow,
+.rc-tooltip-placement-topRight .rc-tooltip-arrow {
+	border-top-color: var(--base-border-color);
+}
+.rc-tooltip-placement-right .rc-tooltip-arrow,
+.rc-tooltip-placement-rightTop .rc-tooltip-arrow,
+.rc-tooltip-placement-rightBottom .rc-tooltip-arrow {
+	border-right-color: var(--base-border-color);
+}
+.rc-tooltip-placement-left .rc-tooltip-arrow,
+.rc-tooltip-placement-leftTop .rc-tooltip-arrow,
+.rc-tooltip-placement-leftBottom .rc-tooltip-arrow {
+	border-left-color: var(--base-border-color);
+}
+.rc-tooltip-placement-bottom .rc-tooltip-arrow,
+.rc-tooltip-placement-bottomLeft .rc-tooltip-arrow,
+.rc-tooltip-placement-bottomRight .rc-tooltip-arrow {
+	border-bottom-color: var(--base-border-color);
+}
+
 @import (inline) "../node_modules/emoji-mart/css/emoji-mart.css";
 
 @import "syntax-highlighting.less";
@@ -43,6 +69,8 @@ a {
 @import "./color";
 @import "./spinner";
 @import "./feedback";
+@import "./inline";
+@import "./tags";
 
 body.preload * {
 	animation-duration: 0s !important;
@@ -55,12 +83,14 @@ body.preload * {
 	}
 	button.cancel {
 		background-color: @background-color-highlight-light !important;
+
 		.vscode-dark& {
 			background-color: @background-color-highlight-dark !important;
 		}
 	}
 
 	input[type="text"],
+	input[type="number"],
 	input[type="password"] {
 		outline: none;
 		border: none;
@@ -70,18 +100,23 @@ body.preload * {
 		opacity: 1 !important;
 		color: @text-color !important;
 		background-color: @background-color-highlight-light;
+
 		.vscode-dark& {
 			background-color: @background-color-highlight-dark;
 		}
-	}
 
-	input[type="text"]:focus,
-	input[type="password"]:focus {
-		outline: 1px solid #99caeb;
-		.vscode-dark& {
-			outline: 1px solid #205376;
+		&:focus {
+			outline: 1px solid @text-focus-border-color;
+		}
+
+		&::placeholder {
+			font-size: 13px !important;
+			font-family: inherit !important;
+			opacity: 0.5 !important;
+			color: @text-color !important;
 		}
 	}
+
 	input[type="radio"] {
 		outline: none;
 	}
@@ -164,13 +199,12 @@ body.preload * {
 			border-bottom: none;
 		}
 		.channel-list,
-		.knowledge-panel,
 		.invite-panel {
 			.section {
 				padding: 0 0 0 0;
 				font-size: 13px;
 				color: var(--panel-section-foreground-color);
-				.header {
+				> .header {
 					font-size: 11px;
 					font-weight: bold;
 					// background: @background-color-highlight;
@@ -224,9 +258,6 @@ body.preload * {
 				}
 			}
 		}
-		.mentions-popup {
-			// bottom: 40px;
-		}
 		.new-messages-below {
 			&:hover {
 				.vscode-dark& {
@@ -250,22 +281,19 @@ body.preload * {
 			}
 		}
 
-		.message-input:focus {
-			outline: 1px solid #99caeb !important;
-			.vscode-dark& {
-				outline: 1px solid #205376 !important;
-			}
-		}
-
 		.message-input {
 			border-radius: 0 !important;
 			border: none !important;
 			// the 26px is to make room for the smiley and plus icons
-			padding: 5px 26px 5px 6px !important;
-		}
+			padding: 5px 6px 26px 6px !important;
 
-		.message-input.has-plus {
-			padding: 5px 26px 5px 36px !important;
+			&:focus {
+				outline: 1px solid @text-focus-border-color !important;
+			}
+
+			&.has-plus {
+				padding: 5px 26px 5px 36px !important;
+			}
 		}
 
 		.code::-webkit-scrollbar-corner {
@@ -356,51 +384,58 @@ body.preload * {
 			text-decoration-skip: ink;
 		}
 	}
+
 	.react-select__control {
 		border: 1px solid @base-border-color;
 		background-color: rgba(0, 0, 0, 0.1);
+		color: @text-color;
 		margin: 0;
 		font-family: inherit;
 		font-size: 13px;
-		min-height: 10px;
+		min-height: 29px;
 		border-radius: 0;
+
 		&:hover {
 			border: 1px solid @base-border-color;
 		}
+
 		&:focus {
-			border: 1px solid #99caeb !important;
-			.vscode-dark& {
-				border: 1px solid #205376 !important;
-			}
+			outline: 1px solid @text-focus-border-color !important;
 		}
 	}
-	.react-select__control-is-focused {
+
+	.react-select__control--is-focused {
 		box-shadow: none;
-		border: 1px solid #205376;
-		.react-select__multi-value__label {
-			color: @text-color-highlight;
-		}
+		border: 1px solid @text-focus-border-color !important;
 	}
+
 	.react-select__input {
 		font-family: inherit;
-		font-size: 0.9em;
-		opacity: 0.6;
+		font-size: 13px;
+		color: @text-color;
+
 		input {
 			padding: 0 !important;
+			outline: none !important;
 		}
 	}
-	.react-select__input:focus {
-		opacity: 1;
-		color: @text-color-highlight;
+
+	.react-select__single-value {
+		color: var(--text-color);
+		font-size: 13px;
+		background: @background-color-highlight;
+		margin-top: 0;
+		margin-bottom: 0;
 	}
+
 	.react-select__multi-value {
-		font-size: 0.9em;
+		font-size: 13px;
 		background: @background-color-highlight;
 		margin-top: 0;
 		margin-bottom: 0;
 	}
 	.react-select__value-container {
-		padding: 0 0px;
+		padding: 0 5px;
 	}
 	.react-select__multi-value__label {
 		color: @text-color;
@@ -409,12 +444,13 @@ body.preload * {
 		background: @background-color-error;
 		color: white;
 	}
+
 	.react-select__menu {
 		z-index: 2;
 	}
 	.react-select__menu-list {
 		background: @base-background-color;
-		border-radius: 0px;
+		border-radius: 3px;
 	}
 	.react-select__option {
 		padding: 5px 10px;
@@ -432,12 +468,22 @@ body.preload * {
 		padding: 0;
 	}
 	.react-select__dropdown-indicator {
+		color: @text-color !important;
 		opacity: 0.6;
 		padding: 0 6px;
 	}
+
 	.react-select__indicator-separator {
-		opacity: 0.5;
+		background-color: @text-color !important;
+		opacity: 0.25;
 		margin: 4px 0;
+	}
+
+	.react-select__placeholder {
+		font-size: 13px !important;
+		font-family: inherit !important;
+		opacity: 0.5 !important;
+		color: @text-color !important;
 	}
 
 	.scrollbox.off-top:before {
@@ -584,15 +630,15 @@ body.preload * {
 		height: inherit;
 		border-radius: 1em;
 		border: 2px solid;
-		-webkit-animation: spinner-animation @spinner-duration infinite;
-		-webkit-animation-fill-mode: backwards;
+		animation: spinner-animation @spinner-duration infinite;
+		animation-fill-mode: backwards;
 	}
 	&::before {
 		border-color: @background-color-info transparent transparent transparent;
 	}
 	&::after {
 		border-color: transparent lighten(@background-color-info, 15%) transparent transparent;
-		-webkit-animation-delay: @spinner-duration / 2;
+		animation-delay: @spinner-duration / 2;
 	}
 
 	&.inline-block {
@@ -600,14 +646,14 @@ body.preload * {
 	}
 }
 
-@-webkit-keyframes spinner-animation {
+@keyframes spinner-animation {
 	0% {
 		transform: rotateZ(0deg);
-		-webkit-animation-timing-function: cubic-bezier(0, 0, 0.8, 0.2);
+		animation-timing-function: cubic-bezier(0, 0, 0.8, 0.2);
 	}
 	50% {
 		transform: rotateZ(180deg);
-		-webkit-animation-timing-function: cubic-bezier(0.2, 0.8, 1, 1);
+		animation-timing-function: cubic-bezier(0.2, 0.8, 1, 1);
 	}
 	100% {
 		transform: rotateZ(360deg);

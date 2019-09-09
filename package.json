@@ -20,6 +20,10 @@
 	"deserializers": {
 		"codestream/CodestreamView": "deserializeCodestreamView"
 	},
+	"uriHandler": {
+		"method": "handleURI",
+		"deferActivation": false
+	},
 	"providedServices": {
 		"codestream-info": {
 			"description": "Provides environment config info",

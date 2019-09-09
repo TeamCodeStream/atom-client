@@ -1,5 +1,18 @@
 # Change Log
 
+## [2.1.2] - 2019-9-9
+
+### Added
+
+- Addresses [#79](]https://github.com/TeamCodeStream/CodeStream/issues/79) &mdash; Adds branch info to codemark display when there's a diff
+- Adds the ability to inject a codemark as an inline comment
+
+### Fixed
+
+- Fixes a rate limiting issue experienced by certain teams authenticating with Microsoft Teams
+- Fixes an issue where replies to a codemark in a Slack-connected team would briefly appear twice
+- Fixes an issue where there was no confirmation message when adding a user to a channel via slash command
+
 ## [2.1.0] - 2019-8-20
 
 ### Added

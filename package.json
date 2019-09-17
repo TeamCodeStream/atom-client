@@ -15,7 +15,7 @@
 	"repository": "https://github.com/TeamCodeStream/atom-client",
 	"license": "",
 	"engines": {
-		"atom": ">=1.34.0 <2.0.0"
+		"atom": ">=1.40.0 <2.0.0"
 	},
 	"deserializers": {
 		"codestream/CodestreamView": "deserializeCodestreamView"
@@ -51,6 +51,11 @@
 		}
 	},
 	"configSchema": {
+		"serverUrl": {
+			"type": "string",
+			"default": "https://api.codestream.com",
+			"description": "Specifies the url to use to connect to the CodeStream service"
+		},
 		"team": {
 			"type": "string",
 			"default": "",

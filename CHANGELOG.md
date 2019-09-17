@@ -1,5 +1,23 @@
 # Change Log
 
+## [3.0.0] - 2019-9-17
+
+### Added
+
+- Adds a "Copy link" menu option for all codemarks so that they can be shared anywhere at any time
+- Adds new web-based codemark pages to display codemarks shared via link
+- Adds options to codemarks shared on Slack to open a codemark on the web, in your IDE or, in the case of issues, on the issue-tracking service
+- When opening a codemark in your IDE from Slack or the web, if you don't happen to have the given repo open, CodeStream will still open the file for you automatically if you've ever opened that repo while signed into CodeStream. If not, we'll prompt you to open the repo, and we'll remember the location so you don't have to do that again.
+- Adds a team switcher under the ellipses menu to switch between all of your CodeStream teams
+- For on-prem installations, adds a check to make sure that the version of the API server running is compatible with the extension
+
+### Fixed
+
+- Fixes a rate limiting issue experienced by certain teams authenticating with Microsoft Teams
+- Fixes an issue with deleting replies to a codemark
+- Fixes an issue with syncing with YouTrack after authenticating
+- Fixes an issue where a codemark created against unsaved code would not appear immediately
+
 ## [2.1.2] - 2019-9-9
 
 ### Added

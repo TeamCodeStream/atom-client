@@ -1,5 +1,24 @@
 # Change Log
 
+## [3.0.1] - 2019-9-20
+
+### Added
+
+- Adds options to codemarks shared on Microsoft Teams to open a codemark on the web, in your IDE or, in the case of issues, on the issue-tracking service
+- Adds new tophat to display of codemarks when the referenced code has been deleted
+
+### Changed
+
+- The bookmark codemark type has been removed, to be brought back at a future date
+
+### Fixed
+
+- Fixes [#117](]https://github.com/TeamCodeStream/CodeStream/issues/117) &mdash; Deleting codemark from Search tab causes unexpected error
+- Fixes [#116](]https://github.com/TeamCodeStream/CodeStream/issues/116) &mdash; Creating codemark takes you out of List view
+- Fixes [#115](]https://github.com/TeamCodeStream/CodeStream/issues/115) &mdash; Tab then enter discards codemark
+- Fixes an issue with incorrect range being selected when code highlighted from the bottom up, and context menu used to create codemark
+- Fixes an issue with permalinks being displayed on the Search tab
+
 ## [3.0.0] - 2019-9-17
 
 ### Added

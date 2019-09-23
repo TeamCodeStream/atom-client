@@ -559,6 +559,11 @@ body.preload * {
 	&:hover {
 		background: var(--button-background-color-hover);
 	}
+	&:focus {
+		// border: 1px solid black !important;
+		outline: 1px solid var(--button-background-color-hover) !important;
+		outline-offset: 2px;
+	}
 }
 
 .popup-button {

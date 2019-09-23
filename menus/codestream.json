@@ -11,10 +11,6 @@
 				"command": "codestream:context-create-issue"
 			},
 			{
-				"label": "Create Bookmark",
-				"command": "codestream:context-create-bookmark"
-			},
-			{
 				"label": "Get Permalink",
 				"command": "codestream:context-get-permalink"
 			},

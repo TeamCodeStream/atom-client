@@ -26,14 +26,12 @@
 	".platform-darwin atom-text-editor, .platform-linux atom-text-editor": {
 		"ctrl-/ c": "codestream:keymap-create-comment",
 		"ctrl-/ i": "codestream:keymap-create-issue",
-		"ctrl-/ b": "codestream:keymap-create-bookmark",
 		"ctrl-/ p": "codestream:keymap-get-permalink",
 		"ctrl-/ shift-p": "codestream:keymap-copy-permalink"
 	},
 	".platform-win32 atom-text-editor": {
 		"ctrl-shift-/ c": "codestream:keymap-create-comment",
 		"ctrl-shift-/ i": "codestream:keymap-create-issue",
-		"ctrl-shift-/ b": "codestream:keymap-create-bookmark",
 		"ctrl-shift-/ p": "codestream:keymap-get-permalink",
 		"ctrl-shift-/ shift-p": "codestream:keymap-copy-permalink"
 	}

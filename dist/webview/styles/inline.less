@@ -12,6 +12,10 @@
 	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 	background-color: @base-background-color;
 	border: 1px solid @base-border-color;
+
+	.vscode-light & {
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+	}
 }
 
 .plane-container {
@@ -106,7 +110,7 @@
 		text-align: right;
 		.count {
 			cursor: pointer;
-			opacity: 0.5;
+			opacity: 0.75;
 			padding: 5px 2%;
 			white-space: nowrap;
 			&:hover {

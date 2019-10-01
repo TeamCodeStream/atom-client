@@ -1,5 +1,20 @@
 # Change Log
 
+## [4.0.0] - 2019-10-1
+
+### Added
+
+- Comments on merged-in pull requests from either GitHub or Bitbucket are now displayed right alongside the code blocks they refer to
+- The ability to inject a codemark as an inline comment now has an option to include replies
+
+### Fixed
+
+- Fixes an issue where an issue codemark with a blank description would not get posted to Slack
+- Fixes an issue where automated closed/opened messages for issue codemarks were not getting posted to Slack
+- Fixes the sort order of Jira projects so that they are in alphabetical order
+- Fixes an issue where the ability to star a reply was missing for Slack-connected teams
+- Fixes an issue where Slack desktop notifications for codemarks would not include any content
+
 ## [3.0.1] - 2019-9-20
 
 ### Added

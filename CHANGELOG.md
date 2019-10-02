@@ -1,5 +1,15 @@
 # Change Log
 
+## [4.0.1] - 2019-10-2
+
+### Added
+
+- Adds the ability to filter codemarks on the Search tab by author, branch or commit
+
+### Fixed
+
+- Fixes an issue with changing issue-tracking services via the dropdown on the codemark form
+
 ## [4.0.0] - 2019-10-1
 
 ### Added

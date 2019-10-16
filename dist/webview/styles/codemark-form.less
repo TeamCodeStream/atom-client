@@ -1,3 +1,25 @@
+.full-height-codemark-form {
+	background: @app-background-color;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 50;
+	max-height: 100%;
+	overflow: auto;
+	.plane-container {
+		padding: 45px 45px;
+	}
+
+	.codemark-form {
+		max-height: none !important;
+	}
+}
+#modal-root .codemark-form {
+	max-height: none !important;
+}
+
 // should go into message-input.less
 .message-input-wrapper {
 	position: relative;
@@ -8,6 +30,17 @@
 	max-height: 100vh !important;
 	padding: 0 10px 10px 10px;
 	position: relative;
+
+	.code {
+		margin: 5px 0 !important;
+	}
+
+	.codemark-actions-button:not(:hover) {
+		background: @base-background-color;
+	}
+	.codemark-actions-button:hover {
+		color: var(--button-foreground-color);
+	}
 
 	.form-body {
 		min-width: 180px;
@@ -40,10 +73,10 @@
 	.channel-label {
 		font-weight: normal;
 		color: @text-color-highlight;
-		white-space: nowrap;
+		// white-space: nowrap;
 		cursor: pointer;
-		text-overflow: ellipsis;
-		overflow: hidden;
+		// text-overflow: ellipsis;
+		// overflow: hidden;
 
 		.icon {
 			display: inline-block;
@@ -52,9 +85,36 @@
 		}
 	}
 
+	.location {
+		&.live {
+			// color: var(--text-color-info);
+		}
+	}
+
+	@keyframes yellow-fade {
+		50% {
+			color: @text-color-highlight;
+			border: 1px solid rgba(255, 255, 0, 0.25);
+		}
+		100% {
+			color: @text-color;
+			border: 1px solid @base-border-color;
+		}
+	}
+
+	.add-range {
+		animation: yellow-fade 1.25s ease 1;
+		display: block;
+		// color: @text-color-info;
+		padding: 10px;
+		border: 1px solid @base-border-color;
+		margin: 35px 0 10px 0;
+		background: rgba(0, 0, 0, 0.1);
+	}
+
 	.headline {
 		padding-left: 25px;
-		height: 20px;
+		// height: 20px;
 		margin-top: 10px;
 		display: inline-flex;
 		width: 100%;
@@ -63,8 +123,8 @@
 			opacity: 0.75;
 			padding-left: 5px;
 			white-space: nowrap;
-			text-overflow: ellipsis;
-			overflow: hidden;
+			// text-overflow: ellipsis;
+			// overflow: hidden;
 		}
 	}
 
@@ -164,6 +224,53 @@
 		&.selected {
 			opacity: 1;
 			color: @text-color-highlight;
+		}
+	}
+}
+
+.add-location {
+	display: block;
+	text-align: right;
+	flex-grow: 10;
+	span {
+		opacity: 0.75;
+		cursor: pointer;
+		.icon {
+			display: inline-block;
+			transform: scale(0.7);
+			margin-right: 2px;
+		}
+		&:hover {
+			opacity: 1;
+			color: @text-color-highlight;
+		}
+	}
+}
+
+&:hover > .code-buttons,
+.code-buttons.live {
+	display: block;
+}
+.code-buttons {
+	position: absolute;
+	bottom: 5px;
+	right: 7px;
+	// display: none;
+	// float: right;
+	.ok {
+		background: var(--button-background-color) !important;
+		border: 1px solid var(--button-background-color);
+		color: var(--button-foreground-color) !important;
+		margin-right: 5px;
+		&:hover {
+			background: var(--button-background-color-hover) !important;
+		}
+	}
+	.icon {
+		opacity: 0.4;
+		margin-left: 10px;
+		&:hover {
+			opacity: 1;
 		}
 	}
 }

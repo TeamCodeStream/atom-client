@@ -1,5 +1,22 @@
 # Change Log
 
+## [5.0.0] - 2019-10-16
+
+### Added
+
+- Add the ability to have multiple blocks of code, even across files/repos, associated with a single codemark
+- Adds the ability to create issues on GitLab Enterprise
+
+### Changed
+
+- Codemarks can now be created and shared with your teammates even if you have unpushed commits
+- Archived codemarks and resolved issues are now both controlled by the Archived filter on the Current File tab
+
+### Fixed
+
+- Fixes an issue where assignee wasn't being set correctly for issues created on GitLab
+- Fixes an issue with the Asana integration where tasks weren't getting created
+
 ## [4.0.1] - 2019-10-2
 
 ### Added

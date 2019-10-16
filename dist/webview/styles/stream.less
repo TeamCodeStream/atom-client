@@ -861,6 +861,9 @@
 			tab-size: 2;
 			position: relative;
 			color: @text-color;
+			&.expanded {
+				max-height: none;
+			}
 		}
 		.code.prettyprint {
 			position: relative;
@@ -1068,6 +1071,7 @@
 				right: 0;
 				margin: -10px;
 				padding: 10px;
+				z-index: 5;
 			}
 			hr {
 				margin: 5px 0;

@@ -1,5 +1,11 @@
 # Change Log
 
+## [5.0.1] - 2019-10-18
+
+### Fixed
+
+- Fixes an issue with codemarks disappearing after a commit
+
 ## [5.0.0] - 2019-10-16
 
 ### Added

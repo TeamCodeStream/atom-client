@@ -1,5 +1,26 @@
 # Change Log
 
+## [5.1.0] - 2019-10-30
+
+### Added
+
+- Adds "Open in IDE", "Open on Web" and "Open on GitHub" (or Bitbucket/GitLab) links to issues created in external issue-tracking services (Jira, Trello, etc.)
+- Adds the ability to manually reposition a codemark in cases where its location isn't automatically updated based on changes to the code
+
+### Changed
+
+- Changed the "Open on CodeStream" button in posts to Slack / MS Teams to "Open on Web"
+- Improvements on codemark location calulation
+- The standard font size in the CodeStream tab will match that of the tree-view and status bar
+
+### Fixed
+
+- Fixes an issue with editing replies
+- Fixes an issue with the dropdowns for Author and Branch on the Search tab not working
+- Fixes an issue with the formatting of code blocks in issues created on YouTrack
+- Fixes an issue where the "Open in IDE" button, for codemarks with multiple locations, would always open to the first location
+- Fixes issues with "Open in IDE" from codemark pages in Firefox
+
 ## [5.0.1] - 2019-10-18
 
 ### Fixed

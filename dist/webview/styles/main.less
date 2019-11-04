@@ -87,6 +87,9 @@ body.preload * {
 		.vscode-dark& {
 			background-color: @background-color-highlight-dark !important;
 		}
+		&:hover {
+			color: @text-color-highlight;
+		}
 	}
 
 	input[type="text"],
@@ -556,13 +559,17 @@ body.preload * {
 	outline: none !important;
 	align-items: center;
 
-	&:hover {
+	&:hover:not(.disabled) {
 		background: var(--button-background-color-hover);
 	}
 	&:focus {
 		// border: 1px solid black !important;
 		outline: 1px solid var(--button-background-color-hover) !important;
 		outline-offset: 2px;
+	}
+	&.disabled {
+		opacity: 0.5;
+		cursor: initial;
 	}
 }
 

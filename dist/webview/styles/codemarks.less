@@ -215,9 +215,10 @@
 				margin: 0;
 			}
 		}
+		&.selected .contents,
 		&:hover .contents {
 			// &.selected .contents {
-			// 	color: @text-color-highlight;
+			color: @text-color-highlight;
 			background: rgba(127, 127, 127, 0.05);
 		}
 
@@ -269,6 +270,11 @@
 		.codemark-details {
 			margin-top: -10px;
 		}
+		.right {
+			float: right;
+			display: flex;
+			flex-direction: row-reverse;
+		}
 		.contents > .body,
 		.codemark-details {
 			.post {
@@ -294,12 +300,6 @@
 			.header {
 				margin-bottom: 8px;
 			}
-			.header .right {
-				float: right;
-				display: flex;
-				flex-direction: row-reverse;
-			}
-
 			.author {
 				display: inline;
 				cursor: pointer;
@@ -475,13 +475,6 @@
 		.assignees {
 			padding-right: 5px;
 		}
-	}
-	form.standard-form .form-body {
-		padding: 0;
-		min-width: 0;
-		max-width: 100%;
-		width: 100%;
-		overflow: hidden;
 	}
 }
 .related-row {
@@ -666,14 +659,23 @@
 	}
 }
 
-form#inject-form {
+form#inject-form,
+form#reposition-form {
 	padding: 0 !important;
 	button {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
 }
-#inject-form {
+#inject-form,
+#reposition-form {
+	.form-body {
+		padding: 0;
+		min-width: 0;
+		max-width: 100%;
+		width: 100%;
+		overflow: hidden;
+	}
 	.control-group {
 		margin-bottom: 0 !important;
 		max-width: 100%;
@@ -698,6 +700,7 @@ form#inject-form {
 #switches div {
 	cursor: pointer;
 }
+
 .has-diff {
 	position: absolute;
 	right: 15px;
@@ -730,4 +733,27 @@ form#inject-form {
 .codemark-actions-button {
 	margin: 0 0 5px 10px;
 	float: right;
+}
+.reposition-dialog {
+	position: absolute;
+	top: 10%;
+	z-index: 65;
+	border: 1px solid @base-border-color;
+	background: @base-background-color;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	width: auto;
+	left: 0;
+	right: 0;
+	// top: 50%;
+	// transform: translateY(-50%);
+}
+#reposition-blanket {
+	z-index: 60;
+	background: rgba(0, 0, 0, 0.25);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }

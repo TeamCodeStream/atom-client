@@ -1,5 +1,16 @@
 # Change Log
 
+## [5.2.0] - 2019-11-6
+
+### Changed
+
+- Repo matching logic now also includes commit hashes to better handle scenarios where teammates don't have a common remote URL for the same repo
+
+### Fixed
+
+- Fixes an issue where the codemark compose form and the newly-created codemark would briefly appear at the same time
+- Fixes an issue where the current codemark was available for selection as a related codemark
+
 ## [5.1.0] - 2019-10-30
 
 ### Added

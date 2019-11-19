@@ -2,12 +2,13 @@
 	"name": "codestream",
 	"main": "./dist/codestream",
 	"version": "5.2.0",
-	"description": "Discuss, review, and share code with your team. Integrates w/ Slack, Jira, Trello, and GitHub",
+	"description": "Discuss code easily. Streamline Code Reviews. Improve code quality. Works w/ Slack, Teams, Jira, Trello, git, and more.",
 	"keywords": [
-		"git",
-		"team",
-		"comment",
-		"collaboration"
+		"chat",
+		"collaboration",
+		"review",
+		"documentation",
+		"slack"
 	],
 	"activationHooks": [
 		"core:loaded-shell-environment"
@@ -71,7 +72,7 @@
 		},
 		"autoHideMarkers": {
 			"type": "boolean",
-			"default": true
+			"default": false
 		},
 		"autoSignIn": {
 			"type": "boolean",

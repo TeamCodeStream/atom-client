@@ -247,7 +247,10 @@
 		transition: transform 0.1s;
 		&:hover {
 			color: @text-color-info;
-			transform: scale(1.2);
+			// reduced to 1.1 to avoid issue where the larger icon
+			// overlapped the line below which made it difficult to
+			// select from line-to-line-to-line going down
+			transform: scale(1.1);
 			// border-color: @text-color-info;
 			// z-index: 16;
 			&:before {

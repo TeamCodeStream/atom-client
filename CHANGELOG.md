@@ -1,5 +1,21 @@
 # Change Log
 
+## [5.2.2] - 2019-11-19
+
+### Added
+
+- Adds support for merge request comments from GitLab via the "PR" toggle on the Current File tab
+
+### Changed
+
+- When you cancel the creation of a codemark you are now prompted to confirm the action<
+- By default, codemarks are now displayed as glyphs in the editor even when the Current File tab is selected
+
+### Fixed
+
+- Fixes an issue with the display of codemarks, as well as the codemark creation form, near the bottom of a file
+- Fixes an issue where Slack DMs sometimes weren't available for sharing a codemark
+
 ## [5.2.0] - 2019-11-6
 
 ### Changed

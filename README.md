@@ -7,9 +7,9 @@
 
 The World's Best Code Discussion Tool. Take the pain out of code reviews, resolve issues faster, and dramatically improve code quality by increasing communication between the developers on your team.
 
-![CodeStream](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/animated/SpatialAtom.gif)
-
 Discussing code is now as easy as highlighting a code block and typing a comment or question. No PRs required.
+
+![CodeStream](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/animated/SpatialAtom.gif)
 
 ## Does your team use Slack or Microsoft Teams?
 

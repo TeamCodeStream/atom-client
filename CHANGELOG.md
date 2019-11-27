@@ -1,5 +1,17 @@
 # Change Log
 
+## [5.2.3] - 2019-11-27
+
+### Added
+
+- Adds support for self-signed SSL certificates for CodeStream On-Prem
+- Adds display of CodeStream version number at the bottom of the ellipses menu
+
+### Fixed
+
+- Fixes an issue with very large codemarks not being displayed on Slack
+- Fixes an issue with "Open on GitHub" buttons not accounting for .com-githubHandle remote syntax
+
 ## [5.2.2] - 2019-11-19
 
 ### Added

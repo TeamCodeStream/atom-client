@@ -93,11 +93,10 @@
 			"type": "string",
 			"default": "off",
 			"enum": [
-				"override",
 				"on",
 				"off"
 			],
-			"description": "Specifies whether to support proxy servers. If 'override', a url is required"
+			"description": "Specifies whether to support proxy servers. If 'on', the provided url will be used, otherwise the os/environment settings will be used"
 		},
 		"proxyUrl": {
 			"type": "string",

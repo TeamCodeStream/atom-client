@@ -1,5 +1,20 @@
 # Change Log
 
+## [5.2.4] - 2019-12-19
+
+### Added
+
+- Adds a roadblock to let people know when CodeStream can't connect due to possible proxy issues
+
+### Changed
+
+- The form to create a codemark is now keyboard navigable
+
+### Fixed
+
+- Fixes an issue with creating codemarks that include blank line at the end of a file
+- Fixes a broken link on the form to configure the GitLab Self-Managed integration
+
 ## [5.2.3] - 2019-11-27
 
 ### Added

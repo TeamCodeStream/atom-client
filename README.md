@@ -35,7 +35,7 @@ Create a codemark by selecting a block of code in your editor and then typing a 
 
 ![New Codemark](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/NewCodemark3.png)
 
-In addition to general comments and questions, there are specific types of codemarks for assigning issues, saving bookmarks, or generating a permalink to a specific block of code.
+In addition to general comments and questions, there are specific types of codemarks for assigning issues, or generating a permalink to a specific block of code.
 
 ![Issue Codemark](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/CodemarkIssue3.png)
 

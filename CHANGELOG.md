@@ -1,5 +1,11 @@
 # Change Log
 
+## [5.2.5] - 2019-12-20
+
+### Fixed
+
+- Fixes an issue with repo matching on startup
+
 ## [5.2.4] - 2019-12-19
 
 ### Added

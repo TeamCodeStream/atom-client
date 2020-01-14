@@ -91,7 +91,32 @@ body.preload * {
 			color: @text-color-highlight;
 		}
 	}
+	input[type="checkbox"] {
+		-webkit-appearance: none;
+		background: rgba(127, 127, 127, 0.4);
 
+		// padding: 8px;
+		width: 20px;
+		height: 20px;
+		display: inline-block;
+		position: relative;
+		border-radius: 3px;
+		vertical-align: -8px;
+		margin-left: 0;
+		margin-right: 5px;
+		&:checked:after {
+			content: "\2714";
+			font-size: 14px;
+			position: absolute;
+			top: 1px;
+			left: 4px;
+			color: var(--text-color);
+		}
+	}
+
+	input[type="checkbox"]:focus {
+		outline: 1px solid @text-focus-border-color !important;
+	}
 	input[type="text"],
 	input[type="number"],
 	input[type="password"] {
@@ -125,6 +150,11 @@ body.preload * {
 			margin: -3px;
 			border: 3px solid transparent;
 		}
+	}
+	input:focus,
+	select:focus,
+	textarea:focus {
+		outline-offset: -1px;
 	}
 	input[type="radio"] {
 		outline: none;
@@ -238,7 +268,7 @@ body.preload * {
 					li {
 						height: 22px;
 						font-weight: inherit;
-						padding-left: 22px;
+						padding: 0 20px;
 
 						.lock,
 						.mute,
@@ -456,6 +486,8 @@ body.preload * {
 
 	.react-select__menu {
 		z-index: 2;
+		border: 1px solid @text-focus-border-color;
+		background-color: unset;
 	}
 	.react-select__menu-list {
 		background: @base-background-color;
@@ -576,6 +608,10 @@ body.preload * {
 	&.disabled {
 		opacity: 0.5;
 		cursor: initial;
+	}
+	&.standard {
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }
 

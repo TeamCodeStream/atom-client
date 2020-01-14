@@ -173,6 +173,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		overflow: auto;
 		//no-animation: 0.2s slidein;
 	}
 
@@ -192,7 +193,7 @@
 			// width: 100%;
 			.icon {
 				display: inline-block;
-				transform: scale(1.5);
+				// transform: scale(1.5);
 				vertical-align: 2px;
 			}
 			label {
@@ -208,7 +209,7 @@
 		}
 		.content {
 			position: relative;
-			flex-basis: 99%;
+			flex: 1;
 		}
 		.mentions-badge,
 		.unread-badge {
@@ -220,8 +221,9 @@
 			font-size: 11px;
 			min-width: 17px;
 			position: absolute;
-			bottom: 0px;
-			right: 0px;
+			bottom: -3px;
+			right: -3px;
+			z-index: 5;
 		}
 		.unread-badge {
 			color: @background-color-umi;
@@ -689,11 +691,6 @@
 					margin-right: 2px;
 				}
 			}
-			// TODO: delete this since it's now in codemark-form.less
-			.connect-issue-label {
-				white-space: nowrap;
-				padding-right: 5px;
-			}
 		}
 		.compose.float-compose {
 			box-sizing: border-box;
@@ -1053,15 +1050,17 @@
 					// text-align: center;
 					position: relative;
 					padding: 10px 40px 3px 10px;
-					.icon {
+					.icons {
 						position: absolute;
 						right: 5px;
 						top: 8px;
-						padding: 3px 6px 0px 6px;
-						display: block;
-						border-radius: 3px;
-						&:hover {
-							background: rgba(127, 127, 127, 0.4);
+						.icon {
+							padding: 3px 6px 0px 6px;
+							display: inline-block;
+							border-radius: 3px;
+							&:hover {
+								background: rgba(127, 127, 127, 0.4);
+							}
 						}
 					}
 				}
@@ -1097,6 +1096,9 @@
 					border-radius: 3px;
 					margin-right: 6px;
 				}
+				.float-right {
+					float: right;
+				}
 			}
 			&.compact li.menu-item {
 				padding: 1px 10px;
@@ -1131,40 +1133,16 @@
 		}
 
 		.editing-indicator {
-			display: none;
-			position: absolute;
-			top: 30px;
-			width: 100%;
-			z-index: 12;
-			// background: @app-background-color;
-			// border-bottom: 1px solid @base-border-color;
-			border-top: 1px solid @base-border-color;
-			padding: 0;
-			// box-shadow: 0 0 10px @app-background-color;
-			div {
-				width: calc(~"100% - 20px");
-				margin: 0 10px;
-
-				padding: 8px 15px;
-				background-color: @background-color-warning;
-				color: white;
-				// color: @text-color-warning;
-				text-align: center;
-				width: auto;
-				top: 40px;
-				border-radius: 0 0 5px 5px;
-				// border: 1px solid @base-border-color;
+			padding-top: 5px;
+			font-size: 12px;
+			color: @text-color-subtle;
+			&.conflict {
+				color: @text-color-warning;
 			}
-			transition: top 0.2s;
-		}
-		.editing-indicator.conflict {
-			div {
-				background-color: @background-color-error;
+			.icon {
+				display: inline-block;
+				transform: scale(0.7);
 			}
-		}
-
-		.editing-indicator.inactive {
-			top: -2em;
 		}
 
 		.icon {
@@ -1432,12 +1410,10 @@
 					}
 				}
 			}
-			.committer-email {
-				font-size: smaller;
-				color: @text-color-subtle;
-			}
 			.reinvite {
 				float: right;
+			}
+			a.reinvite {
 				color: @text-color-info;
 			}
 		}
@@ -2292,8 +2268,12 @@
 		background: @background-color-highlight !important;
 	}
 	button.delete {
-		color: @text-color-highlight;
+		color: var(--button-foreground-color);
 		background: @background-color-error;
+		&:hover {
+			background: @background-color-error;
+			opacity: 0.85;
+		}
 	}
 
 	.invite-panel .standard-form,
@@ -2529,14 +2509,17 @@
 			> span {
 				display: inline-block;
 				padding: 8px 10px;
+				padding: 5px 6px;
 				// border-bottom: 1px solid rgba(127, 127, 127, 0.5);
+				color: @text-color-subtle;
 			}
 			&.checked > span {
 				color: @text-color-highlight;
 				// border-bottom: 1px solid @text-color-highlight;
 				font-weight: 500;
 			}
-			&:hover > span {
+			&:hover > span,
+			&.selected > span {
 				color: @text-color-highlight;
 			}
 			.open-menu {
@@ -2625,7 +2608,7 @@
 		}
 	}
 	.search-bar {
-		padding: 17px 10px 17px 15px;
+		padding: 7px 0 10px 0;
 		input {
 			// width: calc(100% - 38px);
 			width: 100%;
@@ -2638,7 +2621,7 @@
 		// z-index: 15;
 		background-color: @app-background-color;
 		color: @text-color-subtle;
-		padding: 0 20px 15px 20px;
+		padding: 0 0 15px 0;
 		.icon.triangle-down,
 		.icon.smaller {
 			display: inline-block;

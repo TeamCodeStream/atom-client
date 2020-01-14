@@ -1,5 +1,29 @@
 # Change Log
 
+## [6.0.0] - 2020-1-14
+
+### Added
+
+- Adds a new Activity Feed to notify you about new codemarks and new replies to codemarks
+- Adds the ability for CodeStream teams to optionally share codemarks to Slack, without requiring broad access to your workspace
+- Adds the ability to share any existing codemark, including those created by teammates, to Slack
+- Adds the ability to reply to codemarks from Slack via a "View Discussion & Reply" button
+- Adds the ability to specify a default sharing destination on Slack per repo (look for gear menu at top of the channel-selection dropdown)
+- Adds new codemark-centric email notifications, which allow you to post replies by simply replying to the email
+- Adds new notification settings under the ellipses menu in the top nav
+- Adds the ability to manually follow/unfollow individual codemarks to control notifications
+- Adds the ability to create a codemark via the "+" button in the top nav, where the code block is optional
+- Adds a new Team tab to the top nav where you can invite teammates and see those already on the team
+- Adds repo name to the display of codemarks
+
+### Changed
+
+- Assignment of an issue (excluding those shared externally) is now treated like a mention so that the assignee is notified
+
+### Fixed
+
+- Fixes [#139](]https://github.com/TeamCodeStream/CodeStream/issues/139) &mdash; GitHub PR comments not showing up
+
 ## [5.2.5] - 2019-12-20
 
 ### Fixed

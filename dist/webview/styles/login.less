@@ -30,6 +30,9 @@
 	margin-bottom: 20px;
 	position: relative;
 	font-size: 14px;
+	p {
+		margin: 1em 0;
+	}
 	h2,
 	h3 {
 		position: absolute;
@@ -39,6 +42,8 @@
 		padding: 0 5px;
 		margin: 0;
 		display: inline-block;
+		font-weight: 700;
+		line-height: 1.42857143;
 	}
 	h2 {
 		top: -18px;
@@ -60,6 +65,13 @@
 		// background-color: var(--button-background-color-hover);
 		// color: var(--text-color-highlight);
 	}
+	@media only screen and (max-width: 300px) {
+		padding: 5px 0px !important;
+		.icon:not(.spin) {
+			display: none;
+		}
+	}
+
 	.icon {
 		margin: 1px 5px 5px 5px;
 		transform: scale(1.6);
@@ -69,18 +81,20 @@
 	}
 	.spin {
 		flex-basis: 100%;
-		margin: 8px;
+		margin: 6px;
 	}
 	.copy {
-		padding-left: 10px;
+		padding: 0px 10px;
 		flex-basis: 100%;
 		font-size: 14px !important;
 		font-weight: bold;
 		text-align: left;
+		white-space: normal;
+		line-height: 1.42857143;
+
 		.small {
 			font-size: 12px;
 			font-weight: normal;
-			line-height: 1em;
 			padding-bottom: 5px;
 		}
 	}

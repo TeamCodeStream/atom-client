@@ -274,6 +274,7 @@
 			float: right;
 			display: flex;
 			flex-direction: row-reverse;
+			margin-right: -5px;
 		}
 		.contents > .body,
 		.codemark-details {
@@ -370,7 +371,6 @@
 			opacity: 0.5;
 			margin-left: 2px;
 			padding: 0 5px;
-			margin-right: -5px;
 		}
 	}
 	.replies {
@@ -488,20 +488,20 @@
 }
 .related {
 	margin: 20px 0;
-	.file-info {
-		font-size: 11px;
-		.monospace {
-			white-space: nowrap;
-		}
-		.icon {
-			vertical-align: 2px;
-		}
+}
+.file-info {
+	font-size: 11px;
+	.monospace {
+		white-space: nowrap;
 	}
-	&.live {
-		// color: @text-color-info;
-		.code.prettyprint {
-			border: 1px solid @text-focus-border-color;
-		}
+	.icon {
+		vertical-align: 2px;
+	}
+}
+&.live {
+	// color: @text-color-info;
+	.code.prettyprint {
+		border: 1px solid @text-focus-border-color;
 	}
 }
 .related-label,
@@ -527,15 +527,15 @@
 	z-index: 0;
 }
 .no-codemarks {
-	width: 20em;
+	max-width: 23em;
 	margin: 0 auto;
 	color: @text-color-subtle;
-	text-align: center;
+	// text-align: center;
 	font-size: 13px;
+	padding: 0 20px;
 	.keybindings {
 		background-color: @base-background-color;
 		padding: 10px;
-		width: 20em;
 		margin: 10px auto;
 		// box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 		.card;
@@ -544,8 +544,6 @@
 			text-align: right;
 			.function {
 				float: left;
-			}
-			.keybinding {
 			}
 		}
 	}

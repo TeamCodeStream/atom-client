@@ -1,5 +1,13 @@
 # Change Log
 
+## [6.0.1] - 2020-1-27
+
+### Fixed
+
+- Fixes [#146](]https://github.com/TeamCodeStream/CodeStream/issues/146) &mdash; Unclear that duplicated shortcut label means keychord
+- Fixes an issue that could lead to degraded IDE performance when CodeStream is opened with very large source files
+- Fixes an issue where the compose menu in the CodeStream pane would not persist if you switched files while code was selected
+
 ## [6.0.0] - 2020-1-14
 
 ### Added

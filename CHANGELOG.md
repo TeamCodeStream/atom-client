@@ -1,5 +1,15 @@
 # Change Log
 
+## [6.1.0] - 2020-2-3
+
+### Added
+
+- Adds the ability to create additional CodeStream teams from the ellipses menu in the top nav
+
+### Changed
+
+- The pull-request integrations will now display comments from open PRs if you are on either the source or destination branches
+
 ## [6.0.1] - 2020-1-27
 
 ### Fixed

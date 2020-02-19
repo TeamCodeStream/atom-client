@@ -1,5 +1,15 @@
 # Change Log
 
+## [6.2.0] - 2020-2-19
+
+### Added
+
+- Adds the ability to share codemarks to Microsoft Teams
+
+### Fixed
+
+- Fixes an issue with access tokens expiring for the Jira integration
+
 ## [6.1.0] - 2020-2-3
 
 ### Added

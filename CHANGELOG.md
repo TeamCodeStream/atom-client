@@ -1,5 +1,12 @@
 # Change Log
 
+## [6.2.1] - 2020-2-26
+
+### Changed
+
+- Shortened the gutter marker tool tips to 80 characters max
+
+
 ## [6.2.0] - 2020-2-19
 
 ### Added

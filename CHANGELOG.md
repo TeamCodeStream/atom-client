@@ -1,5 +1,20 @@
 # Change Log
 
+# [6.3.0] - 2020-3-10
+
+### Added
+
+- Adds the ability to create an issue not connected to a block of code via the + menu in the global nav
+
+### Changed
+
+- More robust Filter & Search tab with an improved UI, [advanced search syntax](https://github.com/TeamCodeStream/CodeStream/wiki/Filter-and-Search), and the ability to save custom filters
+- More readable activity feed UI, with author/action separated out from each card
+
+### Fixed
+
+- Fixes an issue sharing to Slack when there are spaces in the remote URL
+
 ## [6.2.1] - 2020-2-26
 
 ### Changed

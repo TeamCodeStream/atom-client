@@ -34,6 +34,7 @@ a {
 .rc-tooltip-inner {
 	background-color: var(--base-border-color);
 	color: var(--text-color);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 .rc-tooltip-placement-top .rc-tooltip-arrow,
 .rc-tooltip-placement-topLeft .rc-tooltip-arrow,
@@ -104,6 +105,7 @@ body.preload * {
 		vertical-align: -8px;
 		margin-left: 0;
 		margin-right: 5px;
+		cursor: pointer;
 		&:checked:after {
 			content: "\2714";
 			font-size: 14px;
@@ -112,6 +114,20 @@ body.preload * {
 			left: 4px;
 			color: var(--text-color);
 		}
+	}
+	// this is to wrap an <Icon> with to make it look like a button like the checkbox
+	.icon-button {
+		background: rgba(127, 127, 127, 0.4);
+		line-height: 20px;
+		padding-left: 4px;
+		width: 20px;
+		height: 20px;
+		display: inline-block;
+		position: relative;
+		border-radius: 3px;
+		margin-left: 0;
+		margin-right: 5px;
+		cursor: pointer;
 	}
 
 	input[type="checkbox"]:focus {

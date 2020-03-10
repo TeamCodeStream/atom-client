@@ -56,13 +56,13 @@ Note that CodeStream’s entry in your IDE’s status bar also lets you know whe
 
 ![Status Bar](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/StatusBarWithMentions-Atom.png)
 
-## Share on Slack (or MS Teams… coming soon!)
+## Share on Slack or MS Teams
 
-When you post a codemark your teammates will get notified via the activity feed, and potentially via email as well. Sometimes, though, you might also want to share the codemark out to Slack. This would allow you to reach people who haven’t yet joined CodeStream, or maybe don’t spend a lot of time in their IDE.
+When you post a codemark your teammates will get notified via the activity feed, and potentially via email as well. Sometimes, though, you might also want to share the codemark out to Slack or MS Teams.
 
 ![Share on Slack](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/ShareOnSlack1.png)
 
-On a codemark by codemark basis you can optionally decide which workspace and channel/DM to share to.
+On a codemark by codemark basis you can decide if and where to share.
 
 # Frequently Asked Questions
 

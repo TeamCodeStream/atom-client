@@ -193,6 +193,7 @@
 			z-index: 1;
 			top: 10px;
 			right: 10px;
+			background: var(--app-background-color);
 			.icon {
 				display: inline-block;
 				// vertical-align: 2px;
@@ -2821,7 +2822,25 @@
 		color: @text-color-error;
 	}
 }
-
+@media only screen and (max-width: 430px) {
+	.codemark-form .tab-group label {
+		max-width: calc(~"25% - 10");
+	}
+	nav.inline label > span {
+		padding: 5px 5px !important;
+	}
+}
+@media only screen and (max-width: 350px) {
+	.two-column {
+		grid-template-columns: 1fr !important;
+	}
+	.codemark-form .tab-group label b {
+		display: none;
+	}
+	nav.inline label > span {
+		padding: 5px 4px !important;
+	}
+}
 @media only screen and (max-width: 250px) {
 	.codestream {
 		.stream {
@@ -2834,18 +2853,8 @@
 			}
 		}
 	}
-}
-@media only screen and (max-width: 350px) {
-	.two-column {
-		grid-template-columns: 1fr !important;
-	}
-	.codemark-form .tab-group label b {
-		display: none;
-	}
-}
-@media only screen and (max-width: 430px) {
-	.codemark-form .tab-group label {
-		max-width: calc(~"25% - 10");
+	nav.inline label > span {
+		padding: 5px 3px !important;
 	}
 }
 

@@ -1,5 +1,11 @@
 # Change Log
 
+## [6.3.1] - 2020-3-17
+
+### Fixed
+
+- Fixes an issue with the "Open & Assigned to Me" filter not including issue codemarks
+
 # [6.3.0] - 2020-3-10
 
 ### Added

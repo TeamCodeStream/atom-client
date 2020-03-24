@@ -1,5 +1,15 @@
 # Change Log
 
+## [6.3.3] - 2020-3-24
+
+### Added
+
+- Mentions on CodeStream now flow through to Slack if there's a match on email address or username
+
+### Fixed
+
+- Fixes an issue with the Compare and Apply buttons not appearing right away when there's a diff
+
 ## [6.3.2] - 2020-3-19
 
 ### Fixed

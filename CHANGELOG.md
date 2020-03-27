@@ -1,5 +1,16 @@
 # Change Log
 
+## [6.4.0] - 2020-3-27
+
+### Added
+
+- Adds the ability to email and desktop notifications on/off separately
+- Adds confirmation message after submitting a code review, or a codemark with no associated code block
+
+### Changed
+
+- When viewing a codemark the entire code block is now clickable and will open the given file
+
 ## [6.3.3] - 2020-3-24
 
 ### Added

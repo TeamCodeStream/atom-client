@@ -849,6 +849,13 @@
 			font-weight: 600;
 			margin: 1px 0px -1px 0px;
 			padding: 0px 7px 2px 4px;
+			&.headshot-name {
+				padding: 0 5px 2px 5px;
+				margin: 0 0 0 -5px;
+				border-radius: 0 3px 3px 0;
+				vertical-align: 1px;
+				height: 20px;
+			}
 		}
 
 		pre {
@@ -1485,6 +1492,11 @@
 			}
 			a.reinvite {
 				color: @text-color-info;
+			}
+		}
+		.invite-panel {
+			.user-status {
+				padding-left: 43px;
 			}
 		}
 		.standard-form {
@@ -2794,6 +2806,24 @@
 		cursor: pointer;
 		transition: transform 0.1s;
 		display: inline-block;
+		&.no {
+			opacity: 0.5;
+			position: relative;
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 8px;
+				width: 14px;
+				height: 2px;
+				background: var(--text-color);
+				transform: rotate(-45deg);
+			}
+			&:hover:before {
+				background: @text-color-info;
+			}
+		}
 		&:hover,
 		&.hover {
 			opacity: 1;
@@ -2802,6 +2832,9 @@
 		}
 		&.nogrow:hover {
 			transform: scale(1);
+		}
+		&.info {
+			color: @text-color-info !important;
 		}
 	}
 	// .switch.public-private

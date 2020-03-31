@@ -1,5 +1,11 @@
 # Change Log
 
+## [6.5.0] - 2020-3-31
+
+### Added
+
+- Adds the ability to sign into CodeStream with GitHub
+
 ## [6.4.0] - 2020-3-27
 
 ### Added

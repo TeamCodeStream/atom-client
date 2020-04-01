@@ -1,5 +1,11 @@
 # Change Log
 
+## [6.5.1] - 2020-4-1
+
+### Fixed
+
+- Fixes an issue receiving real-time events for on-prem customers
+
 ## [6.5.0] - 2020-3-31
 
 ### Added

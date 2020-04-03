@@ -34,7 +34,11 @@ a {
 .rc-tooltip-inner {
 	background-color: var(--panel-tool-background-color);
 	color: var(--text-color);
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	.vscode-dark& {
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	}
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+
 	.keybinding {
 		background-color: var(--text-color) !important;
 		color: var(--panel-tool-background-color) !important;
@@ -98,7 +102,10 @@ body.preload * {
 	}
 	input[type="checkbox"] {
 		-webkit-appearance: none;
-		background: rgba(127, 127, 127, 0.4);
+		.vscode-dark& {
+			background: rgba(127, 127, 127, 0.4);
+		}
+		background: rgba(127, 127, 127, 0.2);
 
 		// padding: 8px;
 		width: 20px;

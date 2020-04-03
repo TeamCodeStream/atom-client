@@ -1,5 +1,33 @@
 # Change Log
 
+## [7.0.0] - 2020-4-3
+
+### Added
+
+- Code review functionality is no longer in private beta and is now available for all teams
+- Adds new "Live View" of what your teammates are working, including warnings about potential merge conflicts
+- Adds warnings to the top of the Current File view when a teammate is editing the same file or if there's a potential merge conflict
+- Addresses [#162](https://github.com/TeamCodeStream/CodeStream/issues/162) &mdash; Adds admin capabilities and team settings
+- Adds the ability for an admin to rename the team
+- Adds the ability for an admin to assign/remove admin privileges
+- Adds the ability for an admin to remove people from the team
+- Adds the ability for an admin to control Live View usage for the team
+- Adds the ability for users to change their username
+- Adds the ability for users to change their full name
+- Adds the ability for users to cancel their accounts
+
+### Changed
+
+- Changes status bar entry from "Sign in..." to "CodeStream" when user is signed out
+- Prevents the creation of codemarks when viewing a non-code review diff
+
+### Fixed
+
+- Fixes [#160](https://github.com/TeamCodeStream/CodeStream/issues/160) &mdash; Blank CodeStream pane after starting up VSC
+- Fixes [#166](https://github.com/TeamCodeStream/CodeStream/issues/166) &mdash; Error creating codemarks
+- Fixes [#168](https://github.com/TeamCodeStream/CodeStream/issues/168) &mdash; Can't post issues to GitHub
+- Fixes an issue with the diff for a new file added to a code review being blank
+
 ## [6.5.1] - 2020-4-1
 
 ### Fixed

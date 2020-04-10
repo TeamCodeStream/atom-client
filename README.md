@@ -1,66 +1,46 @@
 # CodeStream
 
-The World's Best Code Discussion Tool. Take the pain out of code reviews, resolve issues faster, and dramatically improve code quality by increasing communication between the developers on your team.
+CodeStream is developer collaboration platform that makes it incredibly easy for development teams, especially remote teams, to discuss and review code in a more natural and contextual way. CodeStream not only makes discussions easier, by allowing them to happen in your IDE, in context, but also preserves the institutional knowledge that is currently being lost in Slack channels and emails. 
 
-Discussing code is now as easy as highlighting a code block and typing a comment or question. No PRs required.
+![CodeStream](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/CSforAtom.png)
 
-![CodeStream](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/animated/SpatialAtom2.gif)
-
-# Requirements
+### Requirements
 
 - CodeStream requires version 1.34 or later of [Atom](https://atom.io/).
 - Your repository must be managed by Git, or a Git hosting service like GitHub.
 
-# Installation
+### Installation
 
 You have two options for installing CodeStream.
 
 - Search for "CodeStream" in Atom's built-in package manager and install from there.
 - Or, run the command `apm install codestream` in your terminal.
 
-# Discuss Code, Right in Your IDE
+# Discuss Code Just Like Commenting on a Google Doc
 
-## Create a Codemark
+Simply select a block of code and type your question or comment. Teammates can participate in the discussion right from their IDE. 
 
-A codemark is a discussion connected to a block of code. Simply select a block of code in your editor and then type a question or comment. Keep in mind that you can discuss any line of code in any source file at any time, even if it’s code that you just typed into your editor and haven’t yet saved or committed. You don’t need PRs or have to wait for code review to get or provide feedback.
+![CodeStream](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/animated/DiscussCode-Atom.gif)
 
-![New Codemark](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/NewCodemarkWithText3.png)
-
-See a problem in the code, or something that needs to be refactored, make sure it gets done by creating an “Issue” codemark and adding an assignee.
-
-![New Issue](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/NewIssueWithText.png)
-
-CodeStream integrates with Jira, Trello, GitHub, GitLab, Bitbucket, Azure DevOps, YouTrack and Asana, making it easy to create an issue tied to a specific block of code, and have that issue appear in your existing issue-tracking service.
-
-![Jira Ticket](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/IssueOnJira.png)
-
-## Connected to the Code
-
-Each codemark contributes to your team’s knowledge base and remains connected to the block of code it refers to… even as the file changes over time. Move the block of code to a different section of the file, and the codemark moves right along with it.
-
-Surfacing discussions contextually is what makes your knowledge base valuable. When a new developer joins your team six months, or three years, from now and is working in this section of the codebase, they’ll see the past discussion, review it, and get a better understanding of why the code looks the way it does.
-
-![Codemark Connected to Code](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/CodemarkInSpatial-Atom.png)
-
-Imagine how much less painful it will be when a key developer leaves the team (along with all of her institutional knowledge) if the new developers got to work from an annotated codebase!
-
-## Activity Feed
-
-The activity feed is the definitive place to find out about new codemarks posted by your teammates, or new replies to existing codemarks.
-
-![Activity Feed](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/ActivityFeed.png)
-
-Note that CodeStream’s entry in your IDE’s status bar also lets you know when there are new messages in the feed.
-
-![Status Bar](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/StatusBarWithMentions-Atom.png)
-
-## Share on Slack or MS Teams
-
-When you post a codemark your teammates will get notified via the activity feed, and potentially via email as well. Sometimes, though, you might also want to share the codemark out to Slack or MS Teams.
+You can optionally share the discussion on Slack or Microsoft Teams so teammates can participate from their chat clients as well.
 
 ![Share on Slack](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/ShareOnSlack1.png)
 
-On a codemark by codemark basis you can decide if and where to share.
+# Build the Knowledge Base Behind Your Codebase
+
+CodeStream turns conversation into documentation by capturing all of the discussion about your code, and saving it with your code. Comment and code review threads are automatically repositioned as your code changes, even across branches. All with zero effort on your part.
+
+![Knowledge Base](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/animated/KnowledgeBase-Atom.gif)
+
+Previously discussed questions and issues that explain important decisions are now accessible right where you need them, when you need them. Just click on the codemark to expand it and see how something works or why something was done a certain way.
+
+# Team Transparency through Live View
+
+Development is a collaborative activity, yet much of it happens in isolation, with work only shared with the team at the end of a cycle, or sprint. CodeStream’s “LiveView” increases transparency by making the local edits of individual developers visible to team members, so that everyone knows what everyone else is working on, in real-time.
+
+As developers write code, whether editing existing files or creating new files, a summary of their changes, including the repo(s), files, and lines changed is exposed to their teammates through CodeStream. The information is displayed contextually, in the IDE, and even warns teammates of potential merge conflicts… before they happen!
+
+![Live View](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/TeamTab.png)
 
 # Frequently Asked Questions
 

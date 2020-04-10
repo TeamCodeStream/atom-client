@@ -177,7 +177,8 @@
 	white-space: nowrap;
 	z-index: 1; // needs to be below .plane-container
 	overflow: visible;
-	width: 120px;
+	// width: 120px; reduced to 50px to account for getting started panel
+	width: 50px;
 	&.narrow {
 		width: 40px;
 	}
@@ -203,7 +204,7 @@
 		left: -1px;
 		z-index: -1;
 		margin-right: 5px;
-		.vscode-dark& {
+		.vscode-dark & {
 			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 		}
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);

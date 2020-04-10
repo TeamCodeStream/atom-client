@@ -1,5 +1,25 @@
 # Change Log
 
+## [7.0.1] - 2020-4-10
+
+### Added
+
+- Adds the ability to change your email address
+- Adds a new guided tour for new users
+- Adds a new consolidated Integrations page, simplifying the ellipses menu
+- Adds the ability to add a profile photo by specifying a URL
+- Adds the ability to remove an invited user from the team
+- Adds a list of suggested invitees based on git commit history (for team admins only)
+
+### Changed
+
+- Creating a codemark via the plus menu will now recognize if you have a block of code selected in the editor
+
+### Fixed
+
+- Fixes an issue with assignees not being added to tickets created on Jira
+- Fixes an issue with sharing very large posts to Slack
+
 ## [7.0.0] - 2020-4-3
 
 ### Added

@@ -1,5 +1,11 @@
 # Change Log
 
+## [7.0.2] - 2020-4-14
+
+### Fixed
+
+- Fixes an issue with codemarks not appearing in the Current File view for uncommitted files
+
 ## [7.0.1] - 2020-4-10
 
 ### Added

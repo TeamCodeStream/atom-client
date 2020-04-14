@@ -128,9 +128,13 @@ body.preload * {
 	}
 	// this is to wrap an <Icon> with to make it look like a button like the checkbox
 	.icon-button {
-		background: rgba(127, 127, 127, 0.4);
+		.vscode-dark& {
+			background: rgba(127, 127, 127, 0.4);
+		}
+		background: rgba(127, 127, 127, 0.2);
+
 		line-height: 20px;
-		padding-left: 4px;
+		text-align: center;
 		width: 20px;
 		height: 20px;
 		display: inline-block;
@@ -139,6 +143,16 @@ body.preload * {
 		margin-left: 0;
 		margin-right: 5px;
 		cursor: pointer;
+		.octicon-plus {
+			padding-left: 0.5px; // the + icon is slightly off-center
+		}
+		&:hover {
+			.vscode-dark& {
+				background: rgba(127, 127, 127, 0.5);
+			}
+			background: rgba(127, 127, 127, 0.3);
+			color: var(--text-color-highlight);
+		}
 	}
 
 	input[type="checkbox"]:focus {

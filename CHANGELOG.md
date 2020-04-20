@@ -1,5 +1,11 @@
 # Change Log
 
+## [7.1.1] - 2020-4-20
+
+### Fixed
+
+- Fixes an issue that omitted the number of changes for modified files in certain code reviews
+
 ## [7.1.0] - 2020-4-20
 
 ### Added

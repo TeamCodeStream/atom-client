@@ -1,5 +1,24 @@
 # Change Log
 
+## [7.1.0] - 2020-4-20
+
+### Added
+
+- Adds new integrations with GitHub Enterprise and GitLab Self-Managed that leverage personal access tokens and no longer require your instance to be publicly accessible
+- Adds the ability to send invitation codes on your own in case CodeStream invitation emails are being blocked by your organization
+- Adds a way to clear the search box on the Filter & Search tab
+- Adds the ability to remove a previously connected Jira Server host
+
+### Changed
+
+- General UI improvements to code reviews, including a warning about open change requests, clearer button copy, etc.
+
+### Fixed
+
+- Fixes an issue where the Submit button on the codemark form was not responsive
+- Fixes an issue where new files are still listed in "modified files" even if saved and staged changes are not selected
+- Fixes an issue where canceling a review results in the re-rendering of the review form
+
 ## [7.0.2] - 2020-4-14
 
 ### Fixed

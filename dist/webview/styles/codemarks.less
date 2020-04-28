@@ -259,7 +259,7 @@
 			float: right;
 			display: flex;
 			flex-direction: row-reverse;
-			margin-right: -5px;
+			margin-right: 0;
 			.kebab-vertical {
 				padding: 3px 5px;
 				margin-left: 5px;
@@ -447,13 +447,14 @@
 				box-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
 			}
 		}
-		.headshot {
-			cursor: pointer;
-			border-radius: 3px;
-			&:hover {
-				box-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
-			}
-		}
+		// commented out since there's no real reason for hover state, as there's no click action
+		// .headshot {
+		// 	cursor: pointer;
+		// 	border-radius: 3px;
+		// 	&:hover {
+		// 		box-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
+		// 	}
+		// }
 		.assignees {
 			padding-right: 5px;
 		}
@@ -496,9 +497,19 @@
 .posts-header {
 	text-transform: uppercase;
 	font-weight: 800;
-	opacity: 0.5;
+	opacity: 0.7;
+	color: var(--text-color-subtle);
 	font-size: 11px;
 	margin-bottom: 3px;
+	// this is to show a text-variant DropdownButton
+	// within a related-label
+	button {
+		font-weight: 800;
+		font-size: 11px;
+		text-transform: uppercase;
+		color: var(--text-color-subtle);
+		// color: var(--text-color-highlight);
+	}
 }
 .posts-header {
 	margin: 10px 0 -7px 10px;

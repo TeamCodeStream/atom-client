@@ -1,5 +1,30 @@
 # Change Log
 
+## [7.2.0] - 2020-4-28
+
+### Added
+
+- Adds the ability to require all reviewers assigned to a code review to approve it individually
+- Adds the ability for admins to control code review approval requirements
+- Adds the ability for adds to control if/how reviewers are suggested for code reviews
+
+### Changed
+
+- The status dropdown and ellipses menu for a code review or issue codemark in the activity feed have been consolidated
+- Headshots for issue and code review assignees are now displayed at the right side of activity feed entries
+- Truncates the display of the review title when viewing a code review diff
+- Updated copy on first extension page to clarify the Create vs Join team choice
+- Increased the contrast of menu backgrounds for easier visibility
+
+### Fixed
+
+- Addresses [#178](https://github.com/TeamCodeStream/CodeStream/issues/178) &mdash; Incorrect Jira URL
+- Fixes an issue with permanently excluded files appearing in a code review
+- Fixes an issue with new or deleted files not being identified as such in code reviews
+- Fixes an issue with the ellipses menu missing for closed code reviews
+- Fixes an issue where long code review names would render poorly
+- Fixes an issue where live-view hovers on the Team tab wouldn't handle large amounts of content
+
 ## [7.1.1] - 2020-4-20
 
 ### Fixed

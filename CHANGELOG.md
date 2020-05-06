@@ -1,5 +1,26 @@
 # Change Log
 
+## [7.2.1] - 2020-5-6
+
+### Added
+
+- Adds new profile pages, accessible by clicking on headshots throughout CodeStream
+
+### Changed
+
+- If you don't have a given repo open when performing a code review you are now able to locate it on disk
+- Warning about not having a commit when performing a code review now automatically goes away once you get the commit
+- Code review form now automatically recognizes when files are stages or commits are pushed
+
+### Fixed
+
+- Addresses [#181](https://github.com/TeamCodeStream/CodeStream/issues/181) &mdash; Prevent spawning of external git diff tools
+- Fixes an issue with repo selection not always being correct the very first time you request a code review
+- Fixes an issue where warning about unsaved changes when requesting a code review only display on Windows
+- Fixes issues with Esc not always closing various modals and panels
+- Fixes an issue with the default code review title not updating when you switched repos
+- Fixes an issue where a code review would incorrectly indicate that it included uncommitted local changes
+
 ## [7.2.0] - 2020-4-28
 
 ### Added

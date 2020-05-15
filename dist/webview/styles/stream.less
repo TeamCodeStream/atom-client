@@ -826,10 +826,18 @@
 			max-height: 300px;
 			max-width: calc(~"100vw - 10px") !important;
 			overflow: auto;
+			white-space: pre-wrap;
 			&.format-code {
 				white-space: pre;
 				font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
 				font-size: 12px;
+			}
+			&.preview {
+				outline: 2px dashed @text-focus-border-color !important;
+				background: transparent !important;
+			}
+			&.hide {
+				display: none;
 			}
 		}
 		.message-input:empty {
@@ -1772,13 +1780,6 @@
 				text-align: right;
 				margin: 10px 0;
 			}
-			.emoji {
-				font-size: 1.5em;
-				vertical-align: -0.15em;
-			}
-			.only-emoji .emoji {
-				font-size: 2.5em;
-			}
 			.reaction {
 				margin: 5px 5px 0 0;
 				line-height: 1.5em;
@@ -1907,14 +1908,6 @@
 				// right: auto;
 				// top: 50px;
 				// left: 30px;
-			}
-			blockquote {
-				border-left: 3px solid @text-color-info;
-				padding: 0px 0 0px 5px;
-				margin: 5px 0;
-				font-family: inherit;
-				font-size: inherit;
-				background: inherit;
 			}
 			.code-reference {
 				margin: 10px 0 5px 0;
@@ -2888,6 +2881,28 @@
 	}
 	.color-error {
 		color: @text-color-error;
+	}
+	.emoji {
+		font-size: 1.5em;
+		vertical-align: -0.15em;
+	}
+	.only-emoji .emoji {
+		font-size: 2.5em;
+	}
+	blockquote {
+		border-left: 3px solid rgb(127, 127, 127);
+		padding: 3px 0 3px 5px;
+		margin: 10px 0;
+		font-family: inherit;
+		font-size: inherit;
+		background: inherit;
+	}
+	// not implemented yet, but would be nice
+	.markdown {
+		ul,
+		ol {
+			margin-top: 0;
+		}
 	}
 }
 @media only screen and (max-width: 430px) {

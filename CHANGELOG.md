@@ -1,5 +1,23 @@
 # Change Log
 
+## [7.2.4] - 2020-5-19
+
+### Added
+
+- Adds the ability to react to posts with emoji
+- Adds the display of the server URL to the bottom of the initial page in the extension, for the benefit of on-prem installations
+
+### Changed
+
+- Expose strictSSL requirement setting for Cloud installations
+- Improved display of nested replies in a code review's thread
+
+### Fixed
+
+- Fixes an issue where reviews of uncommitted changes in branches containing unpushed commits include the changes from those commits
+- Fixes several performance issues associated with the git watcher
+- Fixes an issue with flashing headshots on the Search tab when the editor is scrolled
+
 ## [7.2.2] - 2020-5-15
 
 ### Changed

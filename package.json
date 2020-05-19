@@ -112,7 +112,7 @@
 		"disableStrictSSL": {
 			"type": "boolean",
 			"default": false,
-			"description": "Allow self-signed certificates to be used in network requests (On-Prem)"
+			"description": "Allow self-signed certificates to be used in network requests"
 		}
 	},
 	"scripts": {},

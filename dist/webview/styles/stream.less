@@ -850,7 +850,6 @@
 			color: @text-color-info;
 		}
 		.at-mention.me {
-			color: @text-color-info;
 			font-weight: bold;
 			padding: 0px 3px 2px 3px;
 			margin: 0px 0px -2px 0px;
@@ -874,7 +873,6 @@
 			// background-color: @text-color-info-muted;
 			// background: @background-color-umi;
 			background: var(--button-background-color);
-			// color: #fff;
 			color: var(--button-foreground-color);
 			// font-weight: 600;
 			margin: 1px 0px -1px 0px;
@@ -883,8 +881,11 @@
 				padding: 0 5px 2px 5px;
 				margin: 0 0 0 -5px;
 				border-radius: 0 3px 3px 0;
-				vertical-align: 1px;
+				vertical-align: 0px;
 				height: 20px;
+				line-height: 20px;
+				display: inline-block;
+				background: var(--button-background-color);
 			}
 		}
 
@@ -1779,44 +1780,6 @@
 				}
 				text-align: right;
 				margin: 10px 0;
-			}
-			.reaction {
-				margin: 5px 5px 0 0;
-				line-height: 1.5em;
-				display: inline-block;
-				padding: 2px 7px 2px 2px;
-				border: 1px solid @base-border-color;
-				border-radius: 15px;
-				background: @base-background-color;
-				white-space: normal;
-				.emoji {
-					vertical-align: -0.2em;
-				}
-				p {
-					display: inline;
-					margin: 0;
-					padding: 0;
-				}
-				&.add-reaction {
-					opacity: 0;
-				}
-				&.mine {
-					border-color: @background-color-umi;
-					background: @background-color-umi;
-					color: white;
-				}
-			}
-			.reaction:hover,
-			.reaction.mine:hover {
-				border-color: @text-color-info;
-				background: @base-background-color;
-				color: @text-color-info;
-			}
-			.reactions:hover {
-				.add-reaction {
-					opacity: 1;
-					padding: 2px 4px;
-				}
 			}
 			.headshot-gravatar,
 			.headshot-image,

@@ -1,5 +1,11 @@
 # Change Log
 
+## [7.2.5] - 2020-5-21
+
+### Added
+
+- Adds support for authentication with Okta for CodeStream On-Prem installations
+
 ## [7.2.4] - 2020-5-19
 
 ### Added

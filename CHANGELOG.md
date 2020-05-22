@@ -1,5 +1,11 @@
 # Change Log
 
+## [7.2.6] - 2020-5-22
+
+### Fixed
+
+- Fixes an issue that prevented signup via GitHub
+
 ## [7.2.5] - 2020-5-21
 
 ### Added

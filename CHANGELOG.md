@@ -1,5 +1,15 @@
 # Change Log
 
+## [7.3.0] - 2020-5-29
+
+### Added
+
+- Adds the ability to ammend a code review with new code changes
+
+### Fixed
+
+- Addresses [#195](https://github.com/TeamCodeStream/CodeStream/issues/195) &mdash; .codestreamignore should accept directory/wildcard/regex exclusions
+
 ## [7.2.6] - 2020-5-22
 
 ### Fixed

@@ -1,5 +1,21 @@
 # Change Log
 
+## [7.4.0] - 2020-6-8
+
+### Added
+
+- Adds the ability to notify people via email about codemarks or code review assignments, even if they aren't yet on your CodeStream team
+
+### Changed
+
+- Icons for creating codemarks now appear when you hover in the gutter, or select code in your editor, on most top-level pages and not just on the Current File tab
+- Change request titles at the top of a code review now link to the referenced codemark isntead of marking the request complete
+- Entry of invite codes is now on the initial page in the extension to make it easier for teammates to join
+
+### Fixed
+
+- Fixes an issue where opening a code review via permalink or from Slack would result in an error in the IDE
+
 ## [7.3.0] - 2020-5-29
 
 ### Added

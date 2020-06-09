@@ -1,5 +1,11 @@
 # Change Log
 
+## [7.4.1] - 2020-6-9
+
+### Fixed
+
+- Fixes an issue where the current user would be added as a suggested reviewer in a code review
+
 ## [7.4.0] - 2020-6-8
 
 ### Added

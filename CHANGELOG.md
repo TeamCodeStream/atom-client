@@ -1,5 +1,19 @@
 # Change Log
 
+## [8.0.0] - 2020-6-22
+
+### Added
+
+- Adds the ability to "start work" by selecting a ticket (Trello, Jira, etc.), moving it to the appropriate in-progress state, and automatically creating a feature branch
+- Adds support for creating PRs in Bitbucket (cloud)
+- Adds the ability to create add an upstream branch when creating a PR
+
+## [7.4.2] - 2020-6-20
+
+### Added
+
+- Adds a more granular Help submenu 
+
 ## [7.4.1] - 2020-6-9
 
 ### Fixed

@@ -9,7 +9,8 @@
 		"ctrl-/ 6": "codestream:go-to-codemark-6",
 		"ctrl-/ 7": "codestream:go-to-codemark-7",
 		"ctrl-/ 8": "codestream:go-to-codemark-8",
-		"ctrl-/ 9": "codestream:go-to-codemark-9"
+		"ctrl-/ 9": "codestream:go-to-codemark-9",
+		"ctrl-/ w": "codestream:start-work"
 	},
 	".platform-win32 atom-workspace": {
 		"ctrl-shift-/ /": "codestream:toggle",
@@ -21,7 +22,8 @@
 		"ctrl-shift-/ 6": "codestream:go-to-codemark-6",
 		"ctrl-shift-/ 7": "codestream:go-to-codemark-7",
 		"ctrl-shift-/ 8": "codestream:go-to-codemark-8",
-		"ctrl-shift-/ 9": "codestream:go-to-codemark-9"
+		"ctrl-shift-/ 9": "codestream:go-to-codemark-9",
+		"ctrl-shift-/ w": "codestream:start-work"
 	},
 	".platform-darwin atom-text-editor, .platform-linux atom-text-editor": {
 		"ctrl-/ c": "codestream:keymap-create-comment",

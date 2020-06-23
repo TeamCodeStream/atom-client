@@ -46,7 +46,7 @@ As developers write code, whether editing existing files or creating new files, 
 
 #### Where are messages stored?
 
-Your team’s codemarks, which include the message text and the code snippet, are stored in the cloud on CodeStream’s servers. CodeStream uses best practices when it comes to [security](https://www.codestream.com/security), but if your team has stringent infosec requirements we also offer an [on-prem solution](https://github.com/TeamCodeStream/onprem-install/wiki).
+Your team’s codemarks, which include the message text and the code snippet, are stored in the cloud on CodeStream’s servers. CodeStream uses best practices when it comes to [security](https://www.codestream.com/security), but if your team has stringent infosec requirements we also offer an [on-prem solution](https://docs.codestream.com/onprem/).
 
 #### What access to Git does CodeStream require?
 
@@ -58,6 +58,6 @@ Codestream is free to try for 30 days for teams of all sizes. CodeStream is free
 
 # Help & Feedback
 
-Check out our [wiki](https://github.com/TeamCodeStream/CodeStream/wiki) for more information on getting started with CodeStream. Please follow [@teamcodestream](http://twitter.com/teamcodestream) for product updates and to share feedback and questions. You can also email us at support@codestream.com.
+Check out our [user guide](https://docs.codestream.com/userguide/) for more information on getting started with CodeStream. Please follow [@teamcodestream](http://twitter.com/teamcodestream) for product updates and to share feedback and questions. You can also email us at support@codestream.com.
 
 [![CodeStream Logo](https://alt-images.codestream.com/codestream_logo_atommarketplace.png)](https://codestream.com?utm_source=atommarket&utm_medium=banner&utm_campaign=codestream)

@@ -1176,12 +1176,18 @@
 				// border-top: 1px solid @app-background-color-hover;
 				border-top: 1px solid rgba(127, 127, 127, 0.2);
 			}
+			.popup hr {
+				margin: 0;
+			}
 			ul {
 				// border-top: 1px solid @base-border-color;
 				margin: 5px 0;
 				// border-radius: 0 5px 5px 0;
 				max-height: 75vh; // allow room for title/header above
 				overflow: auto;
+			}
+			.popup li.menu-item {
+				padding: 10px;
 			}
 			li.menu-item {
 				padding: 5px 10px;
@@ -1202,6 +1208,12 @@
 					float: right;
 					padding-left: 10px;
 					// opacity: 0.5;
+				}
+				.subtext {
+					color: var(--text-color-subtle);
+					font-size: smaller;
+					padding-left: 20px;
+					padding: 2px 70px 0 22px;
 				}
 				.checkmark {
 					display: inline-block;
@@ -1232,6 +1244,7 @@
 				}
 			}
 			li.menu-item.hover > span.label,
+			li.menu-item.hover > .subtext,
 			li.menu-item.hover > .icon,
 			li.menu-item.hover > .triangle-right {
 				// color: white;
@@ -2570,7 +2583,7 @@
 		flex-basis: 1%;
 		font-size: 12px;
 		// z-index: 15;
-		background-color: @app-background-color;
+		// background-color: @app-background-color;
 		color: @text-color-subtle;
 		padding: 0 0 15px 0;
 		.icon.triangle-down,
@@ -2578,6 +2591,9 @@
 			display: inline-block;
 			transform: scale(0.75);
 			margin: 0;
+		}
+		.icon.fixed {
+			position: absolute;
 		}
 		.icon.triangle-down {
 			margin-right: 5px;

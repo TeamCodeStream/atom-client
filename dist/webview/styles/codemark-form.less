@@ -243,6 +243,13 @@
 	&.with-file-icon {
 		padding-left: 20px;
 	}
+	&.wide {
+		padding-left: 40px;
+		padding-right: 20px;
+		.icon.file-icon {
+			left: 20px;
+		}
+	}
 	.icon.file-icon {
 		position: absolute !important;
 		left: 0;
@@ -355,7 +362,7 @@
 		vertical-align: 2px;
 	}
 	&.file-has-conflict {
-		color: @text-color-warning;
+		color: @text-color-warning !important;
 	}
 }
 

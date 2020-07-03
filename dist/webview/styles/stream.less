@@ -75,24 +75,24 @@
 	}
 
 	.banner {
-		height: @panel-header-height;
 		position: absolute;
+		bottom: 0;
 		padding: 0;
 		width: 100%;
-		z-index: 30;
+		z-index: 46;
 	}
 
 	#offline-banner {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		height: inherit;
 		background-color: @text-color-warning;
 		text-align: center;
 		font-size: 12px;
-		.content * {
-			color: @app-background-color;
-		}
+		color: @app-background-color;
+		color: white;
+		padding: 10px 20px;
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 	}
 
 	// these shadow styles are to support having a shadow appear above and below
@@ -1217,7 +1217,8 @@
 				}
 				.checkmark {
 					display: inline-block;
-					width: 16px;
+					padding-left: 2.5px;
+					width: 21px; // 16px for standard icon plus 5 for padding
 				}
 				.icon .icon {
 					margin-right: 5px;
@@ -1240,6 +1241,8 @@
 					opacity: 1;
 					.keybinding {
 						color: var(--text-color-highlight);
+						color: var(--button-foreground-color);
+						background-color: rgba(128, 128, 128, 1);
 					}
 				}
 			}

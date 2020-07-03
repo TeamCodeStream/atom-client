@@ -1,5 +1,23 @@
 # Change Log
 
+## [8.1.1] - 2020-7-3
+
+### Added
+
+- Adds the ability to search tickets in the "What are you working on" section of Work Items
+- Adds the ability to create an ad-hoc work item or create a ticket on your issue-tracking service
+- Adds a button to refresh the list of tickets from your issue tracking service
+
+### Changed
+
+- Simplified the form for creating branch templates for team admins
+- The Open Reviews section on the Work Items tab now includes reviews that you requested in additon to reviews assigned to you
+
+### Fixed
+
+- Fixes an issue with a banner not being displayed when you have no connectivity
+- Fixes an issue with the wrapping of your status display on the Team tab
+
 ## [8.1.0] - 2020-7-1
 
 ### Added

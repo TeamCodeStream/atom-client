@@ -1,5 +1,33 @@
 # Change Log
 
+## [8.1.2] - 2020-7-9
+
+### Added
+
+- Adds the ability to update your status on Slack when selecting a task to start work on
+- Adds the ability to create pull requests in Bitbucket Server
+- Adds the ability to select tickets from Jira and Jira Server, and update their statuses when you start work
+- Adds a dismissable banner when CodeStream is set up in an editor group instead of its own pane
+- Adds ticket status to the display of tickets in "What are you working on?"
+- Adds the display of local commits to the Work In Progress section of the Tasks tab
+
+### Changed
+
+- Changed the name of the Work Items tab to Tasks
+- Changed the UI for selecting commits to be included in a code review to make it clear that they have to be sequential
+- Removed the ability to set a keybinding for individual codemarks
+- Improved the UI for selecting a base branch when creating a feature branch from CodeStream
+- Reviews in the Open Reviews section of the Tasks tab are now displayed in descending order
+
+### Fixed
+
+- Fixes an issue with a source file opening when you hover over a code block in the activity, while CodeStream resides in the editor group
+- Fixes an issue with creating a codemark when opening the form while the permalink form is still in view
+- Fixes an issue with the Loading spinner display when connecting to an issue tracking service via the Tasks tab
+- Fixes an issue where the board/list dropdowns didn't have a default selection when creating an issue on Trello
+- Fixes an issue where the form to amend a review would not be displayed fully in view
+- Fixes an issue where the blue + button was sometimes still accessible when a modal was being displayed
+
 ## [8.1.1] - 2020-7-3
 
 ### Added
@@ -290,7 +318,7 @@
 
 - Fixes an issue with the "Open & Assigned to Me" filter not including issue codemarks
 
-# [6.3.0] - 2020-3-10
+## [6.3.0] - 2020-3-10
 
 ### Added
 
@@ -310,7 +338,6 @@
 ### Changed
 
 - Shortened the gutter marker tool tips to 80 characters max
-
 
 ## [6.2.0] - 2020-2-19
 

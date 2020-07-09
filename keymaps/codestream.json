@@ -1,28 +1,10 @@
 {
 	".platform-darwin atom-workspace, .platform-linux atom-text-editor": {
 		"ctrl-/ ctrl-/": "codestream:toggle",
-		"ctrl-/ 1": "codestream:go-to-codemark-1",
-		"ctrl-/ 2": "codestream:go-to-codemark-2",
-		"ctrl-/ 3": "codestream:go-to-codemark-3",
-		"ctrl-/ 4": "codestream:go-to-codemark-4",
-		"ctrl-/ 5": "codestream:go-to-codemark-5",
-		"ctrl-/ 6": "codestream:go-to-codemark-6",
-		"ctrl-/ 7": "codestream:go-to-codemark-7",
-		"ctrl-/ 8": "codestream:go-to-codemark-8",
-		"ctrl-/ 9": "codestream:go-to-codemark-9",
 		"ctrl-/ w": "codestream:start-work"
 	},
 	".platform-win32 atom-workspace": {
 		"ctrl-shift-/ /": "codestream:toggle",
-		"ctrl-shift-/ 1": "codestream:go-to-codemark-1",
-		"ctrl-shift-/ 2": "codestream:go-to-codemark-2",
-		"ctrl-shift-/ 3": "codestream:go-to-codemark-3",
-		"ctrl-shift-/ 4": "codestream:go-to-codemark-4",
-		"ctrl-shift-/ 5": "codestream:go-to-codemark-5",
-		"ctrl-shift-/ 6": "codestream:go-to-codemark-6",
-		"ctrl-shift-/ 7": "codestream:go-to-codemark-7",
-		"ctrl-shift-/ 8": "codestream:go-to-codemark-8",
-		"ctrl-shift-/ 9": "codestream:go-to-codemark-9",
 		"ctrl-shift-/ w": "codestream:start-work"
 	},
 	".platform-darwin atom-text-editor, .platform-linux atom-text-editor": {

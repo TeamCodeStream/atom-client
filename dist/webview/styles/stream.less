@@ -94,6 +94,39 @@
 		padding: 10px 20px;
 		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 	}
+	#wall-to-wall-banner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: @text-color-error;
+		text-align: center;
+		font-size: 12px;
+		color: white;
+		padding: 10px 60px;
+		box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.75);
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+		opacity: 0;
+		animation: fade-in 4s ease 1 forwards;
+		a {
+			color: white;
+			font-weight: bold;
+		}
+		.cancel-button {
+			position: absolute;
+			left: -50px;
+			&:hover {
+				color: white !important;
+			}
+		}
+	}
+	@keyframes fade-in {
+		50% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
 
 	// these shadow styles are to support having a shadow appear above and below
 	// the edges of content that are scrolled out of the way. in vscode it's part
@@ -1215,6 +1248,9 @@
 					padding-left: 20px;
 					padding: 2px 70px 0 22px;
 				}
+				.subtle {
+					padding-left: 10px;
+				}
 				.checkmark {
 					display: inline-block;
 					padding-left: 2.5px;
@@ -1224,6 +1260,7 @@
 					margin-right: 5px;
 				}
 				&.has-submenu {
+					padding-right: 20px;
 					> .label {
 						margin-right: 20px;
 					}
@@ -1257,6 +1294,7 @@
 				color: @text-color-subtle;
 			}
 			li.menu-item.disabled.hover,
+			li.menu-item.disabled.hover > .subtext,
 			li.menu-item.disabled.hover > span.label,
 			li.menu-item.disabled.hover > .icon,
 			li.menu-item.disabled.hover .triangle-right {
@@ -1277,7 +1315,7 @@
 				// margin-right: -20px;
 				// left: calc(100% - 22px);
 				width: 0;
-				margin-right: 5px;
+				margin-right: -5px;
 				// display: inline-block;
 			}
 		}

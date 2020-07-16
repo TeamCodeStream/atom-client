@@ -1,5 +1,19 @@
 # Change Log
 
+## [8.1.3] - 2020-7-16
+
+### Added
+
+- Adds the ability to specify your time zone via your Profile page
+
+### Fixed
+
+- Fixes an issue where diffs would be missing when amending a review with pushed commits
+- Fixes an issue with extraneous blank lines getting added to code blocks in comments on a code review
+- Addresses [#208](https://github.com/TeamCodeStream/CodeStream/issues/208) &mdash;[Object object] error when trying to submit a large review
+- Fixes an issue that would allow you to submit a code review before the list of changed files updated based on changes to the selection of commits
+- Fixes the broken "skip this" link in the "What are you working on?" section of the Tasks tab
+
 ## [8.1.2] - 2020-7-9
 
 ### Added

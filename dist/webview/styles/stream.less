@@ -204,7 +204,14 @@
 		//no-animation: 0.2s slideout;
 	}
 	#confirm-root.active {
-		background: @app-background-color;
+		// background: @app-background-color;
+		background: rgba(255, 255, 255, 0.8);
+		backdrop-filter: blur(1px);
+		.vscode-dark& {
+			background: rgba(0, 0, 0, 0.6);
+			backdrop-filter: contrast(0.5) blur(1px);
+		}
+
 		// background: @base-background-color;
 		display: flex;
 		flex-direction: column;
@@ -1099,6 +1106,12 @@
 				padding: 20px;
 				white-space: pre-wrap;
 				max-width: 300px;
+				background: @base-background-color;
+				border: 1px solid @base-border-color;
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+				.vscode-dark& {
+					box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+				}
 				.confirm-title {
 					font-size: 24px;
 					text-align: center;
@@ -1174,6 +1187,11 @@
 					.back-icons {
 						right: auto;
 						left: 5px;
+					}
+					.spin {
+						display: inline-block;
+						vertical-align: 2px;
+						margin-right: 7px;
 					}
 				}
 				&.center-title h3 {
@@ -1880,7 +1898,6 @@
 				padding-left: 4px;
 			}
 			.retry-spinner {
-				display: inline-block;
 				float: right;
 				* {
 					margin: 0 2px;
@@ -2089,7 +2106,6 @@
 			}
 			.align-far-left {
 				margin-left: -22px;
-				display: inline-block;
 				float: left;
 			}
 		}

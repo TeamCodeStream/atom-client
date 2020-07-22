@@ -1,5 +1,28 @@
 # Change Log
 
+## [8.2.0] - 2020-7-21
+
+### Added
+
+- Adds the ability to create custom JQL queries to filter the list of Jira tickets
+- Adds self-serve payments when subscribing to CodeStream
+- Adds a spinner/indicator when diffs are being calculated as a result of new commits being added to a code review
+
+### Changed
+
+- Improved UX when creating a Jira ticket from CodeStream
+- Jira tickets now use approropriate icons based on the ticket type
+- Improved "start work" UX, particularly around creating a branch
+- When creating a blame map (team admins only) you can now select from a drop-down list of emails
+- Improved the display of modals throughout the service
+- Search box is not displayed in the "What are you working on?" section if there are no tickets listed
+- Restructured the initial landing page in the extension to make things clearer for people signing up
+
+### Fixed
+
+- Fixes an issue where you weren't able to adjust notification settings if your on-prem installation didn't have outbound email configured
+- Fixes an issue where illegal characters weren't being stripped out of the name when creating a branch 
+
 ## [8.1.3] - 2020-7-16
 
 ### Added

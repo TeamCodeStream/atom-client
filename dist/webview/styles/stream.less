@@ -1105,7 +1105,7 @@
 				margin: 20px auto;
 				padding: 20px;
 				white-space: pre-wrap;
-				max-width: 300px;
+				max-width: 340px;
 				background: @base-background-color;
 				border: 1px solid @base-border-color;
 				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -1140,7 +1140,6 @@
 			z-index: 50;
 			padding: 0 10px 0 10px;
 			user-select: none;
-			cursor: pointer;
 			border-radius: 5px;
 			max-width: calc(100vw - 20px);
 			// overflow-x: hidden;
@@ -1283,6 +1282,12 @@
 						margin-right: 20px;
 					}
 				}
+				h3 {
+					padding: 0;
+				}
+				a {
+					color: var(--text-color);
+				}
 			}
 			&.compact li.menu-item {
 				padding: 1px 10px;
@@ -1291,6 +1296,7 @@
 			li.menu-item.hover {
 				// background: @background-color-info;
 				// background: red;
+				cursor: pointer;
 				background: var(--button-background-color);
 				.shortcut {
 					opacity: 1;
@@ -1302,6 +1308,7 @@
 				}
 			}
 			li.menu-item.hover > span.label,
+			li.menu-item.hover > span.label a,
 			li.menu-item.hover > .subtext,
 			li.menu-item.hover > .icon,
 			li.menu-item.hover > .triangle-right {

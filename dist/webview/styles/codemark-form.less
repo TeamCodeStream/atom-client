@@ -220,13 +220,14 @@
 			margin-right: 5px;
 		}
 	}
-	.issue-type-icon {
-		width: 16px;
-		height: 16px;
-		vertical-align: -2px;
-		margin-right: 5px;
-		margin-left: 2px;
-	}
+}
+
+.issue-type-icon {
+	width: 16px;
+	height: 16px;
+	vertical-align: -3px;
+	margin-right: 5px;
+	margin-left: 2px;
 }
 
 .review-form {
@@ -253,6 +254,9 @@
 
 .row-with-icon-actions {
 	position: relative;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin: 0 !important;
 	&:not(.no-hover) {
 		cursor: pointer;
 	}
@@ -269,11 +273,15 @@
 	.icon.file-icon {
 		position: absolute !important;
 		left: 0;
-		top: -1px;
+		top: 2px;
 		opacity: 0.6;
+		&.spin {
+			top: 3px;
+			left: 1px;
+		}
 	}
 	&.ellipsis-left-container {
-		height: 1.4em;
+		height: 1.8em;
 		// overflow-x: hidden;
 		white-space: nowrap;
 		display: flex;
@@ -320,7 +328,9 @@
 	}
 	// align the X vertically centered
 	.actions {
-		margin-top: -1px;
+		position: absolute;
+		right: 3px;
+		top: 2px;
 	}
 	&:hover:not(.no-hover) {
 		color: @text-color-highlight;
@@ -394,14 +404,14 @@
 }
 
 .ellipsis-container {
-	height: 1.4em;
+	height: 1.8em;
 	overflow: hidden;
 	white-space: pre;
 }
 
 //https://stackoverflow.com/questions/9793473/text-overflow-ellipsis-on-left-side
 .ellipsis-left {
-	height: 1.4em;
+	height: 1.8em;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	direction: rtl;

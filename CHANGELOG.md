@@ -1,5 +1,22 @@
 # Change Log
 
+## [8.3.0] - 2020-8-3
+
+### Added
+
+- Adds the ability to jump to a file from the Changed Files section of a code review, in addition to opening the diff
+- Adds the ability to upgrade to a paid plan from under the ellipses menu
+
+### Changed
+
+- Team admin capabilities have been relocated to under the ellipses menu for easier access
+- Code review progress now survives a reload of your IDE, and is tracked separately for each review update
+
+### Fixed
+
+- Fixes an issue with creating a pull request in projects located inside a subgroup
+- Fixes an issues with renamed files in a code review
+
 ## [8.2.0] - 2020-7-21
 
 ### Added

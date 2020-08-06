@@ -1,5 +1,11 @@
 # Change Log
 
+## [8.3.1] - 2020-8-6
+
+### Fixed
+
+- Fixes an issue where lower case paths were being used in git operations
+
 ## [8.3.0] - 2020-8-3
 
 ### Added

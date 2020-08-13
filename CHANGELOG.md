@@ -1,5 +1,15 @@
 # Change Log
 
+## [8.3.2] - 2020-8-13
+
+### Fixed
+
+- Addresses [#224](https://github.com/TeamCodeStream/CodeStream/issues/234) &mdash; Bug with Code range function
+- Fixes an issue with the handling of invalid Jira queries
+- Fixes an issue with the display of newlines in comments when amending a code review
+- Fixes an issue with the handling of renamed files in a code review
+- Fixes an issue when editing a codemark with no code block
+
 ## [8.3.1] - 2020-8-6
 
 ### Fixed
@@ -10,6 +20,7 @@
 
 ### Added
 
+- Adds the ability to sign into CodeStream with GitLab and Bitbucket
 - Adds the ability to jump to a file from the Changed Files section of a code review, in addition to opening the diff
 - Adds the ability to upgrade to a paid plan from under the ellipses menu
 

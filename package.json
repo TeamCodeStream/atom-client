@@ -1,7 +1,7 @@
 {
 	"name": "codestream",
 	"main": "./dist/codestream",
-	"version": "8.3.2",
+	"version": "8.3.3",
 	"description": "Discuss code easily. Streamline Code Reviews. Improve code quality. Works w/ Slack, Teams, Jira, Trello, git, and more.",
 	"keywords": [
 		"chat",

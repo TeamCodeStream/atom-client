@@ -1,5 +1,11 @@
 # Change Log
 
+## [8.3.3] - 2020-8-21
+
+### Fixed
+
+- Fixes an issue with certain scenarios not suggesting appropriate default reviewers using the "authorship" model
+
 ## [8.3.2] - 2020-8-13
 
 ### Fixed

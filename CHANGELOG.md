@@ -1,5 +1,11 @@
 # Change Log
 
+## [8.3.4] - 2020-8-27
+
+### Fixed
+
+- Fixes an issue related to certain upper-case paths
+
 ## [8.3.3] - 2020-8-21
 
 ### Fixed

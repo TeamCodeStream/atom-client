@@ -857,8 +857,10 @@
 			padding: 10px 30px 10px 40px;
 			border-radius: 4px;
 			// background: #fff;
-			background: @base-background-color;
-			background: rgba(0, 0, 0, 0.1);
+			background: @app-background-color;
+			.vscode-dark& {
+				background: rgba(0, 0, 0, 0.1);
+			}
 			border: 1px solid @base-border-color;
 			resize: none;
 			// height: 20px;
@@ -946,9 +948,10 @@
 			white-space: pre;
 			font-family: Menlo, Consolas, "DejaVu Sans Mono", monospace;
 			font-size: 12px;
-			// background: #f6f6f6;
-			// background: @base-background-color;
-			background: rgba(0, 0, 0, 0.1);
+			background: @base-background-color;
+			.vscode-dark& {
+				background: rgba(0, 0, 0, 0.1);
+			}
 			border-radius: 0 0 4px 4px;
 			padding: 10px;
 			border: 1px solid @base-border-color;
@@ -1098,6 +1101,7 @@
 		.confirm-popup {
 			width: 100%;
 			height: 100%;
+			padding: 0 20px;
 			.centered {
 				text-align: center;
 			}
@@ -1111,6 +1115,9 @@
 				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 				.vscode-dark& {
 					box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+				}
+				&.wide {
+					max-width: 500px;
 				}
 				.confirm-title {
 					font-size: 24px;
@@ -1259,14 +1266,18 @@
 					padding-left: 10px;
 					// opacity: 0.5;
 				}
-				.subtext {
+				.subtext,
+				.subtext-wide {
 					color: var(--text-color-subtle);
 					font-size: smaller;
 					padding-left: 20px;
-					padding: 2px 70px 0 22px;
+					padding: 2px 10px 0 22px;
+				}
+				.subtext-wide {
+					padding-right: 70px;
 				}
 				.subtle {
-					padding-left: 10px;
+					padding-left: 5px;
 				}
 				.checkmark {
 					display: inline-block;
@@ -1292,6 +1303,9 @@
 			&.compact li.menu-item {
 				padding: 1px 10px;
 			}
+			li.destructive > .label {
+				color: @text-color-error;
+			}
 			// li:hover,
 			li.menu-item.hover {
 				// background: @background-color-info;
@@ -1310,6 +1324,7 @@
 			li.menu-item.hover > span.label,
 			li.menu-item.hover > span.label a,
 			li.menu-item.hover > .subtext,
+			li.menu-item.hover > .subtext-wide,
 			li.menu-item.hover > .icon,
 			li.menu-item.hover > .triangle-right {
 				// color: white;
@@ -1317,9 +1332,11 @@
 			}
 			li.menu-item.disabled {
 				color: @text-color-subtle;
+				cursor: initial;
 			}
 			li.menu-item.disabled.hover,
 			li.menu-item.disabled.hover > .subtext,
+			li.menu-item.disabled.hover > .subtext-wide,
 			li.menu-item.disabled.hover > span.label,
 			li.menu-item.disabled.hover > .icon,
 			li.menu-item.disabled.hover .triangle-right {
@@ -2414,6 +2431,7 @@
 	}
 
 	.invite-panel .standard-form,
+	.team-panel .standard-form,
 	.configure-provider-panel .standard-form,
 	.create-channel-panel .standard-form {
 		max-width: 100%;
@@ -2424,6 +2442,9 @@
 			background: @base-background-color;
 			border: 1px solid @base-background-color;
 			color: @text-color;
+			&.outline {
+				border: 1px solid var(--base-border-color) !important;
+			}
 		}
 	}
 	.configure-provider-panel .standard-form textarea.input-text {
@@ -3011,6 +3032,10 @@
 	display: inline-block;
 	transform: scale(0.8);
 	vertical-align: 0.5em;
+}
+.icon.margin-right {
+	display: inline-block;
+	margin-right: 5px;
 }
 
 .loading-page {

@@ -169,13 +169,15 @@ body.preload * {
 		font-family: inherit !important;
 		opacity: 1 !important;
 		color: @text-color !important;
-		background-color: @background-color-highlight-light;
+		background-color: @app-background-color;
 
 		&.clearable {
 			padding-right: 31px !important;
 		}
 
+		border: 1px solid @base-border-color;
 		.vscode-dark& {
+			border: none;
 			background-color: @background-color-highlight-dark;
 		}
 
@@ -448,7 +450,10 @@ body.preload * {
 
 	.react-select__control {
 		border: 1px solid @base-border-color;
-		background-color: rgba(0, 0, 0, 0.1);
+		background-color: @app-background-color;
+		.vscode-dark & {
+			background-color: rgba(0, 0, 0, 0.1);
+		}
 		color: @text-color;
 		margin: 0;
 		font-family: inherit;
@@ -667,7 +672,7 @@ body.preload * {
 .spinnable {
 	font-size: 11px !important;
 	height: 16px !important;
-	width: 12px !important;
+	width: 16px !important;
 	margin: 0 !important;
 	padding: 0 !important;
 	line-height: 10px !important;
@@ -677,7 +682,7 @@ body.preload * {
 .spin {
 	font-size: 11px;
 	height: 16px;
-	width: 12px;
+	width: 16px;
 	margin: 0;
 	padding: 0;
 	line-height: 10px;

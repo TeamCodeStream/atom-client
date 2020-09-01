@@ -180,13 +180,16 @@
 	// width: 120px; reduced to 50px to account for getting started panel
 	width: 30px;
 	&.narrow {
-		width: 10px;
+		width: 20px;
 	}
 	&:hover:not(.disabled),
 	&.open {
 		width: 120px;
 		opacity: 1;
 		z-index: 15;
+		&.onebutton {
+			width: 35px;
+		}
 	}
 	&.disabled {
 		cursor: none;
@@ -304,6 +307,9 @@
 		max-width: calc(~"100vw - 62px") !important;
 		// background: @app-background-color;
 		outline: 1px solid @base-border-color !important;
-		background: rgba(0, 0, 0, 0.1) !important;
+		background: @app-background-color !important;
+		.vscode-dark & {
+			background: rgba(0, 0, 0, 0.1) !important;
+		}
 	}
 }

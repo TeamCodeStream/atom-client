@@ -52,10 +52,6 @@ Your team’s codemarks, which include the message text and the code snippet, ar
 
 You won’t need to provide CodeStream with any Git (or GitHub, Bitbucket, etc.) credentials, as the extension simply leverages your IDE’s access to Git. CodeStream uses Git to do things like automatically mention the most recent author when you share a block of code in a post, and to maintain the connection between that block of code and where it’s located in the source file as the file evolves over time (and commits).
 
-#### What is CodeStream's pricing model?
-
-Codestream is free to try for 14 days for teams of all sizes, and then pricing starts at \$10/user/month. CodeStream is free to use for educational organizations and for open source projects. To learn more, visit https://www.codestream.com/pricing or contact sales@codestream.com.
-
 # Help & Feedback
 
 Check out our [user guide](https://docs.codestream.com/userguide/) for more information on getting started with CodeStream. Please follow [@teamcodestream](http://twitter.com/teamcodestream) for product updates and to share feedback and questions. You can also email us at support@codestream.com.

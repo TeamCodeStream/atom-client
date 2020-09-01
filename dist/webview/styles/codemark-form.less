@@ -62,13 +62,19 @@
 		min-height: 50px;
 		max-width: calc(~"100vw - 62px") !important;
 		outline: 1px solid @base-border-color !important;
-		background: rgba(0, 0, 0, 0.1) !important;
+		background: var(--app-background-color) !important;
+		.vscode-dark & {
+			background: rgba(0, 0, 0, 0.1) !important;
+		}
 	}
 
 	.input-text {
-		background: rgba(0, 0, 0, 0.1) !important;
 		border: 1px solid @base-border-color !important;
 		margin-bottom: 5px;
+		background: var(--app-background-color) !important;
+		.vscode-dark & {
+			background: rgba(0, 0, 0, 0.1) !important;
+		}
 	}
 
 	.connect-issue {
@@ -298,18 +304,6 @@
 			display: inline-block;
 			// transform: scale(1.25);
 		}
-	}
-	&.selected::before {
-		display: block;
-		position: absolute;
-		left: -7px;
-		top: 5px;
-		width: 4px;
-		height: 4px;
-		border-radius: 2px;
-		background: var(--text-color-highlight);
-		content: "";
-		z-index: 5;
 	}
 	.ellipsis-right-container {
 		overflow: hidden;

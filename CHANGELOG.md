@@ -1,5 +1,11 @@
 # Change Log
 
+## [8.3.5] - 2020-9-1
+
+### Added
+
+- Adds support for managing GitHub (cloud only) pull requests and doing PR-based code reviews (BETA)
+
 ## [8.3.4] - 2020-8-27
 
 ### Fixed

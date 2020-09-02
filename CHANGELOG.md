@@ -1,5 +1,11 @@
 # Change Log
 
+## [8.3.6] - 2020-9-2
+
+### Fixed
+
+- Fixes an issue with codemarks not appearing on the Current File tab in certain instances
+
 ## [8.3.5] - 2020-9-1
 
 ### Added

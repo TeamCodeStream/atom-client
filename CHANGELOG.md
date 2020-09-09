@@ -1,5 +1,19 @@
 # Change Log
 
+## [8.3.7] - 2020-9-9
+
+### Added
+
+- Adds support for GitHub Enterprise to the new Pull Request integration (beta)
+- Adds new keyboard shortcuts for creating pull/merge requests
+
+### Fixed
+
+- Fixes an issue with the repo matching strategy when viewing file diffs in a pull request 
+- Fixes an issue with an unexpected error when opening certain PRs
+- Fixes an issue with CodeStream not correctly recognizing that you're already connected to GitHub when creating a PR
+- Fixes an issue where, after opening a new repo, the list of repos didn't updating automatically when starting work on a ticket, creating a PR, or requesting a code review
+
 ## [8.3.6] - 2020-9-2
 
 ### Fixed

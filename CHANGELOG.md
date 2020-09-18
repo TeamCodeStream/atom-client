@@ -1,5 +1,29 @@
 # Change Log
 
+## [9.0.0] - 2020-9-17
+
+### Added
+
+- Adds support for GitHub templates when creating a pull request
+- Adds the ability to create custom GitHub queries to control which pull requests are displayed on the Tasks tab
+- Adds the ability to quickly name a code review or pull request based on ticket name, branch name or commit message
+
+### Changed
+
+- Display of pull requests on the Tasks tab is now broken into sections for Waiting on My Review, Assigned to Me, and Created by Me
+- By default, only pull requests associated with repos you have open in your IDE are display, but you also have the ability to show all pull requests
+- Allows for the selection of remote branches when creating a PR
+- On the Search tab you can now use multiple `tag` arguments to create an AND query
+- When the Current File tab is in list view, multi-range codemarks are now only listed once
+- When creating a codemark, we now remember the last state of the checkbox(es) for any non-member notifications
+- Move cloud authentication options to the top of the signup page
+
+### Fixed
+
+- Fixes an issue with creating codemarks in cshtml files
+- Fixes an issue with creating codemarks in a file in a renamed folder on the file system with a new name that varies only by case
+- Fixes an issue where the position of codemarks could not be determined
+
 ## [8.3.7] - 2020-9-9
 
 ### Added

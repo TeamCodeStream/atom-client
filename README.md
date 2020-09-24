@@ -1,6 +1,6 @@
 # CodeStream
 
-CodeStream is a developer collaboration platform that makes it incredibly easy for development teams, especially remote teams, to discuss and review code in a more natural and contextual way. CodeStream not only makes discussions easier, by allowing them to happen in your IDE, in context, but also preserves the institutional knowledge that is currently being lost in Slack channels and emails. 
+CodeStream is a developer collaboration platform that integrates all of your essential dev tools, such as GitHub, GitLab, Bitbucket, Slack, Teams, Jira, Trello and more, into Atom.  CodeStream increases developer productivity by eliminating distractions inherent to context-switching and makes it incredibly easy for development teams, especially remote teams, to discuss and review code in a more natural and contextual way.
 
 ![CodeStream](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/CSforAtom.png)
 
@@ -16,9 +16,9 @@ You have two options for installing CodeStream.
 - Search for "CodeStream" in Atom's built-in package manager and install from there.
 - Or, run the command `apm install codestream` in your terminal.
 
-## Discuss Code Just Like Commenting on a Google Doc
+# Discuss Any Block of Code, at Any Time
 
-Simply select a block of code and type your question or comment. Teammates can participate in the discussion right from their IDE. 
+Whether it's code someone else wrote years ago, or some code you wrote minutes ago, simply select a block of code and type your question or comment. Teammates can participate in the discussion right from their IDE. 
 
 ![CodeStream](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/animated/DiscussCode-Atom.gif)
 

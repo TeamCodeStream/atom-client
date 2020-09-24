@@ -1,5 +1,23 @@
 # Change Log
 
+## [9.0.1] - 2020-9-23
+
+### Added
+
+- Better error handling for the GitHub pull-request integration, particularly around OAuth issues
+- Adds support for Kerberos when creating pull requests from CodeStream
+- Pull requests now reflect require-reviewers status
+
+### Changed
+
+- Removed the 5-person team size limit for companies on CodeStream's Free plan
+
+### Fixed
+
+- Fixes an issue where the icon would not appear in the editor gutter right away for a newly created codemark
+- Fixes an issue with opening a PR from a repo that you no longer have locally
+- Fixes an issue with the caching of GitHub access tokens
+
 ## [9.0.0] - 2020-9-17
 
 ### Added

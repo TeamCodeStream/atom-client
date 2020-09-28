@@ -1,5 +1,12 @@
 # Change Log
 
+## [9.0.2] - 2020-9-26
+
+### Fixed
+
+- Fixes an issue with the GitHub Enterprise configuration step being skipped when connecting from the Pull Requests section of the Tasks tab
+- Fixes an issue where you'd get an error about not having the repo open, when you actually did, when trying to comment on a pull request
+
 ## [9.0.1] - 2020-9-23
 
 ### Added

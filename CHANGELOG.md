@@ -1,6 +1,22 @@
 # Change Log
 
-## [9.0.2] - 2020-9-26
+## [9.1.0] - 2020-10-6
+
+### Changed
+
+- Implemented Google's diff-match-patch as a fallback for maintaining the location of all markers and pull-request comments
+
+### Fixed
+
+- Fixes an issue with long delays in opening diffs in a code review
+- Fixes an issue where the status of viewed files in a PR would get reset if you cancelled the submission of a comment
+- Fixes an issue with codemarks being displayed at the top of a file rather than their correct location
+- Fixes an issue preventing users from creating pull request comments on the last line of a file
+- Fixes an issue that prevented you from closing a pull request from CodeStream
+- Fixes an issue where you couldn't open a pull request diff immediately after opening the repo
+- Fixes an issue where the "Rebase & merge" button in a PR wouldn't work without a reload
+
+## [9.0.2] - 2020-9-28
 
 ### Fixed
 

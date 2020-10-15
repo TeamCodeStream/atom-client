@@ -267,23 +267,30 @@
 		cursor: pointer;
 	}
 	&.with-file-icon {
-		padding-left: 20px;
+		// padding-left: 20px;
 	}
 	&.wide {
-		padding-left: 40px;
+		padding-left: 20px;
 		padding-right: 20px;
 		.icon.file-icon {
-			left: 20px;
+			// left: 20px;
 		}
 	}
+	&.with-action-icons {
+		padding-right: 40px;
+	}
 	.icon.file-icon {
-		position: absolute !important;
-		left: 0;
-		top: 2px;
+		// position: absolute !important;
+		// left: 0;
+		// top: 2px;
+		margin-top: -1px;
 		opacity: 0.6;
+		display: inline-block;
+		margin-right: 3px;
 		&.spin {
-			top: 3px;
-			left: 1px;
+			// margin-top: -1px;
+			// top: 3px;
+			// left: 1px;
 		}
 	}
 	&.ellipsis-left-container {
@@ -295,7 +302,7 @@
 	&.selected,
 	&.selected-simple {
 		color: var(--text-color-highlight);
-		font-weight: bold;
+		// font-weight: bold;
 		position: relative;
 		background: var(--app-background-color-hover);
 		.icon.file-icon {
@@ -323,12 +330,25 @@
 	// align the X vertically centered
 	.actions {
 		position: absolute;
-		right: 3px;
+		right: 15px;
 		top: 2px;
+		&.opaque {
+			right: 0;
+		}
+	}
+	.badge {
+		display: block;
+		margin: 0 10px 0 auto !important;
+		transform: translateX(10px);
+		// using border as a padding here since we
+		// want some space but margin-left has to be auto
 	}
 	&:hover:not(.no-hover) {
 		color: @text-color-highlight;
 		background-color: @app-background-color-hover;
+		.actions.opaque {
+			background: @app-background-color-hover;
+		}
 		.icon.action {
 			display: inline-block;
 			visibility: visible;
@@ -353,16 +373,6 @@
 		pointer-events: none;
 		margin-left: 10px;
 	}
-	.added {
-		white-space: nowrap;
-		padding-left: 5px;
-		color: #66aa66;
-	}
-	.deleted {
-		white-space: nowrap;
-		padding-left: 5px;
-		color: #cc3366;
-	}
 	.icon.merge {
 		color: orange;
 		margin-left: -22px;
@@ -385,6 +395,20 @@
 	&.file-has-conflict {
 		color: @text-color-warning !important;
 	}
+	a {
+		color: var(--text-color);
+	}
+}
+
+.added {
+	white-space: nowrap;
+	padding-left: 5px;
+	color: #66aa66;
+}
+.deleted {
+	white-space: nowrap;
+	padding-left: 5px;
+	color: #cc3366;
 }
 
 .icon.conflict {
@@ -504,10 +528,16 @@
 		.icon {
 			opacity: 0.5;
 			margin: 0 5px;
+			&:hover {
+				opacity: 1;
+			}
 		}
 	}
 	input[type="text"] {
 		padding-right: 100px !important;
+	}
+	&.two-buttons input[type="text"] {
+		padding-right: 50px !important;
 	}
 }
 

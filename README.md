@@ -56,4 +56,8 @@ You won’t need to provide CodeStream with any Git (or GitHub, Bitbucket, etc.)
 
 Check out our [user guide](https://docs.codestream.com/userguide/) for more information on getting started with CodeStream. Please follow [@teamcodestream](http://twitter.com/teamcodestream) for product updates and to share feedback and questions. You can also email us at support@codestream.com.
 
+# Onboarding Focus Group
+
+Help us improve CodeStream for first-time users by participating in a 20-minute zoom call: screen-share your installation experience while we guide you along the way and demonstrate CodeStream's capabilities. If you work on a team with at least 10 developers [please schedule a time here](https://app.hubspot.com/meetings/claudio13/a-codestream-specialist-supports-your-onboarding-live).
+
 [![CodeStream Logo](https://alt-images.codestream.com/codestream_logo_atommarketplace.png)](https://codestream.com?utm_source=atommarket&utm_medium=banner&utm_campaign=codestream)

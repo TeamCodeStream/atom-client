@@ -1,5 +1,29 @@
 # Change Log
 
+## [10.0.0] - 2020-10-15
+
+### Added
+
+- Adds the ability to submit a review in a pull request without having to first start a review via a code comment
+- Code Reviews have been renamed Feedback Requests to better reflect the fact that they are more informal, and are used more frequently, to get feedback on your work in progress throughout the development process
+- Adds the ability to jump to your local version of a file from any comment in a pull request
+- Adds two new ways to view changes in a pull request. Tree view, which is similar to the current List view, but organizes the files as they’d appear in a source tree. And Diff Hunks view, which is the same view you’re used to seeing on GitHub. List and Tree view provide full-file context, whereas Diff Hunks shows just the lines that changed.
+- In any of the three views, mark any file as not viewed if you want to indicate to yourself that you need to come back to it again
+- Adds a new Data Export tool, for team admins only, that dumps all code comments (including those done in a feedback request) in CSV format
+
+### Changed
+
+- All-new tree based UI persistently exposes everything you need access to, and everything you need to do
+- The interface for commenting on code has been improved so that you’re clear on what code block, if any, has been selected. It’s also easier to add additional ranges.
+- When there’s a diff between the code in a codemark and the version you have locally, the original version, the current version, and a diff are all included in the codemark. No need to open a separate diff.
+- The Pull Requests section of the sidebar now includes a “Recent” section that shows you your five most recently created PRs, regardless of their current state.
+- When reviewing a pull request and commenting on code that isn't part of the changeset, it's now clear that the comment will be added as a PR-level comment and not as part of the review (due to GitHub's limitations)
+- When in spatial view of codemarks, there are now clearer indicators of when there are other codemarks above or below the fold
+
+### Fixed
+
+- Fixes an issue where the Work in Progress section would not update unless you first visited the Team tab
+
 ## [9.1.0] - 2020-10-6
 
 ### Changed

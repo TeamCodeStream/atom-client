@@ -1,5 +1,11 @@
 # Change Log
 
+## [10.0.1] - 2020-10-16
+
+### Fixed
+
+- Fixes an issue where authentication with your code host would seem to fail if you didn't have a repo from that code host open in your IDE
+
 ## [10.0.0] - 2020-10-15
 
 ### Added

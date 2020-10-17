@@ -40,7 +40,7 @@ Development is a collaborative activity, yet much of it happens in isolation, wi
 
 As developers write code, whether editing existing files or creating new files, a summary of their changes, including the repo(s), files, and lines changed is exposed to their teammates through CodeStream. The information is displayed contextually, in the IDE, and even warns teammates of potential merge conflicts… before they happen!
 
-![Live View](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/TeamTab.png)
+![Live View](https://raw.githubusercontent.com/TeamCodeStream/codestream-guide/develop/docs/src/assets/images/MyTeamSection-LiveView.png)
 
 ## Frequently Asked Questions
 

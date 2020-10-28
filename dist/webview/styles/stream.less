@@ -922,8 +922,33 @@
 				font-size: 12px;
 			}
 			&.preview {
+				margin-top: 5px;
 				outline: 2px dashed @text-focus-border-color !important;
 				background: transparent !important;
+				white-space: normal;
+				text-overflow: initial;
+				p {
+					margin: 0;
+				}
+				// should match MarkdownText.tsx
+				.code,
+				code {
+					max-width: 100%;
+					overflow-x: auto; // A long code snippet can extend past the container and look weird
+				}
+				white-space: pre-wrap;
+				word-wrap: break-word;
+				// need to increase priority for the li padding
+				.codestream .stream & {
+					ul:not(.linenums),
+					ol:not(.linenums) {
+						margin: 0;
+						padding-left: 20px;
+						li {
+							padding: 5px 0 !important;
+						}
+					}
+				}
 			}
 			&.hide {
 				display: none;
@@ -2976,7 +3001,6 @@
 		&:hover,
 		&.hover {
 			opacity: 1;
-			color: @text-color-info !important;
 			color: var(--text-color-highlight) !important;
 			// transform: scale(1.4);
 		}
@@ -2988,6 +3012,15 @@
 		}
 		&.info {
 			color: @text-color-info !important;
+		}
+		&.selected {
+			border-radius: 3px;
+			background: var(--text-color);
+			color: var(--app-background-color);
+			&:hover,
+			&.hover {
+				color: var(--app-background-color) !important;
+			}
 		}
 	}
 	// .switch.public-private

@@ -557,7 +557,10 @@ body.preload * {
 		position: absolute;
 		top: 0;
 		left: 0;
-		background: linear-gradient(rgba(0, 0, 0, 0.3) 10%, rgba(255, 255, 255, 0)) 100% 0;
+		background: linear-gradient(rgba(0, 0, 0, 0.05) 10%, rgba(255, 255, 255, 0)) 100% 0;
+		.vscode-dark& {
+			background: linear-gradient(rgba(0, 0, 0, 0.3) 10%, rgba(255, 255, 255, 0)) 100% 0;
+		}
 		background-repeat: no-repeat;
 		background-size: 100% 4px;
 		width: inherit;
@@ -571,20 +574,16 @@ body.preload * {
 		position: absolute;
 		bottom: 0;
 		left: 0;
-		background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.3) 90%) 0 100%;
+		background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.05) 90%) 0 100%;
+		.vscode-dark& {
+			background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.3) 90%) 0 100%;
+		}
 		background-repeat: no-repeat;
 		background-size: 100% 4px;
 		width: inherit;
 		height: 5px;
 		z-index: 5;
 		width: 100%;
-	}
-
-	.vscode-light& {
-		.scrollbox.off-top:before,
-		.scrollbox.off-top:after {
-			opacity: 0.2;
-		}
 	}
 
 	.vscroll,

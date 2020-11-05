@@ -1,5 +1,29 @@
 # Change Log
 
+## [10.0.3] - 2020-11-5
+
+### Added
+
+- Adds support for Azure DevOps issue tracking in the Issues section of the CodeStream pane
+
+### Changed
+
+- After creating a pull request on GitHub Enterprise you are now taken right into the newly created pull request on CodeStream
+- Toast notifications for when you're added as a reviewer or assignee to a pull request are now not limited to open pull requests
+- Better messaging when you try to create a pull request with no repositories open
+- Updated Slack app to use Slack's new granular permissions
+
+### Fixed
+
+- Fixes an issue where pull requests from older versions of GitHub Enterprise wouldn't load
+- Fixes an issue where the list of projects and the list of assignees where not list alphabetically when creating an issue on Azure DevOps
+- Fixes an issue where you'd receive a toast notification when assiging a pull request to yourself
+- Fixes an issue where the default notifications settings weren't being reflected on the Notifications page for new users
+- Fixes an issue where the editing of a range in a mult-range codemark caused a change in the ordering of the ranges
+- Fixes an issue with some modals having two "X"s to dismiss
+- Fixes an issue with ESC not properly dismissing modals/pages
+- Fixes an issue where certain actions would inappropriately land you in spatial view
+
 ## [10.0.2] - 2020-10-28
 
 ### Added

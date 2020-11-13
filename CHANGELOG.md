@@ -1,5 +1,27 @@
 # Change Log
 
+## [10.0.4] - 2020-11-13
+
+### Added
+
+- Adds the ability to mention GitHub collaborators when commenting on a pull request
+- Adds typeahead search when selecting branches for a new pull request
+
+### Changed
+
+- After creating a pull request, when you then close it you are brought to the CodeStream sidebar instead of back to the Open a Pull Request page 
+- Provide more guidance for users trying to sign up/in with GitLab regarding the need to have a public primary email on GitLab
+- The "Work in Progress" section is now more performant, with reduced api requests
+
+### Fixed
+
+- Addresses [#322](https://github.com/TeamCodeStream/CodeStream/issues/322) &mdash; When creating a pull request on GitLab or Bitbucket, CodeStream would try to open it in the IDE instead of on the appropriate service
+- Addresses [#315](https://github.com/TeamCodeStream/CodeStream/issues/315) &mdash; Creating a PR on GitLab Self-Managed switches base branch with compare branch
+- Fixes an issue trying to view a pull request in a repo with more than 100 open or merged pull requests
+- Fixes an issue where our polling for updates to a pull request would trigger an error when the user comes back from beign offline
+- Fixes an issue with Open Local File not working from the Files Changed tab in a pull request
+- Fixes an issue that would prevent you from creating a pull request if you had repos from both GitHub and GitHub Entperise open in your IDE
+
 ## [10.0.3] - 2020-11-5
 
 ### Added

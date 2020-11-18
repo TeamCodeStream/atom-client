@@ -1,5 +1,23 @@
 # Change Log
 
+## [10.0.5] - 2020-11-13
+
+### Added
+
+- Adds the ability to react to a comment, issue or feedback request, whereas you previously could only react to a reply
+
+### Changed
+
+- Changed the default branch name template to just use the issue's title
+- Clicking on an icon in the gutter of a pull-request diff now scrolls you to the corresponding comment
+- Improved logic for naming repositories to prioritize upstream and origin remotes
+
+### Fixed
+
+- Fixes an issue that prevented pull request comments from being displayed immediately as icons in the diff gutter
+- Fixes an issue that would prevent you from viewing a pull request that had a team as a reviewer
+- Fixes an issue that would generate an error if you reloaded while configuring an on-prem issue tracking/code hosting service
+
 ## [10.0.4] - 2020-11-13
 
 ### Added

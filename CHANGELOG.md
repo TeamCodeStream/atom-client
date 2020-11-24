@@ -1,5 +1,27 @@
 # Change Log
 
+## [10.1.0] - 2020-11-24
+
+### Added
+
+- Add an integration with Clubhouse that allows you to create stories and see your backlog
+- Adds the ability to create a GitHub pull request across forks
+
+### Changed
+
+- Improves the UX on the form to submit a review in a pull request by making it clear that the Cancel button is for cancelling the review, and not dismissing the form
+- Clarifies that when commenting on code outside of the changeset in a pull request, while a review is pending, the comment is added at the PR level and not included in the review
+
+
+### Fixed
+
+- Fixes an issue where the icons for pull request comments would be displayed on the wrong line in the gutter of the diff
+- Fixes an issue that would result in an error trying to view a pull request
+- Addresses [#296](https://github.com/TeamCodeStream/CodeStream/issues/296) &mdash; "Error 401: Unauthorized" when opening a PR on GitLab Self Managed
+- Fixes an issue where the viewed status of files in the pull request would get reset after adding a comment
+- Fixes an issue that prevented the creation of single pull request comments with certain GitHub Enterprise instances
+- Fixes an issue where files would not be displayed in tree view of a pull request if the folder name was a superset of another folder name
+
 ## [10.0.5] - 2020-11-13
 
 ### Added

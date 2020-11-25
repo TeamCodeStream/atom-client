@@ -1,5 +1,11 @@
 # Change Log
 
+## [10.1.1] - 2020-11-25
+
+### Fixed
+
+- Fixes an issue that prevented you from starting a review when commenting in a pull request
+
 ## [10.1.0] - 2020-11-24
 
 ### Added

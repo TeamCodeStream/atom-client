@@ -28,7 +28,7 @@
 	justify-content: center;
 }
 
-#offline-banner {
+.error-banner {
 	@dark-text-color: darken(@text-color, 40%);
 	width: 100%;
 	background-color: @text-color-warning;

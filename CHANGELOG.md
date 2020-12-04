@@ -1,5 +1,20 @@
 # Change Log
 
+## [10.1.2] - 2020-12-4
+
+### Added
+
+- Adds the "Outdated" label to comments on outdated code displayed in a pull request
+- Improved diff creation for feedback requests so that you should rarley see the “a commit required to perform this review was not found in the local repository” message
+
+### Fixed
+
+- Fixes an issue where multiple lines of code displayed in a code fence were collapsed down to a single line
+- Fixes an issue where Start Work would break if selected a CodeStream issue and the branch template used only {id}
+- Fixes an issue where a feedback request couldn't be submitted against a brand new repo with a single commit
+- Fixes an issue with the "show instructions" link at the bottom of a feedback request that has replies
+- Fixes an off-by-1 issue in the display of comments on the Conversation tab in pull requests
+
 ## [10.1.1] - 2020-11-25
 
 ### Fixed

@@ -1,5 +1,20 @@
 # Change Log
 
+## [10.2.0] - 2020-12-17
+
+### Added
+
+- Adds new onboarding settings for team admins that allow people to join teams based on repository access, and allow admins to restrict integration and authentication options
+- Adds a warning if you have local changes when trying to create a pull request
+- Adds new gear menu to header of the My Team section to access team settings and administration
+
+### Fixed
+
+- Fixes an issue where some users would run into GitHub rate limiting issues when working with pull requests
+- Fixes an issue where the markdown preview for commenting in a pull request was always empty
+- Fixes an issue where adding multiple code blocks to a codemark would result in some not getting added
+- Fixes an issue where a GitHub disconnect banner would incorrectly appear due to lack of internet connectivity
+
 ## [10.1.2] - 2020-12-4
 
 ### Added

@@ -6,6 +6,7 @@
 	flex-direction: column;
 	overflow: auto;
 	background: var(--sidebar-background);
+	position: relative;
 
 	.standard-form .form-body {
 		padding: 0 !important;
@@ -16,9 +17,9 @@
 }
 .separator-label {
 	text-align: center;
-	position: fixed;
+	position: absolute;
 	left: 0;
-	width: 100vw;
+	right: 0;
 	transform: translateY(10px);
 	z-index: 5;
 }
@@ -35,7 +36,7 @@
 }
 
 .border-bottom-box {
-	position: relative;
+	// position: relative;
 	margin: 0 auto;
 	padding: 20px;
 	max-width: 420px;
@@ -51,11 +52,10 @@
 	}
 	&::after {
 		content: "";
-		position: fixed;
+		position: absolute;
 		left: 0;
+		right: 0;
 		transform: translateY(20px);
-		// bottom: 0;
-		width: 100vw;
 		border-bottom: 1px solid @base-border-color;
 		z-index: 2;
 	}

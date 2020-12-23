@@ -1,5 +1,24 @@
 # Change Log
 
+## [10.2.1] - 2020-12-23
+
+### Added
+
+- Adds a new onboarding flow for some users that guides them through the setup of integrations and creating their first code comment
+- Adds support for remotes using SSH aliases
+
+### Changed
+
+- When creating a feedback request only commits from current user are checked by default, and only if they include the most recent commit
+- The list in the Pull Requests section automatically updates when you open, close or merge a pull request from CodeStream
+- The hovers for icons in the editor gutter now make it clear if the discussion was a comment, issue, feedback request or pull request
+- Optimization of git operations to gather commits when creating a feedback request
+
+### Fixed
+
+- Fixes an issue where CodeStream would repeatedly reload
+- Fixes an issue that would create an error when clicking on a feedback request due to bad data
+
 ## [10.2.0] - 2020-12-17
 
 ### Added

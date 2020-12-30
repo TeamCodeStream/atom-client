@@ -1,5 +1,13 @@
 # Change Log
 
+## [10.2.2] - 2020-12-30
+
+### Added
+
+- Split the Feedback Requests section of the sidebar into sections for Open, Approved and Needs Work 
+- When selecting a ticket to start work, added an option to pull latest if base branch is behind origin
+- Added the ability to set a default base branch per repo when creating a feature branch  
+
 ## [10.2.1] - 2020-12-23
 
 ### Added

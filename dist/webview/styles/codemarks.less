@@ -66,7 +66,8 @@
 			span {
 				white-space: nowrap;
 			}
-			br {
+			br,
+			img {
 				display: none;
 			}
 			p {
@@ -696,6 +697,37 @@
 	}
 	to {
 		transform: translateX(350%);
+	}
+}
+.attachment {
+	margin: 0 0 5px 0;
+	display: flex;
+	color: var(--text-color);
+	> span {
+		word-break: break-all;
+	}
+	> span:first-child {
+		flex-grow: 0;
+		flex-shrink: 0;
+		margin-right: 5px;
+	}
+	> span:last-child {
+		padding-left: 5px;
+		margin-left: auto;
+		.icon {
+			margin-left: 5px;
+			opacity: 0.4;
+		}
+		white-space: nowrap;
+	}
+	&:hover > span:last-child .icon {
+		opacity: 1;
+	}
+	&.clickable {
+		cursor: pointer;
+		&:hover {
+			color: var(--text-color-highlight);
+		}
 	}
 }
 .related-codemark {

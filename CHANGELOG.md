@@ -1,5 +1,27 @@
 # Change Log
 
+## [10.4.0] - 2021-1-19
+
+### Added
+
+- Adds support for [file attachments](https://www.codestream.com/blog/codestream-10-4-file-attachments-github-status-checks) when creating comment or issue codemarks
+- Adds support for GitHub status checks in pull requests rendered in CodeStream
+- When selecting a Linear issue to start work, the branch name associated with the issue is used
+- Adds the ability to pull the latest, if the base branch is behind origin, when previewing diffs while creating a pull request
+
+### Changed
+
+- Prevent the creation of codemarks when in a preview diff while submitting a feedback request
+
+### Fixed
+
+- Addresses [#353](https://github.com/TeamCodeStream/CodeStream/issues/353) &mdash; Codemark glyphs do not show up in WSL environment
+- Fixes an issue where starting work on an issue creates a feature branch against the wrong base
+- Fixes a data integrity issue that led to a small group of users getting an error clicking on a codemark
+- Fixes with the fetching of too much history data from PubNub if client clock is inaccurately set
+- Performance improvements
+- Fixes an issue with feedback requests assigned to you not appearing in the Approved or Needs Work sections without a reload
+
 ## [10.3.0] - 2021-1-8
 
 ### Added

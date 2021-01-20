@@ -442,6 +442,10 @@
 	direction: rtl;
 }
 
+.active-drag .message-attach-icons {
+	display: none;
+}
+
 .message-attach-icons {
 	position: absolute;
 	bottom: 5px;
@@ -465,6 +469,23 @@
 			opacity: 1;
 			color: @text-color-highlight;
 		}
+	}
+	.icon-wrapper {
+		cursor: pointer;
+		position: relative;
+		margin-left: 10px;
+		.icon {
+			margin-left: 0;
+		}
+		// https://stackoverflow.com/questions/1537223/change-cursor-type-on-input-type-file
+		input[type="file"]::-webkit-file-upload-button {
+			cursor: pointer;
+		}
+	}
+	.icon-wrapper:hover .icon {
+		opacity: 1;
+		color: @text-color-info;
+		transform: scale(1.4) !important;
 	}
 }
 

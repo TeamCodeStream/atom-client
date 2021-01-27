@@ -1,5 +1,23 @@
 # Change Log
 
+## [10.4.1] - 2021-1-26
+
+### Added
+
+- Adds the ability to attach files to a feedback request, or to a reply
+- Adds support for custom queries for Jira Server in the Issues section
+
+### Changed
+
+- Automatically populate all reviewer slots in a feedback request, going to recent committers if necessary, if one of the "authorship" assignment options is selected
+
+### Fixed
+
+- Addresses [#380](https://github.com/TeamCodeStream/CodeStream/issues/380) &mdash; Viewing a PR with status checks on GitHub Enterprise generates an error 
+- Addresses [#376](https://github.com/TeamCodeStream/CodeStream/issues/376) &mdash; Can't exit preview mode when creating a feedback request
+- Fixes an issue where you'd end up in an infinite "Fetching repo..." loop trying to create an issue on Bitbucket
+- Fixes an issue creating a permalink when in a WSL environment
+
 ## [10.4.0] - 2021-1-19
 
 ### Added

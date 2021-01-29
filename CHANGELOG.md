@@ -1,5 +1,21 @@
 # Change Log
 
+## [10.4.2] - 2021-1-29
+
+### Added
+
+- Adds a new tree view in the Changed Files section of feedback requests
+
+### Changed
+
+- Stop sending toast notifications for closed pull requests
+
+### Fixed
+
+- Fixes an issue with commenting in a feedback request in a file with an @ in the name
+- Fixes an issue preventing you from being able to edit a feedback request
+- Fixes an issue creating an issue codemark on GitLab cloud
+
 ## [10.4.1] - 2021-1-26
 
 ### Added

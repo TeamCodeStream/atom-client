@@ -1,7 +1,7 @@
 {
 	"name": "codestream",
 	"main": "./dist/codestream",
-	"version": "10.4.2",
+	"version": "10.4.3",
 	"description": "GitHub pull requests and code reviews in your IDE. Eliminate context-switching between tools. Also integrates with GitLab, Bitbucket, Slack, Teams, Jira, Trello and more.",
 	"keywords": [
 		"chat",

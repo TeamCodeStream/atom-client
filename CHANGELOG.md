@@ -1,5 +1,11 @@
 # Change Log
 
+## [10.4.3] - 2021-2-6
+
+### Fixed
+
+- Addresses [#392](https://github.com/TeamCodeStream/CodeStream/issues/392) &mdash; Codemark not showing code block when created from Windows 
+
 ## [10.4.2] - 2021-1-29
 
 ### Added

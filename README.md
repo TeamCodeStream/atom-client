@@ -34,7 +34,7 @@ Your teammates can participate in the discussion right from their IDE, or from S
 
 ![Share on Slack](https://raw.githubusercontent.com/TeamCodeStream/CodeStream/master/images/ShareOnSlack1.png)
 
-## Build the Knowledge Base Behind Your Codebase
+# Build the Knowledge Base Behind Your Codebase
 
 CodeStream turns conversation into documentation by capturing all of the discussion about your code, and saving it with your code. Comment and code review threads are automatically repositioned as your code changes, even across branches. All with zero effort on your part.
 
@@ -42,7 +42,7 @@ CodeStream turns conversation into documentation by capturing all of the discuss
 
 Previously discussed questions and issues that explain important decisions are now accessible right where you need them, when you need them. Just click on the codemark to expand it and see how something works or why something was done a certain way.
 
-## Team Transparency through Live View
+# Team Transparency through Live View
 
 Development is a collaborative activity, yet much of it happens in isolation, with work only shared with the team at the end of a cycle, or sprint. CodeStream’s “LiveView” increases transparency by making the local edits of individual developers visible to team members, so that everyone knows what everyone else is working on, in real-time.
 
@@ -50,7 +50,7 @@ As developers write code, whether editing existing files or creating new files, 
 
 ![Live View](https://raw.githubusercontent.com/TeamCodeStream/codestream-guide/develop/docs/src/assets/images/MyTeamSection-LiveView.png)
 
-## Frequently Asked Questions
+# Frequently Asked Questions
 
 #### Where are messages stored?
 

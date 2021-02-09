@@ -1,5 +1,25 @@
 # Change Log
 
+## [10.5.0] - 2021-2-9
+
+### Added
+
+- Adds checkbox to the Notifications page to control the new Feedback Request Reminder email notification
+
+### Changed
+
+- Comment codemarks can now be resolved
+- The Codemarks section of the sidebar breaks out codemarks by status (open, resolved, archived) with new colors for each
+- Default filters on the Search page are now Open Issues, Open Code Comments, and Open Feedback Requests, and is:open / is:closed advanced syntax now includes comment codemarks
+- CodeStream on-prem customers can now connect to Jira's cloud service using API tokens instead of OAuth
+
+### Fixed
+
+- Fixes issue that prevented pull request creation on github.io repositories
+- Fixes an issue with invitation codes for on-prem customers not correctly setting the CodeStream server URL for the invitee
+- Fixes an issue when commenting on a pull request that has been sitting open for more than an hour
+- Fixes a formatting issue with issues created on Asana
+
 ## [10.4.3] - 2021-2-6
 
 ### Fixed

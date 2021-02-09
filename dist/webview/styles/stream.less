@@ -305,16 +305,20 @@
 		}
 		.badge {
 			display: inline-block;
+			color: var(--text-color-highlight);
 			// background: rgba(127, 127, 127, 0.25);
 			background: #ddd;
 			.vscode-dark& {
-				background: #333;
+				background: #444;
 			}
 			border-radius: 9px;
 			padding: 0 5px;
 			min-width: 18px;
 			text-align: center;
 			margin: 0 5px;
+			&.unread {
+				background: @background-color-umi;
+			}
 		}
 		.mentions-badge,
 		.unread-badge {
@@ -1335,6 +1339,11 @@
 			}
 			.popup li.menu-item {
 				padding: 10px;
+			}
+			&.wrap li.menu-item {
+				.subtext {
+					white-space: normal;
+				}
 			}
 			li.menu-item {
 				padding: 5px 10px;

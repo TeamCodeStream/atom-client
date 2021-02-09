@@ -49,6 +49,12 @@
 		.type-icon {
 			margin-right: 5px;
 		}
+		img {
+			max-height: 18px;
+		}
+	}
+	&.archived {
+		opacity: 0.5;
 	}
 	&.collapsed {
 		// height: 25px;
@@ -737,9 +743,6 @@
 	cursor: pointer;
 	&:hover {
 		color: var(--text-color-info);
-	}
-	&.resolved {
-		text-decoration: line-through;
 	}
 }
 .external-link,

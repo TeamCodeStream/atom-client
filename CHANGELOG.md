@@ -1,5 +1,11 @@
 # Change Log
 
+## [10.5.1] - 2021-2-10
+
+### Fixed
+
+- Fixes an issue that caused an 'Unexpected Error' screen on sign-in
+
 ## [10.5.0] - 2021-2-9
 
 ### Added

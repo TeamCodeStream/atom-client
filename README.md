@@ -1,6 +1,12 @@
 # CodeStream
 
-CodeStream is a developer collaboration platform that integrates all of your essential dev tools, such as GitHub, GitLab, Bitbucket, Slack, Teams, Jira, Trello and more, into Atom. Eliminate context-switching and simplify code discussion and code review by putting collaboration tools in your IDE.
+CodeStream is a developer collaboration platform that integrates all of your essential dev tools into Atom. Eliminate context-switching and simplify code discussion and code review by putting collaboration tools in your IDE.
+
+### Integrations
+
+- **Code Hosts:** Bitbucket, Bitbucket Server, GitHub, GitHub Enterprise, GitLab, GitLab Self-Managed
+- **Issue Trackers:** Asana, Azure DevOps, Bitbucket, Clubhouse, GitHub, GitHub Enterprise, GitLab, GitLab Self-Managed, Jira, Linear, Trello, YouTrack
+- **Messaging Services:** Slack, Microsoft Teams
 
 ### Requirements
 
@@ -13,10 +19,6 @@ You have two options for installing CodeStream.
 
 - Search for "CodeStream" in Atom's built-in package manager and install from there.
 - Or, run the command `apm install codestream` in your terminal.
-
-### Guided Installation Option
-
-Help us improve CodeStream for first-time users by participating in a 20-minute zoom call: screen-share while we guide you along the way and demonstrate CodeStream's capabilities. If you work on a team with at least 10 developers [please schedule a time here](https://app.hubspot.com/meetings/claudio13/a-codestream-specialist-supports-your-onboarding-live).
 
 # Create and Review Pull Requests in Atom
 
@@ -41,14 +43,6 @@ CodeStream turns conversation into documentation by capturing all of the discuss
 ![Knowledge Base](https://raw.githubusercontent.com/TeamCodeStream/codestream-guide/develop/docs/src/assets/images/animated/KnowledgeBase1-Atom.gif)
 
 Previously discussed questions and issues that explain important decisions are now accessible right where you need them, when you need them. Just click on the codemark to expand it and see how something works or why something was done a certain way.
-
-# Team Transparency through Live View
-
-Development is a collaborative activity, yet much of it happens in isolation, with work only shared with the team at the end of a cycle, or sprint. CodeStream’s “LiveView” increases transparency by making the local edits of individual developers visible to team members, so that everyone knows what everyone else is working on, in real-time.
-
-As developers write code, whether editing existing files or creating new files, a summary of their changes, including the repo(s), files, and lines changed is exposed to their teammates through CodeStream. The information is displayed contextually, in the IDE, and even warns teammates of potential merge conflicts… before they happen!
-
-![Live View](https://raw.githubusercontent.com/TeamCodeStream/codestream-guide/develop/docs/src/assets/images/MyTeamSection-LiveView.png)
 
 # Frequently Asked Questions
 

@@ -745,13 +745,14 @@
 		color: var(--text-color-info);
 	}
 }
-.external-link,
-.internal-link {
+.codestream a.external-link,
+.codestream a.internal-link {
 	color: @text-color;
 	overflow: hidden;
 	white-space: nowrap;
 	display: block;
 	text-overflow: ellipsis;
+	text-decoration: none;
 	cursor: pointer;
 
 	&:hover {

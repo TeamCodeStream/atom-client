@@ -1,5 +1,26 @@
 # Change Log
 
+## [10.6.0] - 2021-2-19
+
+### Added
+
+- Adds the ability to review a pull request by a specific commit
+- Adds a new onboarding tour focussed on educating new users on CodeStream's key features
+- Adds a "Shared To" section to codemarks and feedback requests indicating when the item was shared to Slack
+- Adds an [automated post to Slack](https://www.codestream.com/blog/codestream-10-6-discussion-resolutions-published-to-slack) when a shared codemark or feedback request has been resolved- Adds the feedback request title to the toast notification when the request is approved, rejected ot reopened
+
+### Fixed
+
+- Fixes an issue with “disable strict SSL” setting not working for self-hosted services
+- Fixes an issue with an HTTPS-Required popup incorrectly showing for new on-prem installations
+- Addresses [#388](https://github.com/TeamCodeStream/CodeStream/issues/388) &mdash; Codemark issue with filenames containing "+" char
+- Fixes an unexpected error when clicking on a pull request
+- Fixes an issue with the count in the heading of the Coedmarks section being incorrect when filter isn't set to the current file
+- Fixes an issue commenting in a pull request in a file in a folder that doesn't exist in your current branch 
+- Fixes an issue with the Slack integration not appearing as a green tile on the Integrations page immediately after connecting
+- Fixes an issue with the Locate button not working in a feedback request when you don't have the given repo open
+- Fixes an issue with commenting on code in files that are symlinks
+
 ## [10.5.1] - 2021-2-10
 
 ### Fixed

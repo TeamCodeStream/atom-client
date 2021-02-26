@@ -1,5 +1,25 @@
 # Change Log
 
+## [10.6.1] - 2021-2-26
+
+### Added
+
+- Addresses [#411](https://github.com/TeamCodeStream/CodeStream/issues/411) &mdash; Case sensitive branch names
+
+### Changed
+
+- Even if Line Number is the selected sort, the sorting of the Codemarks section is always Date unless Current File is the selected filter
+
+### Fixed
+
+- Fixes an issue with connecting on on-prem services, such as GitHub Entperise and Bitbucket Server
+- Addresses [#408](https://github.com/TeamCodeStream/CodeStream/issues/408) &mdash; Codemark not showing code block with Russian characters
+- Fixes an issue when clicking on icons in the editor gutter for pull request comments from Bitbucket or GitLab
+- Fixes an issue with viewing diffs for pull requests from forks
+- Fixes an issue where manually entering triple backticks when adding a code block to a post breaks the formatting of the post
+- Fixes an issue where the contents of the Codemarks section would unecessarily reload when switching files within the same repo
+- Fixes an issue when clicking to see git diff in review window would trigger an undefined error
+
 ## [10.6.0] - 2021-2-19
 
 ### Added

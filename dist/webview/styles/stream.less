@@ -1366,11 +1366,16 @@
 					// opacity: 0.5;
 				}
 				.subtext,
-				.subtext-wide {
+				.subtext-wide,
+				.subtext-no-padding {
 					color: var(--text-color-subtle);
 					font-size: smaller;
 					padding-left: 20px;
 					padding: 2px 10px 0 22px;
+				}
+				.subtext-no-padding {
+					padding-left: 0;
+					padding-right: 0;
 				}
 				.subtext-wide {
 					padding-right: 70px;
@@ -1398,6 +1403,10 @@
 				a {
 					color: var(--text-color);
 				}
+				&.static {
+					border-top: 1px solid rgba(127, 127, 127, 0.2);
+					border-bottom: 1px solid rgba(127, 127, 127, 0.2);
+				}
 			}
 			&.compact li.menu-item {
 				padding: 1px 10px;
@@ -1418,6 +1427,9 @@
 						color: var(--button-foreground-color);
 						background-color: rgba(128, 128, 128, 1);
 					}
+				}
+				&.range-hover {
+					background: var(--button-background-color);
 				}
 			}
 			li.menu-item.hover > span.label,

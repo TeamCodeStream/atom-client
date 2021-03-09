@@ -1,5 +1,29 @@
 # Change Log
 
+## [10.7.0] - 2021-3-9
+
+### Added
+
+- Adds toast notifications prompting you to review new commits from a teammate after you do a pull
+- Adds the ability to review changes in a pull request since your last review, or for a specific range of commits
+
+### Changed
+
+- When you resovle a codemark the modal is now automatically closed
+- When creating a feedback request from an auto-prompt, the first line of the commit message is used as the FR title and anything after a newline character goes into the description
+- Moved repository/branch information into the header of feedback requests
+- Improved support for SSH aliases to prevent "The git repository for this review is not currently open in the IDE" messages from incorrecly being displayed
+
+### Fixed
+
+- Fixes an issue with the you-don't-have-this-file warning, when you view a codemark in a file that doesn't exist in your branch, not persisting
+- Addresses [#406](https://github.com/TeamCodeStream/CodeStream/issues/406) &mdash; Inject as comment inserts at wrong marker location
+- Addresses [#338](https://github.com/TeamCodeStream/CodeStream/issues/338) &mdash; multiline code break (newline) markdown not rendering inside code block syntax
+- Fixes an issue with attaching files via copy-and-paste
+- Fixes an issue with codemarks created on Windows showing a diff for the codeblock when there wasn't one
+- Fixes an issue where pull_request_template.md files in uppercase weren't being recognized when creating a PR
+- Fixes an issue with the inline display of images with a ? in the file name
+
 ## [10.6.1] - 2021-2-26
 
 ### Added

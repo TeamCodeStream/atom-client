@@ -1,5 +1,25 @@
 # Change Log
 
+## [10.7.1] - 2021-3-17
+
+### Added
+
+- Adds the ability to set up the Jira Server (v8.14.0 or later) integration using an API token
+- Ability to create a pull request against a fork on GitHub Enterprise
+
+### Changed
+
+- Local changes now only block creation of a pull request when done in the context of a feedback request, otherwise it's just a warning
+- When creating a pull request, if the diff is huge it is now not displayed by default
+- Minor change to the navigation in the sign up/in flow when authenticating via a 3rd party
+- UX improvement to the Notification Settings page
+- When a teammate proactively creates a feedback request to review a commit of yours, you are now shown as the code author for that feedback request and it will appear in the "Open" section of the Feedback Requests section
+
+### Fixed
+
+- Addresses [#348](https://github.com/TeamCodeStream/CodeStream/issues/348) &mdash; Fixes an issue with checking out to a pull request's branch when the repo name included upper case letters
+- Fixes an issue that would result in an unexpected error when clicking on a feedback request
+
 ## [10.7.0] - 2021-3-9
 
 ### Added

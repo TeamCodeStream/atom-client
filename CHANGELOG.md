@@ -1,5 +1,16 @@
 # Change Log
 
+## [10.7.2] - 2021-3-23
+
+### Changed
+
+- Toast notifications for commits are shown even if a feedback request already exists for the given commmit, as long as the feedback request is still open
+- The heading of the Codemarks section now shows the number of open codemarks when the section is collapsed
+
+### Fixed
+
+- Fixes an unexpected error when clicking on the Files Changed tab in a pull request
+
 ## [10.7.1] - 2021-3-17
 
 ### Added

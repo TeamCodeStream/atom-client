@@ -1,5 +1,9 @@
 # Change Log
 
+## [11.0.3] - 2021-4-12
+
+- Addresses [#486](https://github.com/TeamCodeStream/CodeStream/issues/486) &mdash; Unexpected error clicking on a merge request after update to 11.0
+
 ## [11.0.2] - 2021-4-12
 
 ### Changed

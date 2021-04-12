@@ -1,12 +1,29 @@
 # Change Log
 
-## [11.0.1] - 2021-4-7
+## [11.0.2] - 2021-4-12
+
+### Changed
+
+- List of PRs in the Pull Requests section automatically refreshes after reconnecting to a previously disconnected service
 
 ### Fixed
 
-- Fixes an issue that would cause blue badges to appear for codemarks/feedback requests even if they didn't have unread replies
+- Addresses [#488](https://github.com/TeamCodeStream/CodeStream/issues/488) &mdash; Can't save custom MR query
+- Addresses [#486](https://github.com/TeamCodeStream/CodeStream/issues/486) &mdash; Unexpected error clicking on a merge request after update to 11.0
+- Addresses [#483](https://github.com/TeamCodeStream/CodeStream/issues/483) &mdash; Error loading git info when trying to ammend a feedback request
+- Addresses [#482](https://github.com/TeamCodeStream/CodeStream/issues/482) &mdash; Gitlab open merge request error field 'approvalsRequired'
+- Fixes field 'stages' doesn't exist on type 'Pipeline' on GitLab Self-Managed 13.2.3
+- Fixes field 'currentUser' doesn't exist on type 'Query' on GitLab Self-Managed 12.X and below
+- Fixes field 'approvalsLeft' doesn't exist on type 'MergeRequest'
+- Fixes field 'id' doesn't exist on type 'User' on GitLab Self-Managed 12.X and below
+- Addresses [#470](https://github.com/TeamCodeStream/CodeStream/issues/470) &mdash; Shouldn't be able to submit review with zero pending comments
+- Fixes an issue with the Template dropdown incorrectly being displayed when creating a PR on GitHub
+- Fixes an issue with the display of the "source branch is X commit behind the target branch" copy in a merge request
+- Fixes an issue with line breaks getting lost in the description of a feedback request
+- Fixes an issue where you can't dismiss a feedback request when opening it via a toast notification on top of an open pull request
+- Fixes an error clicking on the Files Changed tab of a pull request
 
-## [11.0.0] - 2021-4-7
+## [11.0.1] - 2021-4-7
 
 ### Added
 
@@ -20,6 +37,7 @@
 
 ### Fixed
 
+- Fixes an issue that would cause blue badges to appear for codemarks/feedback requests even if they didn't have unread replies
 - Fixes an issue where Cmd + Enter submits a feedback request with no changes selected
 - Fixes an issue where you'd get prompted to review changes after changing branches
 - Fixes an issue where the Linear integration wasn't recognizing multiple teams

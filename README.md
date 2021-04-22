@@ -28,7 +28,7 @@ Create, review and merge pull requests inside Atom, with full source-tree and fu
 
 # Simplified Code Discussion
 
-Rather than copying & pasting, CodeStream enables in-editor commenting on any code in your repository, with optional sharing to Slack, Teams or via email, with automatic at-mentioning of code authors via git blame.
+Rather than copying & pasting, CodeStream enables in-editor commenting on any code in your repository, with optional sharing to Slack, MS Teams or via email, with automatic at-mentioning of code authors via git blame.
 
 ![CodeStream](https://raw.githubusercontent.com/TeamCodeStream/codestream-guide/develop/docs/src/assets/images/animated/DiscussCode1-Atom.gif) 
 

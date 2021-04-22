@@ -1,5 +1,31 @@
 # Change Log
 
+## [11.0.4] - 2021-4-22
+
+### Added
+
+- Adds the ability to edit a pending review comment in a GitLab merge request
+- Adds a roadblock to indicate that merge request support for GitLab Self Managed requires version 12.10.X or later
+
+### Changed
+
+- Ask user if they want to switch teams when clicking on a permalink for an item owned by a team other than the one you currently have selected
+- More efficient use of GitHub api points to prevent users from getting hit with rate-limit errors
+- Decrease the number of git operations being performed at extension startup
+- When going a quote reply in a pull/merge request, a blank line is automatically inserted before the cursor to prevent entered text from being included in the quote
+
+### Fixed
+
+- Addresses [#514](https://github.com/TeamCodeStream/CodeStream/issues/514) &mdash; Merge request not listed when using proxy
+- Addresses [#477](https://github.com/TeamCodeStream/CodeStream/issues/477) &mdash; Add messaging when not all files in a large MR will be listed
+- Fixes an issue where the issue you select via Start Work in one team, also appears in the Work In Progress section for all of your teams
+- Fixes an error when creating a pull request
+- Fixes an issue with the Open File buttons in the Changed Files section of a feedback request not working
+- Fixes an issue with creating a pull request on Bitbucket
+- Fixes an issue where collapsing/expanding sections in the Pull Requests section would cause all queries to refresh
+- Fixes an issue where clicking on a mention in a merge request opens a blank page
+- Fixes an issue where a local-changes warning would be shown when creating a pull request when there's weren't any local changes in the selected repository
+
 ## [11.0.3] - 2021-4-12
 
 - Addresses [#486](https://github.com/TeamCodeStream/CodeStream/issues/486) &mdash; Unexpected error clicking on a merge request after update to 11.0

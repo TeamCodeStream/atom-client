@@ -1,5 +1,34 @@
 # Change Log
 
+## [11.0.5] - 2021-4-29
+
+### Added
+
+- Adds the ability to toggle the display of pull request descriptions in the Pull Requests section
+
+### Changed
+
+- Establish GitLab v12.10 as the minimum required version for merge-request support
+
+### Fixed
+
+- Addresses [#502](https://github.com/TeamCodeStream/CodeStream/issues/502) &mdash; Can't checkout to the branch in a merge request
+- Fixes an issue where clicking on Diff Hunks view in a pull request would result in an error
+- Addresses [#454](https://github.com/TeamCodeStream/CodeStream/issues/454) &mdash; Default headshot display to initials when gravatar/headshot can't be loaded for on-prem users
+- Addresses [#498](https://github.com/TeamCodeStream/CodeStream/issues/498) &mdash; GitLab MR doesn't show commits created after MR is added
+- Fixes an error when creating a codemark
+- Fixes an issue where trying to view a pull request via list/tree view results in an error
+- Addresses [#429](https://github.com/TeamCodeStream/CodeStream/issues/429) &mdash; Incorrect user/repo listed at bottom of a PR
+- Fixes an issue where hitting Esc to close the comment form in a pull request exits you out of the pull request completely
+- Fixes an issue where some loading/saving messages in pull requests don't go away after completion 
+- Fixes an issue where merge requests created with unpushed branches lead to GraphQL error
+- Fixes an issue with the display of images in merge request descriptions
+- Fixes an issue replying to an existing comment in a merge request while there is a pending review
+- Fixes an issue deleting a pending review comment in a merge request
+- Fixes an issue with broken headshot display when adding a comment in a merge request
+- Fixes an issue where the "requested a review" banner in a pull request doesn't go away on submission of a review
+- Fixes an issue where WSL users can't select repo when creating a feedback reqest
+
 ## [11.0.4] - 2021-4-22
 
 ### Added

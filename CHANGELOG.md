@@ -1,5 +1,26 @@
 # Change Log
 
+## [11.0.6] - 2021-5-7
+
+### Added
+
+- Provide feedback in the UI for on-prem customers when the api server can't communicate with the broadcaster
+
+### Changed
+
+- Repo/branch names at the top of GitHub pull requests are now links to the appropriate branch on GitHub
+
+### Fixed
+
+- Addresses [#551](https://github.com/TeamCodeStream/CodeStream/issues/551) &mdash; Error compiling Less stylesheet
+- Fixes an issue where an apostrophe would get added to the end of email addresses suggested as reviewers in feedback requests
+- Fixes an issue with the display of images in comments on a GitLab merge request
+- Fixes an issue preventing you from being able to paste when editing most content types on CodeStream
+- Fixes an issue where editing an MR comment and adding a code fence results in divs being displayed
+- Fixes an issue where the code block doesn't immediately show in the merge request timeline after adding a new comment
+- Fixes an issue where you couldn't edit a merge request comment from Diff Hunks view
+- Fixes an issue with the responsiveness of the display of the Merge and Pipeline boxes in a merge request
+
 ## [11.0.5] - 2021-4-29
 
 ### Added
